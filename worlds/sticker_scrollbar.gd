@@ -5,9 +5,8 @@ extends VBoxContainer
 @export var sticker_prefab: PackedScene
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for sticker in stciker_resource:
-		var sticker_instance = sticker_prefab.instantiate() as dragglable_sticker
-		sticker_instance.set_texture((sticker as StickerData).sticker_texture)
+		var sticker_instance = sticker_prefab.instantiate() as DraggableSticker
+		sticker_instance.setTexture((sticker as StickerData).sticker_texture)
 		add_child(sticker_instance)

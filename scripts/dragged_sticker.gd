@@ -1,4 +1,4 @@
-class_name dragged_sticker
+class_name DraggedSticker
 extends Sprite2D
 
 var is_dragging: bool = true
