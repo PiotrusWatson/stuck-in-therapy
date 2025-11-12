@@ -12,10 +12,12 @@ func set_up(text: String, is_yours: bool):
 		panel_container.add_theme_stylebox_override("panel", your_style)
 		add_theme_constant_override("margin_left", 150)
 		add_theme_constant_override("margin_right", 5)
+		label.horizontal_alignment = HorizontalAlignment.HORIZONTAL_ALIGNMENT_RIGHT
 		
 	else:
 		panel_container.add_theme_stylebox_override("panel", their_style)
 		add_theme_constant_override("margin_right", 150)
 		add_theme_constant_override("margin_left", 5)
+		label.horizontal_alignment = HorizontalAlignment.HORIZONTAL_ALIGNMENT_LEFT
 		
 	
