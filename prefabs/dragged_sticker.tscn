@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cek4f543oebwm"]
+
+[ext_resource type="Script" uid="uid://ba331fg1ip718" path="res://scripts/dragged_sticker.gd" id="1_pfrvw"]
+
+[node name="DraggedSticker" type="Sprite2D"]
+z_index = 30
+script = ExtResource("1_pfrvw")
