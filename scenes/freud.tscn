@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcn7wkl3o7mq5"]
+
+[ext_resource type="Texture2D" uid="uid://ddtam874l3y5o" path="res://placeholder/freud-cutout.png" id="1_7af7b"]
+
+[node name="Freud" type="TextureRect"]
+texture = ExtResource("1_7af7b")
+flip_h = true

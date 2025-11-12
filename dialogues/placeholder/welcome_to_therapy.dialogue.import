@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ce5v1penscns1"
+path="res://.godot/imported/welcome_to_therapy.dialogue-3ad78e2c59856bbae386afced18446e4.tres"
+
+[deps]
+
+source_file="res://dialogues/placeholder/welcome_to_therapy.dialogue"
+dest_files=["res://.godot/imported/welcome_to_therapy.dialogue-3ad78e2c59856bbae386afced18446e4.tres"]
+
+[params]
+
+defaults=true

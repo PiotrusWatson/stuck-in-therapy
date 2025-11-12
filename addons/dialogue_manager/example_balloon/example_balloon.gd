@@ -131,6 +131,8 @@ func apply_dialogue_line() -> void:
 func next(next_id: String) -> void:
 	self.dialogue_line = await resource.get_next_dialogue_line(next_id, temporary_game_states)
 
+func auto_next():
+	next(dialogue_line.next_id)
 
 #region Signals
 
@@ -167,6 +169,8 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 		next(dialogue_line.next_id)
 	elif event.is_action_pressed(next_action) and get_viewport().gui_get_focus_owner() == balloon:
 		next(dialogue_line.next_id)
+		
+
 
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
