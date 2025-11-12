@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://54d17rar78tt"]
+
+[ext_resource type="Script" uid="uid://dag5lovjubg2u" path="res://scenes/phone_screen/phone_screen.gd" id="1_6p1uq"]
+[ext_resource type="Resource" uid="uid://ce5v1penscns1" path="res://dialogues/placeholder/welcome_to_therapy.dialogue" id="2_8e1rd"]
+[ext_resource type="PackedScene" uid="uid://kyse6qfuqcau" path="res://scenes/message/message_box.tscn" id="3_ar6ec"]
+
+[node name="PhoneScreen" type="ColorRect"]
+offset_left = 693.0
+offset_top = 112.0
+offset_right = 1128.0
+offset_bottom = 951.0
+color = Color(0, 0.40370244, 0.30018407, 1)
+script = ExtResource("1_6p1uq")
+dialogue_to_use = ExtResource("2_8e1rd")
+message_box_prefab = ExtResource("3_ar6ec")
+
+[node name="MessageScroller" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="Messages" type="VBoxContainer" parent="MessageScroller"]
+layout_mode = 2
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="MessageTimer" type="Timer" parent="Timers"]
+
+[connection signal="timeout" from="Timers/MessageTimer" to="." method="_on_message_timer_timeout"]
