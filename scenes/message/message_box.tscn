@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://kyse6qfuqcau"]
+[gd_scene load_steps=8 format=3 uid="uid://kyse6qfuqcau"]
 
 [ext_resource type="FontFile" uid="uid://bpm5h050ty0jo" path="res://fonts/Ldfcomicsans-jj7l.ttf" id="1_awoei"]
 [ext_resource type="StyleBox" uid="uid://mw0yh24s4b8" path="res://scenes/message/their_message.tres" id="1_ihena"]
 [ext_resource type="Script" uid="uid://bx1wac5qns3sh" path="res://scenes/message/message_box.gd" id="2_1iohf"]
 [ext_resource type="StyleBox" uid="uid://bwtmow7os3cwh" path="res://scenes/message/your_message.tres" id="4_fyhq7"]
+[ext_resource type="Texture2D" uid="uid://bqy86vhlny4b2" path="res://placeholder/properlaugh.webp" id="5_ittyt"]
 
 [sub_resource type="Theme" id="Theme_4itna"]
 Label/font_sizes/font_size = 20
@@ -13,6 +14,10 @@ MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_top = 10
 PanelContainer/styles/panel = ExtResource("1_ihena")
 
+[sub_resource type="Theme" id="Theme_ittyt"]
+MarginContainer/constants/margin_left = 5
+MarginContainer/constants/margin_right = 15
+
 [node name="MessageBox" type="MarginContainer"]
 offset_right = 400.0
 offset_bottom = 75.0
@@ -20,15 +25,33 @@ theme = SubResource("Theme_4itna")
 script = ExtResource("2_1iohf")
 your_style = ExtResource("4_fyhq7")
 their_style = ExtResource("1_ihena")
-smallest_margin = 10
-largest_margin = 150
+your_largest_margin = 90
+their_smallest_margin = 10
+their_largest_margin = 90
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="Message" type="Label" parent="."]
+[node name="Emote" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_ittyt")
+
+[node name="Face" type="TextureRect" parent="HBoxContainer/Emote"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("5_ittyt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Message" type="Label" parent="HBoxContainer/PanelContainer"]
 custom_minimum_size = Vector2(275, 0)
 layout_mode = 2
 size_flags_vertical = 3
-text = "Hello everybody it's me the big man on campus im going to jack off and suck myself off big time sexual style wow it's so cool"
+text = "Hello everybody it's me the big man on campus im going to jack off and suck myself off big time sexual style wow it's so cool."
 autowrap_mode = 3
