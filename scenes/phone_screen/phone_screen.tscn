@@ -25,3 +25,9 @@ horizontal_scroll_mode = 0
 
 [node name="Messages" type="VBoxContainer" parent="MessageScroller"]
 layout_mode = 2
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="MessageTimer" type="Timer" parent="Timers"]
+
+[connection signal="timeout" from="Timers/MessageTimer" to="." method="_on_message_timer_timeout"]
