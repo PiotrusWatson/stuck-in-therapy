@@ -24,7 +24,7 @@ their_colour = Color(0.44291076, 0.44291076, 0.44291073, 1)
 layout_mode = 2
 
 [node name="Message" type="Label" parent="."]
-custom_minimum_size = Vector2(400, 0)
+custom_minimum_size = Vector2(275, 0)
 layout_mode = 2
 size_flags_vertical = 3
 text = "Hello everybody it's me the big man on campus im going to jack off and suck myself off big time sexual style wow it's so cool"
