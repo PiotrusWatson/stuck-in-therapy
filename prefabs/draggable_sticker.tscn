@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn1gwdoilwgt2"]
+
+[ext_resource type="Texture2D" uid="uid://bi6mefp2558py" path="res://placeholder/stickers/sticker1.png" id="1_cqs44"]
+[ext_resource type="Script" uid="uid://cr3hs2a20xo7y" path="res://scripts/draggable_sticker.gd" id="2_l8jk2"]
+[ext_resource type="PackedScene" uid="uid://cek4f543oebwm" path="res://prefabs/dragged_sticker.tscn" id="3_l8jk2"]
+
+[node name="DraggableSticker" type="TextureRect"]
+texture = ExtResource("1_cqs44")
+expand_mode = 5
+script = ExtResource("2_l8jk2")
+dragged_sticker_prefab = ExtResource("3_l8jk2")
