@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://kyse6qfuqcau"]
+
+[ext_resource type="StyleBox" uid="uid://mw0yh24s4b8" path="res://scenes/message/their_message.tres" id="1_ihena"]
+[ext_resource type="Script" uid="uid://bx1wac5qns3sh" path="res://scenes/message/message_box.gd" id="2_1iohf"]
+
+[sub_resource type="Theme" id="Theme_4itna"]
+PanelContainer/styles/panel = ExtResource("1_ihena")
+
+[node name="MessageBox" type="MarginContainer"]
+offset_right = 400.0
+offset_bottom = 75.0
+theme = SubResource("Theme_4itna")
+script = ExtResource("2_1iohf")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="Message" type="Label" parent="."]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Hello everybody it's me the big man on campus im going to jack off and suck myself off big time sexual style wow it's so cool"
+autowrap_mode = 3
