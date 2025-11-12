@@ -17,9 +17,9 @@ texture = ExtResource("3_hjr63")
 [node name="ColorRect" type="ColorRect" parent="MemoryBackground"]
 layout_mode = 0
 offset_left = -0.99999994
-offset_top = -4.012002
-offset_right = 185.99998
-offset_bottom = 1083.006
+offset_top = 4.0120025
+offset_right = 144.99998
+offset_bottom = 1083.0059
 color = Color(0, 0, 0, 0.39607844)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MemoryBackground/ColorRect"]
