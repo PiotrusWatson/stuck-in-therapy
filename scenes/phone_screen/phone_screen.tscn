@@ -1,34 +1,151 @@
-[gd_scene load_steps=4 format=3 uid="uid://54d17rar78tt"]
+[gd_scene load_steps=13 format=3 uid="uid://54d17rar78tt"]
 
 [ext_resource type="Script" uid="uid://dag5lovjubg2u" path="res://scenes/phone_screen/phone_screen.gd" id="1_6p1uq"]
 [ext_resource type="Resource" uid="uid://ce5v1penscns1" path="res://dialogues/placeholder/welcome_to_therapy.dialogue" id="2_8e1rd"]
 [ext_resource type="PackedScene" uid="uid://kyse6qfuqcau" path="res://scenes/message/message_box.tscn" id="3_ar6ec"]
+[ext_resource type="Shader" uid="uid://c0h3ibfqgsa66" path="res://scenes/phone_screen/phone_screen.tres" id="4_ar6ec"]
+[ext_resource type="Texture2D" uid="uid://508155i8s6xe" path="res://placeholder/Hamburger_icon.svg.png" id="5_vv4ai"]
+[ext_resource type="Texture2D" uid="uid://co3illq88p7ax" path="res://placeholder/chevron.png" id="6_y063l"]
+[ext_resource type="Texture2D" uid="uid://c3kvo2q1pccfu" path="res://placeholder/square-icon-13.png" id="7_acdai"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_irhmb"]
+shader = ExtResource("4_ar6ec")
+
+[sub_resource type="Gradient" id="Gradient_lsbn2"]
+colors = PackedColorArray(0.54901963, 0.27450982, 0.6431373, 1, 0.28627452, 0.65882355, 0.79607844, 1)
+metadata/_snap_enabled = true
+metadata/_snap_count = 14
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vv4ai"]
+gradient = SubResource("Gradient_lsbn2")
+width = 247
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ar6ec"]
+bg_color = Color(0.11372549, 0.14509805, 0.38431373, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Theme" id="Theme_irhmb"]
+Button/styles/disabled = SubResource("StyleBoxFlat_ar6ec")
 
 [node name="PhoneScreen" type="ColorRect"]
 offset_left = 693.0
 offset_top = 112.0
 offset_right = 1128.0
 offset_bottom = 951.0
-color = Color(0, 0.40370244, 0.30018407, 1)
+color = Color(0.16862746, 0.33333334, 0.6156863, 1)
 script = ExtResource("1_6p1uq")
 dialogue_to_use = ExtResource("2_8e1rd")
 message_box_prefab = ExtResource("3_ar6ec")
 
-[node name="MessageScroller" type="ScrollContainer" parent="."]
+[node name="MessageBackground" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_irhmb")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = -204.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_vv4ai")
+
+[node name="MessageScroller" type="ScrollContainer" parent="MessageBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 follow_focus = true
 horizontal_scroll_mode = 0
 
-[node name="Messages" type="VBoxContainer" parent="MessageScroller"]
+[node name="Messages" type="VBoxContainer" parent="MessageBackground/MessageScroller"]
 layout_mode = 2
 
 [node name="Timers" type="Node" parent="."]
 
 [node name="MessageTimer" type="Timer" parent="Timers"]
+
+[node name="BottomScreenJunk" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -215.5
+offset_top = -204.0
+offset_right = 222.5
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_irhmb")
+
+[node name="FakeTyper" type="Button" parent="BottomScreenJunk"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 12.0
+offset_right = 399.0
+offset_bottom = 77.0
+disabled = true
+text = "Type here :)"
+
+[node name="DreamHelper" type="Label" parent="BottomScreenJunk"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -11.0
+offset_right = 116.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Powered by DreamHelper AI"
+horizontal_alignment = 1
+
+[node name="Hamburger" type="TextureRect" parent="BottomScreenJunk"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 111.0
+offset_top = 36.0
+offset_right = 165.0
+offset_bottom = 90.0
+grow_vertical = 2
+texture = ExtResource("5_vv4ai")
+expand_mode = 5
+
+[node name="Chevron" type="TextureRect" parent="BottomScreenJunk"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 271.0
+offset_top = 40.0
+offset_right = 326.0
+offset_bottom = 86.0
+grow_vertical = 2
+texture = ExtResource("6_y063l")
+expand_mode = 3
+
+[node name="Square" type="TextureRect" parent="BottomScreenJunk"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 188.0
+offset_top = 38.0
+offset_right = 256.0
+offset_bottom = 93.0
+grow_vertical = 2
+texture = ExtResource("7_acdai")
+expand_mode = 3
 
 [connection signal="timeout" from="Timers/MessageTimer" to="." method="_on_message_timer_timeout"]

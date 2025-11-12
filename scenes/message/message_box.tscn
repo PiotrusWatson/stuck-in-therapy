@@ -10,7 +10,7 @@ Label/font_sizes/font_size = 20
 Label/fonts/font = ExtResource("1_awoei")
 MarginContainer/constants/margin_bottom = 0
 MarginContainer/constants/margin_left = 10
-MarginContainer/constants/margin_top = 6
+MarginContainer/constants/margin_top = 10
 PanelContainer/styles/panel = ExtResource("1_ihena")
 
 [node name="MessageBox" type="MarginContainer"]
@@ -20,6 +20,8 @@ theme = SubResource("Theme_4itna")
 script = ExtResource("2_1iohf")
 your_style = ExtResource("4_fyhq7")
 their_style = ExtResource("1_ihena")
+smallest_margin = 10
+largest_margin = 150
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2

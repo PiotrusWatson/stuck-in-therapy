@@ -2,7 +2,7 @@ extends ColorRect
 
 @export var dialogue_to_use: DialogueResource
 @export var message_box_prefab: PackedScene
-@onready var messages = $MessageScroller/Messages
+@onready var messages = $MessageBackground/MessageScroller/Messages
 @onready var message_timer = $Timers/MessageTimer
 
 var current_line: DialogueLine
