@@ -22,8 +22,8 @@ func set_up(text: String, is_yours: bool):
 		
 	else:
 		panel_container.add_theme_stylebox_override("panel", their_style)
-		add_theme_constant_override("margin_right", your_largest_margin)
-		add_theme_constant_override("margin_left", your_smallest_margin)
+		add_theme_constant_override("margin_right", their_largest_margin)
+		add_theme_constant_override("margin_left", their_smallest_margin)
 		label.horizontal_alignment = HorizontalAlignment.HORIZONTAL_ALIGNMENT_LEFT
 		face.visible = true
 		
