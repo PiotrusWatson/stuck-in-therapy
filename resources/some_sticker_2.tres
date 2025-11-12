@@ -6,4 +6,5 @@
 [resource]
 script = ExtResource("1_o1ppq")
 sticker_texture = ExtResource("2_a5anp")
+sticker_name = "another name"
 metadata/_custom_type_script = "uid://bkoyo31sqb8kt"
