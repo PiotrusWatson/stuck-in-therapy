@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bk08p22bqgedt"]
+[gd_scene load_steps=5 format=3 uid="uid://bk08p22bqgedt"]
 
 [ext_resource type="Texture2D" uid="uid://cc0o0u0mfv615" path="res://placeholder/phone.jpeg" id="1_4itna"]
+[ext_resource type="Script" uid="uid://bx6vafdiacrbd" path="res://worlds/phone_scene.gd" id="1_ds0r6"]
 [ext_resource type="PackedScene" uid="uid://54d17rar78tt" path="res://scenes/phone_screen/phone_screen.tscn" id="2_ok0bf"]
 [ext_resource type="PackedScene" uid="uid://cgg2ylkntboy8" path="res://scenes/thoughts/thoughts.tscn" id="3_ws1tj"]
 
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ds0r6")
 
 [node name="PhoneBackground" type="TextureRect" parent="."]
 layout_mode = 1
@@ -28,10 +30,10 @@ expand_mode = 1
 
 [node name="PhoneScreen" parent="." instance=ExtResource("2_ok0bf")]
 layout_mode = 0
-offset_left = 686.0
-offset_top = 111.0
-offset_right = 1121.0
-offset_bottom = 950.0
+offset_left = 683.0
+offset_top = 105.0
+offset_right = 1127.0
+offset_bottom = 944.0
 
 [node name="Thoughts" parent="." instance=ExtResource("3_ws1tj")]
 layout_mode = 1

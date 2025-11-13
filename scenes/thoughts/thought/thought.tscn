@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cca4hxrunpw3"]
+
+[ext_resource type="Script" uid="uid://dch7khbg5iq1m" path="res://scenes/thoughts/thought/thought.gd" id="1_nnvrq"]
+
+[node name="Thought" type="MarginContainer"]
+script = ExtResource("1_nnvrq")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+disabled = true
+text = "Wow Am I a shit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
