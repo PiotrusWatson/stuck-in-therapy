@@ -1,15 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://uq1gauu4yhaj"]
+[gd_scene load_steps=6 format=3 uid="uid://uq1gauu4yhaj"]
 
-[ext_resource type="Script" uid="uid://c2biu1aukbohn" path="res://audio_manager.gd" id="1_73uix"]
+[ext_resource type="Script" uid="uid://c2biu1aukbohn" path="res://scripts/audio_manager.gd" id="1_73uix"]
 [ext_resource type="AudioStream" uid="uid://cphmn5wctqptk" path="res://sounds/Sticker2.wav" id="2_dn1u1"]
 [ext_resource type="AudioStream" uid="uid://b6ingkv786hui" path="res://sounds/Sticker.wav" id="3_6hqem"]
+[ext_resource type="AudioStream" uid="uid://7b576cyhrb7i" path="res://sounds/Memory_scene_music83_Gm.mp3" id="4_aymke"]
+[ext_resource type="AudioStream" uid="uid://cqmks8tvmc6ut" path="res://sounds/Therapy_Memory85_Bm.mp3" id="4_r3nto"]
 
-[node name="AudioManager" type="Node" node_paths=PackedStringArray("audio_player")]
+[node name="AudioManager" type="Node" node_paths=PackedStringArray("audio_player", "background_music_player", "background_music_player_second")]
 script = ExtResource("1_73uix")
 sticker_sounds = Array[AudioStream]([ExtResource("2_dn1u1"), ExtResource("3_6hqem")])
 audio_player = [NodePath("AudioStreamPlayer"), NodePath("AudioStreamPlayer2")]
-volume_db = -7.0
+background_music_player = NodePath("BackgroundMusicPlayer")
+background_music_player_second = NodePath("BackgroundMusicPlayer2")
+background_music = ExtResource("4_r3nto")
+background_music_second = ExtResource("4_aymke")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+
+[node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="BackgroundMusicPlayer2" type="AudioStreamPlayer" parent="."]

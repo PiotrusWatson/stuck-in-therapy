@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkj473o2yxwtl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n6gr5"]
+font_size = 50
+
+[node name="MemoryText" type="Label"]
+offset_right = 1081.0
+offset_bottom = 44.0
+text = "Place Holder text, Lorem Ipsum etc"
+label_settings = SubResource("LabelSettings_n6gr5")

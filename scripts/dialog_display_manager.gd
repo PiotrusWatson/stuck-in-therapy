@@ -1,0 +1,79 @@
+class_name DialogDisplayManager
+extends CanvasLayer
+
+@export var fade_out_duration: float = 10.0
+@export var allowed_area: ColorRect
+@export var label_prefab: PackedScene
+
+var character_fonts: Dictionary = {}
+var character_colors: Dictionary = {}
+var active_label: Label = null
+var fade_tween: Tween = null
+
+func _ready() -> void:
+	setup_character_styles()
+
+func setup_character_styles() -> void:
+	# Configure fonts and colors per character
+	character_fonts["kaisa"] = load("res://fonts/kaisa.ttf")
+	character_fonts["ai"] = load("res://fonts/ai.ttf")
+	character_fonts["thirdVoice"] = load("res://fonts/memory_voice.otf")
+	
+	# character_colors["kaisa"] = Color.PURPLE
+	# character_colors["ai"] = Color.CYAN
+	# character_colors["thirdVoice"] = Color.ORANGE
+
+func display_dialog(character: String, text: String) -> void:
+	# Kill previous tween if active
+	if fade_tween:
+		fade_tween.kill()
+	
+	# Remove previous label
+	if active_label:
+		active_label.queue_free()
+	
+	# Debug: Check if allowed_area exists
+	if not allowed_area:
+		push_error("allowed_area is not assigned!")
+		return
+	
+	# Create new label
+	active_label = label_prefab.instantiate() as Label
+	active_label.text = text
+	active_label.label_settings.font = character_fonts.get(character)
+	active_label.label_settings.font_color = Color.WHITE
+	active_label.custom_minimum_size = Vector2(400, 200)
+	active_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	active_label.modulate.a = 1.0
+
+	active_label.visible = false
+	
+	add_child(active_label)
+	await get_tree().process_frame
+	
+	var label_size = active_label.size
+	var rect = allowed_area.get_global_rect()
+	
+	# Generate random position
+	var random_x = randf_range(rect.position.x, rect.position.x + rect.size.x)
+	var random_y = randf_range(rect.position.y, rect.position.y + rect.size.y)
+	
+	# Clamp to keep label fully inside bounds
+	var clamped_x = clamp(random_x, rect.position.x, rect.position.x + rect.size.x - label_size.x)
+	var clamped_y = clamp(random_y, rect.position.y, rect.position.y + rect.size.y - label_size.y)
+	
+	active_label.position = Vector2(clamped_x, clamped_y)
+	active_label.visible = true
+	
+	print("Label position: ", active_label.position)
+	print("Label size: ", label_size)
+	print("Fade duration: ", fade_out_duration)
+	
+	fade_tween = create_tween()
+	fade_tween.set_trans(Tween.TRANS_SINE)
+	fade_tween.set_ease(Tween.EASE_IN_OUT)
+	fade_tween.tween_interval(fade_out_duration)
+	fade_tween.tween_property(active_label, "modulate:a", 0.0, 1.0)
+	fade_tween.tween_callback(func(): active_label.queue_free())
+	
+	print("Tween started")
