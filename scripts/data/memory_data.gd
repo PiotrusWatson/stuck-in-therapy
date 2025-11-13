@@ -1,4 +1,4 @@
-class_name Memory
+class_name MemoryData
 extends Resource
 
 @export var texture: Texture2D

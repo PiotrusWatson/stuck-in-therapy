@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cb16cuqo8h7mk"]
 
-[ext_resource type="Texture2D" uid="uid://dqlbj7jxva735" path="res://placeholder/hospital_var3.png" id="1_7jid2"]
+[ext_resource type="Texture2D" uid="uid://dqlbj7jxva735" path="res://sprites/hospital_var3.png" id="1_7jid2"]
 [ext_resource type="Script" uid="uid://3mfuktwawp7d" path="res://scripts/sticker_scrollbar.gd" id="2_cxery"]
 [ext_resource type="PackedScene" uid="uid://bn1gwdoilwgt2" path="res://prefabs/draggable_sticker.tscn" id="2_hjr63"]
 [ext_resource type="PackedScene" uid="uid://qthvuvksqow3" path="res://prefabs/dialog_display_manager.tscn" id="2_hurhv"]

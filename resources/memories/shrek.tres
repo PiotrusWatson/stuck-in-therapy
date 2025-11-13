@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Memory" load_steps=3 format=3 uid="uid://bx675g4lwwlj6"]
+
+[ext_resource type="Script" uid="uid://m07xebbobwqp" path="res://scripts/data/memory_data.gd" id="1_h1xdr"]
+[ext_resource type="Texture2D" uid="uid://cpwg4goxr5445" path="res://placeholder/shrek_shadow.jpg" id="2_1ued0"]
+
+[resource]
+script = ExtResource("1_h1xdr")
+texture = ExtResource("2_1ued0")
+name = "Shrek 2..."
+metadata/_custom_type_script = "uid://m07xebbobwqp"
