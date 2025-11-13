@@ -37,3 +37,9 @@ offset_bottom = 944.0
 
 [node name="Thoughts" parent="." instance=ExtResource("3_ws1tj")]
 layout_mode = 1
+
+[node name="LoadDelayTimer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="timeout" from="LoadDelayTimer" to="." method="_on_load_delay_timer_timeout"]
