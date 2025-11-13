@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://bn1gwdoilwgt2" path="res://prefabs/draggable_sticker.tscn" id="2_hjr63"]
 [ext_resource type="PackedScene" uid="uid://qthvuvksqow3" path="res://prefabs/dialog_display_manager.tscn" id="2_hurhv"]
 [ext_resource type="PackedScene" uid="uid://bkj473o2yxwtl" path="res://prefabs/memory_text.tscn" id="3_7jid2"]
-[ext_resource type="Script" uid="uid://bkoyo31sqb8kt" path="res://scripts/sticker_data.gd" id="3_37m0f"]
-[ext_resource type="Resource" uid="uid://bbch84uppf4ud" path="res://resources/some_sticker.tres" id="3_iko1f"]
-[ext_resource type="Resource" uid="uid://cbd46riqqh1un" path="res://resources/some_sticker_2.tres" id="4_37m0f"]
-[ext_resource type="Resource" uid="uid://mh3amykpkeae" path="res://resources/some_sticker_3.tres" id="5_hurhv"]
+[ext_resource type="Script" uid="uid://bkoyo31sqb8kt" path="res://scripts/data/sticker_data.gd" id="3_37m0f"]
+[ext_resource type="Resource" uid="uid://bbch84uppf4ud" path="res://resources/stickers/some_sticker.tres" id="3_iko1f"]
+[ext_resource type="Resource" uid="uid://cbd46riqqh1un" path="res://resources/stickers/some_sticker_2.tres" id="4_37m0f"]
+[ext_resource type="Resource" uid="uid://mh3amykpkeae" path="res://resources/stickers/some_sticker_3.tres" id="5_hurhv"]
 
 [node name="Memory" type="Node2D"]
 

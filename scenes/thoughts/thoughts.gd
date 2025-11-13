@@ -2,6 +2,7 @@ extends Control
 
 @onready var thought_box = $ThoughtBox
 @export var thought_prefab: PackedScene
+@export var memories = []
 @onready var title = $Title
 @onready var current_thoughts = []
 

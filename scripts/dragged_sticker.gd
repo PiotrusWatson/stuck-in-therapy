@@ -26,4 +26,3 @@ func persistData() -> void:
 		push_error("No sticker data to persist!")
 	#send data to game manager or something like that
 	MemoryManager.increment_sticker_count.emit()
-

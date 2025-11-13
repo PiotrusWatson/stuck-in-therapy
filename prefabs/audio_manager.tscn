@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://uq1gauu4yhaj"]
 
-[ext_resource type="Script" uid="uid://c2biu1aukbohn" path="res://scripts/audio_manager.gd" id="1_73uix"]
+[ext_resource type="Script" uid="uid://c2biu1aukbohn" path="res://scripts/autoloads/audio_manager.gd" id="1_73uix"]
 [ext_resource type="AudioStream" uid="uid://cphmn5wctqptk" path="res://sounds/Sticker2.wav" id="2_dn1u1"]
 [ext_resource type="AudioStream" uid="uid://b6ingkv786hui" path="res://sounds/Sticker.wav" id="3_6hqem"]
 [ext_resource type="AudioStream" uid="uid://7b576cyhrb7i" path="res://sounds/Memory_scene_music83_Gm.mp3" id="4_aymke"]
