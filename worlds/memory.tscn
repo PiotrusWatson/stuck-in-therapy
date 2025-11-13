@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cb16cuqo8h7mk"]
+[gd_scene load_steps=10 format=3 uid="uid://cb16cuqo8h7mk"]
 
-[ext_resource type="Script" uid="uid://3mfuktwawp7d" path="res://worlds/sticker_scrollbar.gd" id="2_cxery"]
+[ext_resource type="Texture2D" uid="uid://dqlbj7jxva735" path="res://placeholder/hospital_var3.png" id="1_7jid2"]
+[ext_resource type="Script" uid="uid://3mfuktwawp7d" path="res://scripts/sticker_scrollbar.gd" id="2_cxery"]
 [ext_resource type="PackedScene" uid="uid://bn1gwdoilwgt2" path="res://prefabs/draggable_sticker.tscn" id="2_hjr63"]
-[ext_resource type="Texture2D" uid="uid://mupjijmm6p7k" path="res://placeholder/memory_placeholder.png" id="3_hjr63"]
+[ext_resource type="PackedScene" uid="uid://qthvuvksqow3" path="res://prefabs/dialog_display_manager.tscn" id="2_hurhv"]
+[ext_resource type="PackedScene" uid="uid://bkj473o2yxwtl" path="res://prefabs/memory_text.tscn" id="3_7jid2"]
+[ext_resource type="Script" uid="uid://bkoyo31sqb8kt" path="res://scripts/sticker_data.gd" id="3_37m0f"]
 [ext_resource type="Resource" uid="uid://bbch84uppf4ud" path="res://resources/some_sticker.tres" id="3_iko1f"]
 [ext_resource type="Resource" uid="uid://cbd46riqqh1un" path="res://resources/some_sticker_2.tres" id="4_37m0f"]
 [ext_resource type="Resource" uid="uid://mh3amykpkeae" path="res://resources/some_sticker_3.tres" id="5_hurhv"]
@@ -14,7 +17,18 @@ z_index = 10
 offset_right = 1920.0
 offset_bottom = 1080.0
 scale = Vector2(1, 0.99700844)
-texture = ExtResource("3_hjr63")
+texture = ExtResource("1_7jid2")
+
+[node name="DialogDisplayManager" parent="MemoryBackground" node_paths=PackedStringArray("allowed_area") instance=ExtResource("2_hurhv")]
+allowed_area = NodePath("ColorRect")
+label_prefab = ExtResource("3_7jid2")
+
+[node name="ColorRect" type="ColorRect" parent="MemoryBackground/DialogDisplayManager"]
+offset_left = 210.0
+offset_top = 29.0
+offset_right = 1900.0
+offset_bottom = 1052.0
+color = Color(1, 1, 1, 0)
 
 [node name="ColorRect" type="ColorRect" parent="MemoryBackground"]
 layout_mode = 0
@@ -39,5 +53,5 @@ custom_minimum_size = Vector2(0, 1080)
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("2_cxery")
-stciker_resource = Array[Resource]([ExtResource("3_iko1f"), ExtResource("4_37m0f"), ExtResource("5_hurhv"), ExtResource("3_iko1f"), ExtResource("4_37m0f"), ExtResource("5_hurhv"), ExtResource("3_iko1f"), ExtResource("3_iko1f"), ExtResource("3_iko1f"), ExtResource("3_iko1f"), ExtResource("3_iko1f"), ExtResource("3_iko1f"), ExtResource("4_37m0f")])
+stciker_resource = Array[ExtResource("3_37m0f")]([ExtResource("3_iko1f"), ExtResource("4_37m0f"), ExtResource("5_hurhv"), ExtResource("3_iko1f"), ExtResource("4_37m0f"), ExtResource("5_hurhv"), ExtResource("3_iko1f"), ExtResource("3_iko1f"), ExtResource("3_iko1f"), ExtResource("3_iko1f"), ExtResource("3_iko1f"), ExtResource("3_iko1f"), ExtResource("4_37m0f")])
 sticker_prefab = ExtResource("2_hjr63")

@@ -1,0 +1,26 @@
+{
+    "kaisa": {
+        "percentage": 0.10,
+        "dialogs": [
+            "1 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not.",
+            "2 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not.",
+            "3 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not."
+        ]
+    },
+    "ai": {
+        "percentage": 0.75,
+        "dialogs": [
+            "1 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not.",
+            "2 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not.",
+            "3 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not."
+        ]
+    },
+    "thirdVoice": {
+        "percentage": 0.15,
+        "dialogs": [
+            "1 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not.",
+            "2 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not.",
+            "3 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not."
+        ]
+    }
+}
