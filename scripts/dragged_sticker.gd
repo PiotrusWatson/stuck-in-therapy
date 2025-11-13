@@ -8,7 +8,7 @@ var stciker_resource: StickerData
 func setData(sticker_data: StickerData) -> void:
 	stciker_resource = sticker_data
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if is_dragging:
 		global_position = get_global_mouse_position()
 
@@ -25,6 +25,5 @@ func persistData() -> void:
 	if stciker_resource == null:
 		push_error("No sticker data to persist!")
 	#send data to game manager or something like that
-	print("Persisting sticker data: %s" % stciker_resource.sticker_name)
-	pass
+	MemoryManager.increment_sticker_count.emit()
 
