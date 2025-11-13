@@ -4,7 +4,8 @@ extends ColorRect
 @export var message_box_prefab: PackedScene
 @onready var messages = $MessageBackground/MessageScroller/Messages
 @onready var message_timer = $Timers/MessageTimer
-
+signal time_to_choose
+signal thought_parsed(text)
 var current_line: DialogueLine
 func _ready():
 	current_line = await DialogueManager.get_next_dialogue_line(dialogue_to_use)
@@ -17,9 +18,16 @@ func parse_character(character: String):
 	else:
 		return true
 		
+func is_thought(text: String):
+	return text.begins_with("**")
+		
+		
 func parse_and_make_message(dialogue_line: DialogueLine):
 	var is_yours = parse_character(dialogue_line.character)
 	var text = dialogue_line.text
+	if is_yours and is_thought(text):
+		thought_parsed.emit(text)
+		return
 	return make_message(text, is_yours)
 	
 func make_message(text, is_yours):
@@ -33,7 +41,7 @@ func make_message(text, is_yours):
 func _on_message_timer_timeout() -> void:
 	current_line = await dialogue_to_use.get_next_dialogue_line(current_line.next_id)
 	if current_line == null:
-		print("we done")
+		time_to_choose.emit()
 		message_timer.stop()
 		return
 	parse_and_make_message(current_line)

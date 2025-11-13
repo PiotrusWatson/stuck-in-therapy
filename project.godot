@@ -40,4 +40,4 @@ LeftMouse={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogues/placeholder/welcome_to_therapy.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogues/placeholder/welcome_to_therapy.dialogue", "res://dialogues/placeholder/wow.dialogue")

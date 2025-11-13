@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dnwbsn05viswe"
+path="res://.godot/imported/wow.dialogue-1f3b312bbb064138249e4cbcecbb8e5c.tres"
+
+[deps]
+
+source_file="res://dialogues/placeholder/wow.dialogue"
+dest_files=["res://.godot/imported/wow.dialogue-1f3b312bbb064138249e4cbcecbb8e5c.tres"]
+
+[params]
+
+defaults=true

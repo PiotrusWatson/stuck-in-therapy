@@ -1,9 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://bk08p22bqgedt"]
+[gd_scene load_steps=6 format=3 uid="uid://bk08p22bqgedt"]
 
 [ext_resource type="Texture2D" uid="uid://cc0o0u0mfv615" path="res://placeholder/phone.jpeg" id="1_4itna"]
 [ext_resource type="PackedScene" uid="uid://54d17rar78tt" path="res://scenes/phone_screen/phone_screen.tscn" id="2_ok0bf"]
 
-[node name="Control" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ws1tj"]
+bg_color = Color(0.24595326, 0.2520835, 0.26741594, 0.5529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ok0bf"]
+bg_color = Color(0.34901962, 0.35686275, 0.3764706, 0.827451)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_ok0bf"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0.7708395, 0.77083945, 0.77083945, 1)
+Button/constants/line_spacing = 4
+Button/font_sizes/font_size = 35
+Button/styles/disabled = SubResource("StyleBoxFlat_ws1tj")
+Button/styles/normal = SubResource("StyleBoxFlat_ok0bf")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 50
+
+[node name="PhoneScene" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,3 +53,41 @@ offset_left = 686.0
 offset_top = 111.0
 offset_right = 1121.0
 offset_bottom = 950.0
+
+[node name="Thoughts" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 619.0
+grow_vertical = 2
+theme = SubResource("Theme_ok0bf")
+
+[node name="ThoughtBox" type="VBoxContainer" parent="Thoughts"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Thought" type="MarginContainer" parent="Thoughts/ThoughtBox"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Thoughts/ThoughtBox/Thought"]
+layout_mode = 2
+disabled = true
+text = "Wow Am I a shit"
+
+[node name="Label" type="Label" parent="Thoughts"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -173.5
+offset_top = 126.0
+offset_right = 217.5
+offset_bottom = 203.0
+grow_horizontal = 2
+text = "THOUGHTS"
+horizontal_alignment = 1
