@@ -1,24 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bu70xqugcwedp"]
+[gd_scene load_steps=5 format=3 uid="uid://bu70xqugcwedp"]
 
-[ext_resource type="StyleBox" uid="uid://dtb2evyop03b4" path="res://worlds/title/start.tres" id="1_tqgdg"]
-[ext_resource type="FontFile" uid="uid://davs5q4w1xsj7" path="res://fonts/Ldfcomicsansbold-zgma.ttf" id="2_4ko3b"]
+[ext_resource type="Theme" uid="uid://ckyyf48pnkwpe" path="res://worlds/title/title_menu_theme.tres" id="1_pu426"]
 [ext_resource type="Script" uid="uid://mxmhdtqb5koc" path="res://worlds/credit_screen.gd" id="3_tqgdg"]
 [ext_resource type="Texture2D" uid="uid://cc0o0u0mfv615" path="res://placeholder/phone.jpeg" id="4_kyl1g"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vht7m"]
-bg_color = Color(0, 0.90588236, 0.39215687, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="Theme" id="Theme_pi3m5"]
-Button/font_sizes/font_size = 50
-Button/styles/hover = SubResource("StyleBoxFlat_vht7m")
-Button/styles/normal = ExtResource("1_tqgdg")
-Label/colors/font_color = Color(0, 0, 0, 1)
-Label/font_sizes/font_size = 43
-Label/fonts/font = ExtResource("2_4ko3b")
 
 [sub_resource type="Theme" id="Theme_tqgdg"]
 Label/font_sizes/font_size = 35
@@ -30,7 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_pi3m5")
+theme = ExtResource("1_pu426")
 script = ExtResource("3_tqgdg")
 
 [node name="PhoneBackground" type="TextureRect" parent="."]

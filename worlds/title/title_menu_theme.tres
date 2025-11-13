@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://ckyyf48pnkwpe"]
+
+[ext_resource type="StyleBox" uid="uid://dtb2evyop03b4" path="res://worlds/title/start.tres" id="1_32k7p"]
+[ext_resource type="FontFile" uid="uid://davs5q4w1xsj7" path="res://fonts/Ldfcomicsansbold-zgma.ttf" id="2_nfu2h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vht7m"]
+bg_color = Color(0, 0.90588236, 0.39215687, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[resource]
+Button/font_sizes/font_size = 50
+Button/styles/hover = SubResource("StyleBoxFlat_vht7m")
+Button/styles/normal = ExtResource("1_32k7p")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 43
+Label/fonts/font = ExtResource("2_nfu2h")
