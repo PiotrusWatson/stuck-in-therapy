@@ -14,6 +14,9 @@ func _ready() -> void:
 	for player in audio_player:
 		player.volume_linear = volume
 
+	play_background_music(background_music)
+	
+
 func play_random_sticker_sound() -> void:
 	if sticker_sounds.size() == 0:
 		return

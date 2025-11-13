@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://cphmn5wctqptk" path="res://sounds/Sticker2.wav" id="2_dn1u1"]
 [ext_resource type="AudioStream" uid="uid://b6ingkv786hui" path="res://sounds/Sticker.wav" id="3_6hqem"]
 [ext_resource type="AudioStream" uid="uid://7b576cyhrb7i" path="res://sounds/Memory_scene_music83_Gm.mp3" id="4_aymke"]
-[ext_resource type="AudioStream" uid="uid://bar1gxgvtamoj" path="res://sounds/Therapy_app_music_83_G_first_loop.mp3" id="5_r3nto"]
+[ext_resource type="AudioStream" uid="uid://cqmks8tvmc6ut" path="res://sounds/Therapy_Memory85_Bm.mp3" id="4_r3nto"]
 
 [node name="AudioManager" type="Node" node_paths=PackedStringArray("audio_player", "background_music_player", "background_music_player_second")]
 script = ExtResource("1_73uix")
@@ -12,7 +12,7 @@ sticker_sounds = Array[AudioStream]([ExtResource("2_dn1u1"), ExtResource("3_6hqe
 audio_player = [NodePath("AudioStreamPlayer"), NodePath("AudioStreamPlayer2")]
 background_music_player = NodePath("BackgroundMusicPlayer")
 background_music_player_second = NodePath("BackgroundMusicPlayer2")
-background_music = ExtResource("5_r3nto")
+background_music = ExtResource("4_r3nto")
 background_music_second = ExtResource("4_aymke")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

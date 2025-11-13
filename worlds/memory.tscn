@@ -19,6 +19,15 @@ offset_bottom = 1080.0
 scale = Vector2(1, 0.99700844)
 texture = ExtResource("1_7jid2")
 
+[node name="ExitButton" type="Button" parent="MemoryBackground"]
+z_index = 50
+layout_mode = 0
+offset_left = 1805.9999
+offset_top = 5.015002
+offset_right = 1911.9999
+offset_bottom = 59.177032
+text = "Exit Memory"
+
 [node name="DialogDisplayManager" parent="MemoryBackground" node_paths=PackedStringArray("allowed_area") instance=ExtResource("2_hurhv")]
 allowed_area = NodePath("ColorRect")
 label_prefab = ExtResource("3_7jid2")
@@ -28,6 +37,7 @@ offset_left = 210.0
 offset_top = 29.0
 offset_right = 1900.0
 offset_bottom = 1052.0
+mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
 [node name="ColorRect" type="ColorRect" parent="MemoryBackground"]
