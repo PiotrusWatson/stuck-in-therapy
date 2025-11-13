@@ -16,6 +16,10 @@ func _process(delta: float) -> void:
 		is_dragging = false
 		z_index = 15 # put the sticker behind scrollable area when dropped
 		persistData()
+		play_sticker_sound()
+
+func play_sticker_sound() -> void:
+	AudioManager.play_random_sticker_sound()
 
 func persistData() -> void:
 	if stciker_resource == null:
