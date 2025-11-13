@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="stuck in therapy"
-run/main_scene="uid://bk08p22bqgedt"
+run/main_scene="uid://dg1t6l8xfh5un"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
