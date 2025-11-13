@@ -4,6 +4,8 @@ extends ColorRect
 @export var message_box_prefab: PackedScene
 @onready var messages = $MessageBackground/MessageScroller/Messages
 @onready var message_timer = $Timers/MessageTimer
+@onready var message_scroller = $MessageBackground/MessageScroller
+@onready var scrollbar = message_scroller.get_v_scroll_bar()
 signal memory_choice_triggered
 signal response_choice_triggered(responses)
 signal thought_parsed(text)
@@ -11,8 +13,12 @@ var current_line: DialogueLine
 func _ready():
 	current_line = await DialogueManager.get_next_dialogue_line(dialogue_to_use)
 	parse_and_make_message(current_line)
+	scrollbar.changed.connect(handle_scrollbar_changed)
 	message_timer.start()
 
+func handle_scrollbar_changed():
+	message_scroller.scroll_vertical = scrollbar.max_value
+	
 func select_response(response: DialogueResponse):
 	current_line = await dialogue_to_use.get_next_dialogue_line(response.next_id)
 	parse_and_make_message(current_line)
