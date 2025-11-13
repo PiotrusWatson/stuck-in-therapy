@@ -30,7 +30,7 @@ func play_random_sticker_sound() -> void:
 			return
 	if not is_any_player_available:
 		var random_index = randi() % sticker_sounds.size()
-		play_sound_in_new_player(sound)
+		play_sound_in_new_player(sticker_sounds[random_index])
 
 
 func play_sound(sound: AudioStream) -> void:
