@@ -25,4 +25,4 @@ func persistData() -> void:
 	if stciker_resource == null:
 		push_error("No sticker data to persist!")
 	#send data to game manager or something like that
-	MemoryManager.increment_sticker_count.emit()
+	SignalBus.increment_sticker_count.emit()

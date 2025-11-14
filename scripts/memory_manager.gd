@@ -4,18 +4,14 @@ var current_sticker_count: int = 0
 
 @export var sticker_max_count: int = 10
 @onready var dialog_manager = DialogManager.new()
-var dialog_display: DialogDisplayManager
-var exit_button: Button
+@export var dialog_display: DialogDisplayManager
+@export var exit_button: Button
 var exit_unlocked: bool = false
-
-signal increment_sticker_count()
 
 
 func _ready() -> void:
-	increment_sticker_count.connect(on_increment_sticker_count)
+	SignalBus.increment_sticker_count.connect(on_increment_sticker_count)
 	dialog_manager.load_dialogs("res://resources/memory_dialogs.json")
-	dialog_display = get_tree().root.get_node("Memory/MemoryBackground/DialogDisplayManager")
-	exit_button = get_tree().root.get_node("Memory/MemoryBackground/ExitButton")
 	exit_button.visible = false
 
 func on_increment_sticker_count() -> void:
