@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cb16cuqo8h7mk"]
+[gd_scene load_steps=24 format=3 uid="uid://cb16cuqo8h7mk"]
 
 [ext_resource type="Texture2D" uid="uid://dqlbj7jxva735" path="res://sprites/hospital_var3.png" id="1_7jid2"]
 [ext_resource type="Script" uid="uid://dc67o6nwswrcx" path="res://worlds/memory.gd" id="1_rwnrf"]
@@ -9,9 +9,20 @@
 [ext_resource type="PackedScene" uid="uid://bkj473o2yxwtl" path="res://prefabs/memory_text.tscn" id="3_7jid2"]
 [ext_resource type="Script" uid="uid://bkoyo31sqb8kt" path="res://scripts/data/sticker_data.gd" id="3_37m0f"]
 [ext_resource type="PackedScene" uid="uid://dd8scxj0g6iwu" path="res://components/fader.tscn" id="5_x5ada"]
-[ext_resource type="Resource" uid="uid://bbch84uppf4ud" path="res://resources/stickers/some_sticker.tres" id="8_2yns3"]
-[ext_resource type="Resource" uid="uid://cbd46riqqh1un" path="res://resources/stickers/some_sticker_2.tres" id="9_ou3y8"]
-[ext_resource type="Resource" uid="uid://mh3amykpkeae" path="res://resources/stickers/some_sticker_3.tres" id="10_x5ada"]
+[ext_resource type="Resource" uid="uid://76c52wfoyr7w" path="res://resources/stickers/sticker1.tres" id="9_2vv2x"]
+[ext_resource type="Resource" uid="uid://jevvn0xfycy3" path="res://resources/stickers/sticker2.tres" id="10_itv5q"]
+[ext_resource type="Resource" uid="uid://djr6denh037b6" path="res://resources/stickers/sticker3.tres" id="11_46wtp"]
+[ext_resource type="Resource" uid="uid://cielbcp6l2f5j" path="res://resources/stickers/sticker4.tres" id="12_c2gur"]
+[ext_resource type="Resource" uid="uid://c561oy2i77kxh" path="res://resources/stickers/sticker5.tres" id="13_jux1v"]
+[ext_resource type="Resource" uid="uid://dfqgdpd8l0qj3" path="res://resources/stickers/sticker6.tres" id="14_r2a1t"]
+[ext_resource type="Resource" uid="uid://bu0pnmsv206i8" path="res://resources/stickers/sticker7.tres" id="15_rh3kr"]
+[ext_resource type="Resource" uid="uid://bcq8u0m5tdlxt" path="res://resources/stickers/sticker8.tres" id="16_8p1ng"]
+[ext_resource type="Resource" uid="uid://dw3fp21bo23so" path="res://resources/stickers/sticker9.tres" id="17_dqos0"]
+[ext_resource type="Resource" uid="uid://ttecmv7i4246" path="res://resources/stickers/sticker10.tres" id="18_2mmri"]
+[ext_resource type="Resource" uid="uid://lnsipq3tcufp" path="res://resources/stickers/sticker11.tres" id="19_04pn2"]
+[ext_resource type="Resource" uid="uid://ge4k2wtx4ydy" path="res://resources/stickers/sticker12.tres" id="20_l277u"]
+[ext_resource type="Resource" uid="uid://d1p8mpvgaatrc" path="res://resources/stickers/sticker13.tres" id="21_aokbw"]
+[ext_resource type="Resource" uid="uid://pggiohsyvfgi" path="res://resources/stickers/sticker14.tres" id="22_tn4tt"]
 
 [node name="Memory" type="Control"]
 layout_mode = 3
@@ -81,7 +92,7 @@ custom_minimum_size = Vector2(0, 1080)
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("2_cxery")
-stciker_resource = Array[ExtResource("3_37m0f")]([ExtResource("8_2yns3"), ExtResource("9_ou3y8"), ExtResource("10_x5ada")])
+stciker_resource = Array[ExtResource("3_37m0f")]([ExtResource("9_2vv2x"), ExtResource("10_itv5q"), ExtResource("11_46wtp"), ExtResource("12_c2gur"), ExtResource("13_jux1v"), ExtResource("14_r2a1t"), ExtResource("15_rh3kr"), ExtResource("16_8p1ng"), ExtResource("17_dqos0"), ExtResource("18_2mmri"), ExtResource("19_04pn2"), ExtResource("20_l277u"), ExtResource("21_aokbw"), ExtResource("22_tn4tt")])
 sticker_prefab = ExtResource("2_hjr63")
 sticker_daddy = NodePath("../../..")
 
