@@ -1,13 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://cb16cuqo8h7mk"]
+[gd_scene load_steps=14 format=3 uid="uid://cb16cuqo8h7mk"]
 
 [ext_resource type="Texture2D" uid="uid://dqlbj7jxva735" path="res://sprites/hospital_var3.png" id="1_7jid2"]
-[ext_resource type="Script" path="res://worlds/memory.gd" id="1_rwnrf"]
+[ext_resource type="Script" uid="uid://dc67o6nwswrcx" path="res://worlds/memory.gd" id="1_rwnrf"]
 [ext_resource type="PackedScene" uid="uid://gt545m88xo40" path="res://prefabs/memory_manager.tscn" id="2_37m0f"]
 [ext_resource type="Script" uid="uid://3mfuktwawp7d" path="res://scripts/sticker_scrollbar.gd" id="2_cxery"]
 [ext_resource type="PackedScene" uid="uid://bn1gwdoilwgt2" path="res://prefabs/draggable_sticker.tscn" id="2_hjr63"]
 [ext_resource type="PackedScene" uid="uid://qthvuvksqow3" path="res://prefabs/dialog_display_manager.tscn" id="2_hurhv"]
 [ext_resource type="PackedScene" uid="uid://bkj473o2yxwtl" path="res://prefabs/memory_text.tscn" id="3_7jid2"]
 [ext_resource type="Script" uid="uid://bkoyo31sqb8kt" path="res://scripts/data/sticker_data.gd" id="3_37m0f"]
+[ext_resource type="Script" uid="uid://b87enckblgk28" path="res://components/fader.gd" id="4_ou3y8"]
+[ext_resource type="Script" uid="uid://dpog4ylkpjllb" path="res://prefabs/exit_button.gd" id="4_x5ada"]
 [ext_resource type="Resource" uid="uid://bbch84uppf4ud" path="res://resources/stickers/some_sticker.tres" id="8_2yns3"]
 [ext_resource type="Resource" uid="uid://cbd46riqqh1un" path="res://resources/stickers/some_sticker_2.tres" id="9_ou3y8"]
 [ext_resource type="Resource" uid="uid://mh3amykpkeae" path="res://resources/stickers/some_sticker_3.tres" id="10_x5ada"]
@@ -21,9 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rwnrf")
 
-[node name="MemoryManager" parent="." node_paths=PackedStringArray("dialog_display", "exit_button") instance=ExtResource("2_37m0f")]
-dialog_display = NodePath("../MemoryBackground/DialogDisplayManager")
-exit_button = NodePath("../MemoryBackground/ExitButton")
+[node name="MemoryManager" parent="." instance=ExtResource("2_37m0f")]
 
 [node name="MemoryBackground" type="TextureRect" parent="."]
 z_index = 10
@@ -41,6 +41,10 @@ offset_top = 5.015002
 offset_right = 1911.9999
 offset_bottom = 59.177032
 text = "Exit Memory"
+script = ExtResource("4_x5ada")
+
+[node name="Fader" type="Node" parent="MemoryBackground/ExitButton"]
+script = ExtResource("4_ou3y8")
 
 [node name="DialogDisplayManager" parent="MemoryBackground" node_paths=PackedStringArray("allowed_area") instance=ExtResource("2_hurhv")]
 allowed_area = NodePath("ColorRect")
@@ -79,3 +83,6 @@ size_flags_horizontal = 3
 script = ExtResource("2_cxery")
 stciker_resource = Array[ExtResource("3_37m0f")]([ExtResource("8_2yns3"), ExtResource("9_ou3y8"), ExtResource("10_x5ada")])
 sticker_prefab = ExtResource("2_hjr63")
+
+[connection signal="reached_max_stickers" from="MemoryManager" to="." method="_on_memory_manager_reached_max_stickers"]
+[connection signal="pressed" from="MemoryBackground/ExitButton" to="." method="_on_exit_button_pressed"]

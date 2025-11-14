@@ -70,6 +70,7 @@ layout_mode = 2
 [node name="Timers" type="Node" parent="."]
 
 [node name="MessageTimer" type="Timer" parent="Timers"]
+wait_time = 2.0
 
 [node name="BottomScreenJunk" type="Control" parent="."]
 layout_mode = 1
