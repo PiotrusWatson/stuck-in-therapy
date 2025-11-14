@@ -1,13 +1,22 @@
-[gd_scene load_steps=14 format=3 uid="uid://54d17rar78tt"]
+[gd_scene load_steps=23 format=3 uid="uid://54d17rar78tt"]
 
 [ext_resource type="Script" uid="uid://dag5lovjubg2u" path="res://scenes/phone_screen/phone_screen.gd" id="1_6p1uq"]
 [ext_resource type="Resource" uid="uid://ce5v1penscns1" path="res://dialogues/placeholder/welcome_to_therapy.dialogue" id="2_8e1rd"]
 [ext_resource type="PackedScene" uid="uid://kyse6qfuqcau" path="res://scenes/message/message_box.tscn" id="3_ar6ec"]
 [ext_resource type="Shader" uid="uid://c0h3ibfqgsa66" path="res://scenes/phone_screen/phone_screen.tres" id="4_ar6ec"]
 [ext_resource type="PackedScene" uid="uid://vfm4316ynwxs" path="res://scenes/dotted_anim_box.tscn" id="4_y063l"]
+[ext_resource type="Texture2D" uid="uid://b4wwl7v54428e" path="res://assets/stickers/Untitled_Artwork_10.png" id="5_acdai"]
 [ext_resource type="Texture2D" uid="uid://508155i8s6xe" path="res://placeholder/Hamburger_icon.svg.png" id="5_vv4ai"]
+[ext_resource type="Texture2D" uid="uid://c35brohqbakcv" path="res://assets/stickers/Untitled_Artwork.png" id="6_ghj0f"]
 [ext_resource type="Texture2D" uid="uid://co3illq88p7ax" path="res://placeholder/chevron.png" id="6_y063l"]
+[ext_resource type="Texture2D" uid="uid://co423b6b2enhi" path="res://assets/stickers/Untitled_Artwork_1.png" id="7_2dw1j"]
 [ext_resource type="Texture2D" uid="uid://c3kvo2q1pccfu" path="res://placeholder/square-icon-13.png" id="7_acdai"]
+[ext_resource type="Texture2D" uid="uid://bt8ivs5bt4xw8" path="res://assets/stickers/Untitled_Artwork_2.png" id="8_ealox"]
+[ext_resource type="Texture2D" uid="uid://dxcc1tjbw2fvo" path="res://assets/stickers/Untitled_Artwork_3.png" id="9_nb2fu"]
+[ext_resource type="Texture2D" uid="uid://cld8ry611o60l" path="res://assets/stickers/Untitled_Artwork_4.png" id="10_6oa37"]
+[ext_resource type="Texture2D" uid="uid://b8aqbqfuah08j" path="res://assets/stickers/Untitled_Artwork_5.png" id="11_yva0c"]
+[ext_resource type="Texture2D" uid="uid://dp03676fy8dxi" path="res://assets/stickers/Untitled_Artwork_6.png" id="12_1b5rh"]
+[ext_resource type="Texture2D" uid="uid://d1fve5wf0oykv" path="res://assets/stickers/Untitled_Artwork_7.png" id="13_nbp6t"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_irhmb"]
 shader = ExtResource("4_ar6ec")
@@ -41,6 +50,7 @@ script = ExtResource("1_6p1uq")
 dialogue_to_use = ExtResource("2_8e1rd")
 message_box_prefab = ExtResource("3_ar6ec")
 dotted_anim_box_prefab = ExtResource("4_y063l")
+stickers = Array[Texture2D]([ExtResource("5_acdai"), ExtResource("6_ghj0f"), ExtResource("7_2dw1j"), ExtResource("8_ealox"), ExtResource("9_nb2fu"), ExtResource("10_6oa37"), ExtResource("11_yva0c"), ExtResource("12_1b5rh"), ExtResource("13_nbp6t")])
 
 [node name="MessageBackground" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_irhmb")

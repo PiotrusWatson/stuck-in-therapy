@@ -3,6 +3,7 @@ extends ColorRect
 @export var dialogue_to_use: DialogueResource
 @export var message_box_prefab: PackedScene
 @export var dotted_anim_box_prefab: PackedScene
+@export var stickers: Array[Texture2D]
 @onready var messages = $MessageBackground/MessageScroller/Messages
 @onready var message_timer = $Timers/MessageTimer
 @onready var time_before_typing = $Timers/TimeBeforeTyping
@@ -33,7 +34,9 @@ func parse_character(character: String):
 		return false
 	else:
 		return true
-		
+
+func parse_sticker_data():
+	pass
 func is_thought(text: String):
 	return text.begins_with("**")
 
@@ -41,6 +44,7 @@ func is_thought(text: String):
 func parse_and_make_message(dialogue_line: DialogueLine):
 	var is_yours = parse_character(dialogue_line.character)
 	var text = dialogue_line.text
+	var sticker_info = dialogue_line.get_tag_value("sticker")	
 	if is_yours and is_thought(text):
 		thought_parsed.emit(text)
 		return
@@ -49,12 +53,16 @@ func parse_and_make_message(dialogue_line: DialogueLine):
 		message_timer.stop()
 	else:
 		time_before_typing.start()
-	return make_message(text, is_yours)
+	return make_message(text, is_yours, sticker_info)
 	
-func make_message(text, is_yours):
-	var message: MessageBox = message_box_prefab.instantiate() 
+func make_message(text, is_yours, sticker_info):
+	var message: MessageBox = message_box_prefab.instantiate()
 	messages.add_child(message)
-	message.set_up(text, is_yours)
+	if sticker_info != "":
+		print(sticker_info)
+		message.set_up_sticker(stickers[int(sticker_info)])
+	else:
+		message.set_up(text, is_yours)
 	return message
 
 func make_dotted_anim():

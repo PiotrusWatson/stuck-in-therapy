@@ -67,6 +67,10 @@ text = "Hello everybody it's me the big man on campus im going to jack off and s
 autowrap_mode = 3
 
 [node name="Sticker" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(250, 250)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
 texture = ExtResource("10_868i4")
-expand_mode = 2
+expand_mode = 1
+stretch_mode = 4
