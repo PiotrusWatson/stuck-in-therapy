@@ -1,11 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://kyse6qfuqcau"]
+[gd_scene load_steps=12 format=3 uid="uid://kyse6qfuqcau"]
 
 [ext_resource type="FontFile" uid="uid://bpm5h050ty0jo" path="res://fonts/Ldfcomicsans-jj7l.ttf" id="1_awoei"]
 [ext_resource type="StyleBox" uid="uid://mw0yh24s4b8" path="res://scenes/message/their_message.tres" id="1_ihena"]
 [ext_resource type="Script" uid="uid://bx1wac5qns3sh" path="res://scenes/message/message_box.gd" id="2_1iohf"]
 [ext_resource type="StyleBox" uid="uid://bwtmow7os3cwh" path="res://scenes/message/your_message.tres" id="4_fyhq7"]
+[ext_resource type="Script" uid="uid://dn8ea2cg8ihgq" path="res://scenes/message/emote.gd" id="5_1wds6"]
 [ext_resource type="Texture2D" uid="uid://bqy86vhlny4b2" path="res://placeholder/properlaugh.webp" id="5_ittyt"]
-[ext_resource type="Script" uid="uid://8d712mx78kdl" path="res://scenes/message/face.gd" id="6_1wds6"]
+[ext_resource type="Script" uid="uid://c4n2mr874rlgd" path="res://scenes/message/message_panel.gd" id="7_2tjhq"]
+[ext_resource type="FontFile" uid="uid://cvtrvram72il3" path="res://fonts/final_fonts_decided/Vividly-Regular.otf" id="7_wr4po"]
+[ext_resource type="FontFile" uid="uid://drairci7rdnud" path="res://fonts/final_fonts_decided/Comfortaa-Regular.ttf" id="8_868i4"]
 
 [sub_resource type="Theme" id="Theme_4itna"]
 Label/font_sizes/font_size = 20
@@ -24,8 +27,6 @@ offset_right = 400.0
 offset_bottom = 75.0
 theme = SubResource("Theme_4itna")
 script = ExtResource("2_1iohf")
-your_style = ExtResource("4_fyhq7")
-their_style = ExtResource("1_ihena")
 your_smallest_margin = 10
 your_largest_margin = 150
 their_smallest_margin = 10
@@ -38,6 +39,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_ittyt")
+script = ExtResource("5_1wds6")
 
 [node name="Face" type="TextureRect" parent="HBoxContainer/Emote"]
 custom_minimum_size = Vector2(50, 50)
@@ -47,12 +49,16 @@ size_flags_vertical = 4
 texture = ExtResource("5_ittyt")
 expand_mode = 1
 stretch_mode = 5
-script = ExtResource("6_1wds6")
 
-[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+[node name="MessagePanel" type="PanelContainer" parent="HBoxContainer"]
 layout_mode = 2
+script = ExtResource("7_2tjhq")
+your_font = ExtResource("7_wr4po")
+their_font = ExtResource("8_868i4")
+your_style = ExtResource("4_fyhq7")
+their_style = ExtResource("1_ihena")
 
-[node name="Message" type="Label" parent="HBoxContainer/PanelContainer"]
+[node name="Message" type="Label" parent="HBoxContainer/MessagePanel"]
 custom_minimum_size = Vector2(275, 0)
 layout_mode = 2
 size_flags_vertical = 3
