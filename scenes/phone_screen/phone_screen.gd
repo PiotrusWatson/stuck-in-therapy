@@ -41,6 +41,7 @@ func select_response(response: DialogueResponse):
 	current_line = await dialogue_to_use.get_next_dialogue_line(response.next_id)
 	parse_and_make_message(current_line)
 	message_timer.start()
+	time_before_typing.start()
 	
 func parse_character(character: String):
 	if character.to_lower() == "ai":
@@ -48,8 +49,6 @@ func parse_character(character: String):
 	else:
 		return true
 
-func parse_sticker_data():
-	pass
 func is_thought(text: String):
 	return text.begins_with("**")
 
@@ -72,7 +71,6 @@ func make_message(text, is_yours, sticker_info):
 	var message: MessageBox = message_box_prefab.instantiate()
 	messages.add_child(message)
 	if sticker_info != "":
-		print(sticker_info)
 		message.set_up_sticker(stickers[int(sticker_info)])
 	else:
 		message.set_up(text, is_yours)
