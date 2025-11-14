@@ -127,7 +127,7 @@ offset_right = 116.0
 offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Powered by DreamHelper AI"
+text = "Powered by Sparkl AI"
 horizontal_alignment = 1
 
 [node name="Hamburger" type="TextureRect" parent="BottomScreenJunk"]
