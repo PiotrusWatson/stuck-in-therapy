@@ -122,7 +122,6 @@ func remove_label(label: RichTextLabel) -> void:
 
 func remove_label_gracefully(label: RichTextLabel) -> void:
 
-	print("am i here??????")
 	if fade_tweens.has(label):
 		var fade_tween = fade_tweens[label]
 		active_labels.erase(label)
