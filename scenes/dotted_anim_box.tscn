@@ -19,7 +19,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(120, 123)
+position = Vector2(63.500004, 68.5)
+scale = Vector2(0.52916664, 0.54583335)
 sprite_frames = SubResource("SpriteFrames_dk62d")
+offset = Vector2(30, 0)
