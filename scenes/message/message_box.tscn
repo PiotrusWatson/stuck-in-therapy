@@ -4,7 +4,8 @@
 [ext_resource type="StyleBox" uid="uid://mw0yh24s4b8" path="res://scenes/message/their_message.tres" id="1_ihena"]
 [ext_resource type="Script" uid="uid://bx1wac5qns3sh" path="res://scenes/message/message_box.gd" id="2_1iohf"]
 [ext_resource type="StyleBox" uid="uid://bwtmow7os3cwh" path="res://scenes/message/your_message.tres" id="4_fyhq7"]
-[ext_resource type="Script" uid="uid://dn8ea2cg8ihgq" path="res://scenes/message/emote.gd" id="5_1wds6"]
+[ext_resource type="PackedScene" uid="uid://d01kcxnb3kiup" path="res://scenes/emote.tscn" id="4_wr4po"]
+[ext_resource type="Texture2D" uid="uid://cgppmd015g0xe" path="res://placeholder/laugh.webp" id="5_gou7c"]
 [ext_resource type="Texture2D" uid="uid://bqy86vhlny4b2" path="res://placeholder/properlaugh.webp" id="5_ittyt"]
 [ext_resource type="Script" uid="uid://c4n2mr874rlgd" path="res://scenes/message/message_panel.gd" id="7_2tjhq"]
 [ext_resource type="FontFile" uid="uid://cvtrvram72il3" path="res://fonts/final_fonts_decided/Vividly-Regular.otf" id="7_wr4po"]
@@ -19,10 +20,6 @@ MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_top = 10
 PanelContainer/styles/panel = ExtResource("1_ihena")
 
-[sub_resource type="Theme" id="Theme_ittyt"]
-MarginContainer/constants/margin_left = 5
-MarginContainer/constants/margin_right = 15
-
 [node name="MessageBox" type="MarginContainer"]
 offset_right = 400.0
 offset_bottom = 75.0
@@ -36,20 +33,10 @@ their_largest_margin = 90
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="Emote" type="MarginContainer" parent="HBoxContainer"]
+[node name="Emote" parent="HBoxContainer" instance=ExtResource("4_wr4po")]
 layout_mode = 2
-size_flags_horizontal = 3
-theme = SubResource("Theme_ittyt")
-script = ExtResource("5_1wds6")
-
-[node name="Face" type="TextureRect" parent="HBoxContainer/Emote"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("5_ittyt")
-expand_mode = 1
-stretch_mode = 5
+normal_face = ExtResource("5_gou7c")
+happy_face = ExtResource("5_ittyt")
 
 [node name="MessagePanel" type="PanelContainer" parent="HBoxContainer"]
 layout_mode = 2

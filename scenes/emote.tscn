@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d01kcxnb3kiup"]
+
+[ext_resource type="Script" uid="uid://dn8ea2cg8ihgq" path="res://scenes/message/emote.gd" id="1_ynt4s"]
+[ext_resource type="Texture2D" uid="uid://bqy86vhlny4b2" path="res://placeholder/properlaugh.webp" id="2_swm51"]
+
+[sub_resource type="Theme" id="Theme_ittyt"]
+MarginContainer/constants/margin_left = 5
+MarginContainer/constants/margin_right = 15
+
+[node name="Emote" type="MarginContainer"]
+size_flags_horizontal = 3
+theme = SubResource("Theme_ittyt")
+script = ExtResource("1_ynt4s")
+
+[node name="Face" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_swm51")
+expand_mode = 1
+stretch_mode = 5
