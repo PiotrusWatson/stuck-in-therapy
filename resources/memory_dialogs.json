@@ -1,26 +1,45 @@
 {
     "kaisa": {
-        "percentage": 0.10,
-        "dialogs": [
-            "1 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not.",
-            "2 Place Holder text short example",
-            "3 shortest"
-        ]
+        "percentage": 0.1,
+        "moods": {
+            "default": {
+                "dialogs": [
+                    "1 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not.",
+                    "2 Place Holder text short example",
+                    "3 shortest"
+                ]
+            },
+            "sad": {
+                "dialogs": [
+                    "1 sad mood text here",
+                    "2 Short sad example",
+                    "3 crying"
+                ]
+            }
+        }
     },
     "ai": {
         "percentage": 0.75,
-        "dialogs": [
-            "1 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not.",
-            "2 Place Holder text short example",
-            "3 shortest"
-        ]
+        "moods": {
+            "default": {
+                "dialogs": [
+                    "1 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not.",
+                    "2 Place Holder text short example",
+                    "3 shortest"
+                ]
+            }
+        }
     },
     "thirdVoice": {
         "percentage": 0.15,
-        "dialogs": [
-            "1 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not.",
-            "2 Place Holder text short example",
-            "3 shortest"
-        ]
+        "moods": {
+            "default": {
+                "dialogs": [
+                    "1 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not.",
+                    "2 Place Holder text short example",
+                    "3 shortest"
+                ]
+            }
+        }
     }
 }
