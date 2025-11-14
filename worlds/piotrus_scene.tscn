@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bk08p22bqgedt"]
+[gd_scene load_steps=21 format=3 uid="uid://bk08p22bqgedt"]
 
 [ext_resource type="Script" uid="uid://bx6vafdiacrbd" path="res://worlds/phone_scene.gd" id="1_ds0r6"]
 [ext_resource type="PackedScene" uid="uid://54d17rar78tt" path="res://scenes/phone_screen/phone_screen.tscn" id="2_ok0bf"]
@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://cp3ncskft3r6a" path="res://resources/memories/dead_dad.tres" id="6_p1gq1"]
 [ext_resource type="Resource" uid="uid://bx675g4lwwlj6" path="res://resources/memories/shrek.tres" id="7_jvojg"]
 [ext_resource type="Resource" path="res://resources/memories/end.tres" id="8_5nblm"]
+[ext_resource type="Texture2D" uid="uid://b23mvt5lw1rh8" path="res://sprites/phone/screenblur.png" id="12_gpm3c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gpm3c"]
 atlas = ExtResource("3_jvojg")
@@ -110,7 +111,7 @@ texture = ExtResource("4_5nblm")
 layout_mode = 0
 offset_left = 683.0
 offset_top = 105.0
-offset_right = 1127.0
+offset_right = 1120.0
 offset_bottom = 944.0
 
 [node name="FingersSprite" type="AnimatedSprite2D" parent="."]
@@ -122,10 +123,19 @@ metadata/_edit_lock_ = true
 
 [node name="Thoughts" parent="." instance=ExtResource("3_ws1tj")]
 layout_mode = 1
+offset_left = 51.0
+offset_right = 653.0
+offset_bottom = -94.0
 memories = Array[ExtResource("5_pcggb")]([ExtResource("6_p1gq1"), ExtResource("7_jvojg"), ExtResource("8_5nblm")])
 
 [node name="LoadDelayTimer" type="Timer" parent="."]
 wait_time = 0.4
 one_shot = true
+
+[node name="Screenblur" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.13725491)
+position = Vector2(949.00006, 540.00006)
+scale = Vector2(0.31496894, 0.3108466)
+texture = ExtResource("12_gpm3c")
 
 [connection signal="timeout" from="LoadDelayTimer" to="." method="_on_load_delay_timer_timeout"]
