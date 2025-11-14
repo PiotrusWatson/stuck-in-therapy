@@ -7,8 +7,11 @@ extends CanvasLayer
 
 var character_fonts: Dictionary = {}
 var character_colors: Dictionary = {}
-var active_label: Label = null
+var active_label: RichTextLabel = null
 var fade_tween: Tween = null
+var typewriter_tween: Tween = null
+var max_typewriter_duration: float = 8.0
+var typewriter_time_per_character: float = 0.015
 
 func _ready() -> void:
 	setup_character_styles()
@@ -17,7 +20,7 @@ func setup_character_styles() -> void:
 	# Configure fonts and colors per character
 	character_fonts["kaisa"] = load("res://fonts/kaisa.ttf")
 	character_fonts["ai"] = load("res://fonts/ai.ttf")
-	character_fonts["thirdVoice"] = load("res://fonts/memory_voice.otf")
+	character_fonts["thirdVoice"] = load("res://fonts/memory_voice.ttf")
 	
 	# character_colors["kaisa"] = Color.PURPLE
 	# character_colors["ai"] = Color.CYAN
@@ -27,6 +30,8 @@ func display_dialog(character: String, text: String) -> void:
 	# Kill previous tween if active
 	if fade_tween:
 		fade_tween.kill()
+	if typewriter_tween:
+		typewriter_tween.kill()
 	
 	# Remove previous label
 	if active_label:
@@ -38,10 +43,13 @@ func display_dialog(character: String, text: String) -> void:
 		return
 	
 	# Create new label
-	active_label = label_prefab.instantiate() as Label
+	active_label = label_prefab.instantiate()
 	active_label.text = text
-	active_label.label_settings.font = character_fonts.get(character)
-	active_label.label_settings.font_color = Color.WHITE
+	active_label.text = "[outline_size=1]%s[/outline_size]" % text
+	active_label.visible_ratio = 0
+	active_label.add_theme_font_override("normal_font", character_fonts.get(character))
+	active_label.add_theme_color_override("font_color", character_colors.get(character, Color.WHITE))
+	# active_label.label_settings.shadow_color = Color.BLACK
 	active_label.custom_minimum_size = Vector2(400, 200)
 	active_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	active_label.modulate.a = 1.0
@@ -64,10 +72,13 @@ func display_dialog(character: String, text: String) -> void:
 	
 	active_label.position = Vector2(clamped_x, clamped_y)
 	active_label.visible = true
-	
-	print("Label position: ", active_label.position)
-	print("Label size: ", label_size)
-	print("Fade duration: ", fade_out_duration)
+
+	#TODO maybe do shorter text faster kinda like typewriter effect as it feels a bit too slow for short text
+	typewriter_tween = create_tween()
+	var text_length = active_label.text.length()
+	var typewriter_duration = minf(float(text_length) * typewriter_time_per_character, max_typewriter_duration)
+	typewriter_tween.set_trans(Tween.TRANS_LINEAR)
+	typewriter_tween.tween_property(active_label, "visible_ratio", 1.0, typewriter_duration)
 	
 	fade_tween = create_tween()
 	fade_tween.set_trans(Tween.TRANS_SINE)
@@ -76,4 +87,3 @@ func display_dialog(character: String, text: String) -> void:
 	fade_tween.tween_property(active_label, "modulate:a", 0.0, 1.0)
 	fade_tween.tween_callback(func(): active_label.queue_free())
 	
-	print("Tween started")
