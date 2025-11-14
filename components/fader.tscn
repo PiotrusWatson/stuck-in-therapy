@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd8scxj0g6iwu"]
+
+[ext_resource type="Script" uid="uid://b87enckblgk28" path="res://components/fader.gd" id="1_gvqrv"]
+
+[node name="Fader" type="Node"]
+script = ExtResource("1_gvqrv")
