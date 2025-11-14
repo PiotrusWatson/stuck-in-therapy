@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="StickerData" load_steps=3 format=3 uid="uid://bcq8u0m5tdlxt"]
+
+[ext_resource type="Script" uid="uid://bkoyo31sqb8kt" path="res://scripts/data/sticker_data.gd" id="1_hpjw7"]
+[ext_resource type="Texture2D" uid="uid://brbfq4ov12squ" path="res://assets/stickers/Untitled_Artwork_8.png" id="2_hpjw7"]
+
+[resource]
+script = ExtResource("1_hpjw7")
+sticker_texture = ExtResource("2_hpjw7")
+metadata/_custom_type_script = "uid://bkoyo31sqb8kt"

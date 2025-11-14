@@ -1,10 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkj473o2yxwtl"]
+[gd_scene format=3 uid="uid://bkj473o2yxwtl"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_n6gr5"]
-font_size = 50
-
-[node name="MemoryText" type="Label"]
-offset_right = 1081.0
-offset_bottom = 44.0
-text = "Place Holder text, Lorem Ipsum etc"
-label_settings = SubResource("LabelSettings_n6gr5")
+[node name="RichTextLabel" type="RichTextLabel"]
+offset_right = 878.0
+offset_bottom = 83.0
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
+theme_override_font_sizes/bold_italics_font_size = 50
+theme_override_font_sizes/italics_font_size = 50
+theme_override_font_sizes/mono_font_size = 50
+bbcode_enabled = true
+text = "Lorem ipsum etc, test for log text"
+fit_content = true
+scroll_active = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
