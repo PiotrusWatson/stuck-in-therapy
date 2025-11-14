@@ -4,8 +4,8 @@
 [ext_resource type="Resource" uid="uid://ce5v1penscns1" path="res://dialogues/placeholder/welcome_to_therapy.dialogue" id="2_8e1rd"]
 [ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="2_nb2fu"]
 [ext_resource type="PackedScene" uid="uid://kyse6qfuqcau" path="res://scenes/message/message_box.tscn" id="3_ar6ec"]
-[ext_resource type="Resource" uid="uid://dnwbsn05viswe" path="res://dialogues/placeholder/wow.dialogue" id="4_6oa37"]
 [ext_resource type="Shader" uid="uid://c0h3ibfqgsa66" path="res://scenes/phone_screen/phone_screen.tres" id="4_ar6ec"]
+[ext_resource type="Resource" uid="uid://b3y5ixrc74kax" path="res://woah_heavy.dialogue" id="4_nb2fu"]
 [ext_resource type="PackedScene" uid="uid://vfm4316ynwxs" path="res://scenes/dotted_anim_box.tscn" id="4_y063l"]
 [ext_resource type="Texture2D" uid="uid://b4wwl7v54428e" path="res://assets/stickers/Untitled_Artwork_10.png" id="5_acdai"]
 [ext_resource type="Texture2D" uid="uid://508155i8s6xe" path="res://placeholder/Hamburger_icon.svg.png" id="5_vv4ai"]
@@ -50,7 +50,7 @@ offset_right = 1128.0
 offset_bottom = 951.0
 color = Color(0.16862746, 0.33333334, 0.6156863, 1)
 script = ExtResource("1_6p1uq")
-dialogues_to_use = Array[ExtResource("2_nb2fu")]([ExtResource("2_8e1rd"), ExtResource("4_6oa37"), ExtResource("5_yva0c")])
+dialogues_to_use = Array[ExtResource("2_nb2fu")]([ExtResource("2_8e1rd"), ExtResource("4_nb2fu"), ExtResource("5_yva0c")])
 message_box_prefab = ExtResource("3_ar6ec")
 dotted_anim_box_prefab = ExtResource("4_y063l")
 stickers = Array[Texture2D]([ExtResource("5_acdai"), ExtResource("6_ghj0f"), ExtResource("7_2dw1j"), ExtResource("8_ealox"), ExtResource("9_nb2fu"), ExtResource("10_6oa37"), ExtResource("11_yva0c"), ExtResource("12_1b5rh"), ExtResource("13_nbp6t")])

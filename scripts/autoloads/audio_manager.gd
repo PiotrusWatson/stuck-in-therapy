@@ -67,4 +67,3 @@ func play_background_music(music: AudioStream) -> void:
 	background_music_player.volume_linear = volume_background
 	background_music_player.stream = music
 	background_music_player.play()
-

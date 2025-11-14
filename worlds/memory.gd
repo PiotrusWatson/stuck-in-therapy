@@ -8,4 +8,5 @@ func _ready():
 		background.texture = Globals.memory_image.texture
 
 func _on_exit_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://worlds/end_screen.tscn")
+	Globals.state += 1 
+	get_tree().change_scene_to_file("res://worlds/piotrus_scene.tscn")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MemoryData" load_steps=3 format=3 uid="uid://baqko3el8b42y"]
+
+[ext_resource type="Script" uid="uid://m07xebbobwqp" path="res://scripts/data/memory_data.gd" id="1_qccd6"]
+[ext_resource type="Texture2D" uid="uid://dqlbj7jxva735" path="res://sprites/hospital_var3.png" id="2_p2h4h"]
+
+[resource]
+script = ExtResource("1_qccd6")
+texture = ExtResource("2_p2h4h")
+name = "The End"
+metadata/_custom_type_script = "uid://m07xebbobwqp"

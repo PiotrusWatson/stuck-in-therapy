@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bk08p22bqgedt"]
+[gd_scene load_steps=9 format=3 uid="uid://bk08p22bqgedt"]
 
 [ext_resource type="Texture2D" uid="uid://cc0o0u0mfv615" path="res://placeholder/phone.jpeg" id="1_4itna"]
 [ext_resource type="Script" uid="uid://bx6vafdiacrbd" path="res://worlds/phone_scene.gd" id="1_ds0r6"]
 [ext_resource type="PackedScene" uid="uid://54d17rar78tt" path="res://scenes/phone_screen/phone_screen.tscn" id="2_ok0bf"]
 [ext_resource type="PackedScene" uid="uid://cgg2ylkntboy8" path="res://scenes/thoughts/thoughts.tscn" id="3_ws1tj"]
+[ext_resource type="Script" uid="uid://m07xebbobwqp" path="res://scripts/data/memory_data.gd" id="5_pcggb"]
+[ext_resource type="Resource" uid="uid://cp3ncskft3r6a" path="res://resources/memories/dead_dad.tres" id="6_p1gq1"]
+[ext_resource type="Resource" uid="uid://bx675g4lwwlj6" path="res://resources/memories/shrek.tres" id="7_jvojg"]
+[ext_resource type="Resource" uid="uid://baqko3el8b42y" path="res://resources/memories/end.tres" id="8_5nblm"]
 
 [node name="PhoneScene" type="Control"]
 layout_mode = 3
@@ -37,6 +41,7 @@ offset_bottom = 944.0
 
 [node name="Thoughts" parent="." instance=ExtResource("3_ws1tj")]
 layout_mode = 1
+memories = Array[ExtResource("5_pcggb")]([ExtResource("6_p1gq1"), ExtResource("7_jvojg"), ExtResource("8_5nblm")])
 
 [node name="LoadDelayTimer" type="Timer" parent="."]
 wait_time = 0.4

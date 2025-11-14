@@ -10,6 +10,7 @@ var dialogue_to_use: DialogueResource
 @onready var time_before_typing = $Timers/TimeBeforeTyping
 @onready var message_scroller = $MessageBackground/MessageScroller
 @onready var scrollbar = message_scroller.get_v_scroll_bar()
+
 signal memory_choice_triggered
 signal response_choice_triggered(responses)
 signal thought_parsed(text)
@@ -26,6 +27,7 @@ func _ready():
 		_:
 			print(Globals.state)
 			assert("UH OH THIS SHOULDN'T HAPPEN (we're in the wrong state)")
+
 	current_line = await DialogueManager.get_next_dialogue_line(dialogue_to_use)
 	parse_and_make_message(current_line)
 	scrollbar.changed.connect(handle_scrollbar_changed)

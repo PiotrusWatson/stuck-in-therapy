@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://cgg2ylkntboy8"]
+[gd_scene load_steps=12 format=3 uid="uid://cgg2ylkntboy8"]
 
+[ext_resource type="FontFile" uid="uid://cvtrvram72il3" path="res://fonts/final_fonts_decided/Vividly-Regular.otf" id="1_8naq7"]
 [ext_resource type="Script" uid="uid://bb3q3wqw1gx0i" path="res://scenes/thoughts/thoughts.gd" id="1_qag6t"]
 [ext_resource type="StyleBox" uid="uid://c38t0dwt07mw6" path="res://scenes/thoughts/thought_style_box.tres" id="1_yboo6"]
 [ext_resource type="PackedScene" uid="uid://cca4hxrunpw3" path="res://scenes/thoughts/thought/thought.tscn" id="2_2hhch"]
@@ -41,12 +42,14 @@ Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_disabled_color = Color(0.7708395, 0.77083945, 0.77083945, 1)
 Button/constants/line_spacing = 4
 Button/font_sizes/font_size = 35
+Button/fonts/font = ExtResource("1_8naq7")
 Button/styles/disabled = SubResource("StyleBoxFlat_ws1tj")
 Button/styles/hover = SubResource("StyleBoxFlat_yboo6")
 Button/styles/normal = ExtResource("1_yboo6")
 Button/styles/pressed = SubResource("StyleBoxFlat_xv6fk")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/font_sizes/font_size = 50
+Label/fonts/font = ExtResource("1_8naq7")
 MarginContainer/constants/margin_bottom = 10
 MarginContainer/constants/margin_top = 10
 

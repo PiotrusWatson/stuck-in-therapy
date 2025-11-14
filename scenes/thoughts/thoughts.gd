@@ -14,13 +14,24 @@ func _ready():
 	
 func fill_memories():
 	clear_thoughts()
-	for memory in memories:
-		var thought: Thought = thought_prefab.instantiate()
-		thought_box.add_child(thought)
-		thought.set_up_memory(memory)
-		current_thoughts.append(thought)
-		thought.memory_selected.connect(select_memory)
+	var memory: MemoryData
+	match Globals.state:
+		Globals.GameState.FIRST_DIALOGUE:
+			memory = memories[0]
+		Globals.GameState.SECOND_DIALOGUE:
+			memory = memories[1]
+		Globals.GameState.THIRD_DIALOGUE:
+			memory = memories[2]
+		_:
+			print(Globals.state)
+			assert("WE'RE IN THE WRONG STATE OH NO")
+	var thought: Thought = thought_prefab.instantiate()
+	thought_box.add_child(thought)
+	thought.set_up_memory(memory)
+	current_thoughts.append(thought)
+	thought.memory_selected.connect(select_memory)
 	visible = true
+	title.text = "Time to go..."
 
 func fill_responses(responses):
 	clear_thoughts()
@@ -31,6 +42,7 @@ func fill_responses(responses):
 		current_thoughts.append(thought)
 		thought.response_selected.connect(select_response)
 	visible = true
+	title.text = "What do I choose?"
 
 func clear_thoughts():
 	for thought: Thought in current_thoughts:
