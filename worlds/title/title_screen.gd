@@ -3,6 +3,7 @@ extends Control
 
 
 func _on_start_pressed() -> void:
+	Globals.state = Globals.GameState.FIRST_DIALOGUE
 	get_tree().change_scene_to_file("res://worlds/piotrus_scene.tscn")
 
 

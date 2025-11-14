@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b3y5ixrc74kax"
+path="res://.godot/imported/woah_heavy.dialogue-d05663e7999eb322b33745a1ed74c471.tres"
+
+[deps]
+
+source_file="res://woah_heavy.dialogue"
+dest_files=["res://.godot/imported/woah_heavy.dialogue-d05663e7999eb322b33745a1ed74c471.tres"]
+
+[params]
+
+defaults=true

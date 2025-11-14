@@ -1,6 +1,7 @@
 extends ColorRect
 
-@export var dialogue_to_use: DialogueResource
+@export var dialogues_to_use: Array[DialogueResource]
+var dialogue_to_use: DialogueResource
 @export var message_box_prefab: PackedScene
 @export var dotted_anim_box_prefab: PackedScene
 @export var stickers: Array[Texture2D]
@@ -15,6 +16,16 @@ signal thought_parsed(text)
 var current_line: DialogueLine
 var current_dotted_anim
 func _ready():
+	match Globals.state:
+		Globals.GameState.FIRST_DIALOGUE:
+			dialogue_to_use = dialogues_to_use[0]
+		Globals.GameState.SECOND_DIALOGUE:
+			dialogue_to_use = dialogues_to_use[1]
+		Globals.GameState.THIRD_DIALOGUE:
+			dialogue_to_use = dialogues_to_use[2]
+		_:
+			print(Globals.state)
+			assert("UH OH THIS SHOULDN'T HAPPEN (we're in the wrong state)")
 	current_line = await DialogueManager.get_next_dialogue_line(dialogue_to_use)
 	parse_and_make_message(current_line)
 	scrollbar.changed.connect(handle_scrollbar_changed)

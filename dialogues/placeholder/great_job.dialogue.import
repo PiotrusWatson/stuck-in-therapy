@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://n0ktc85cjf4h"
+path="res://.godot/imported/great_job.dialogue-e044f2d811bbbdef04636da1f757022e.tres"
+
+[deps]
+
+source_file="res://dialogues/placeholder/great_job.dialogue"
+dest_files=["res://.godot/imported/great_job.dialogue-e044f2d811bbbdef04636da1f757022e.tres"]
+
+[params]
+
+defaults=true
