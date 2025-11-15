@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://d2nrtqab4je30" path="res://sprites/room_props/crow.png" id="9_87f5q"]
 [ext_resource type="Texture2D" uid="uid://cmjey7ytuxl6a" path="res://sprites/room_props/flowers.png" id="10_kbv4o"]
 [ext_resource type="Texture2D" uid="uid://b23mvt5lw1rh8" path="res://sprites/phone/screenblur.png" id="12_gpm3c"]
-[ext_resource type="PackedScene" uid="uid://bpq4mik0kteh0" path="res://scenes/black_to_fade.tscn" id="21_8sxkk"]
+[ext_resource type="PackedScene" path="res://scenes/black_to_fade.tscn" id="21_8sxkk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t1jrl"]
 atlas = ExtResource("5_7teo3")
@@ -157,6 +157,7 @@ sprite_frames = SubResource("SpriteFrames_grcxh")
 autoplay = "default"
 frame_progress = 0.9478507
 script = ExtResource("6_grcxh")
+appear_chance_per_interval = 0.15
 fade_in_out_duration = 0.05
 current_element = NodePath(".")
 next_element = NodePath("../IV_stand")
@@ -166,6 +167,7 @@ visible = false
 position = Vector2(1307, 474)
 texture = ExtResource("6_34q1c")
 script = ExtResource("9_8sxkk")
+appear_chance_per_interval = 0.15
 fade_in_out_duration = 0.05
 
 [node name="xray" type="Sprite2D" parent="BG_props"]
@@ -173,6 +175,7 @@ visible = false
 position = Vector2(476, 366)
 texture = ExtResource("7_8sxkk")
 script = ExtResource("9_8sxkk")
+appear_chance_per_interval = 0.15
 fade_in_out_duration = 0.05
 
 [node name="IV_stand" type="Sprite2D" parent="BG_props"]
@@ -185,6 +188,7 @@ visible = false
 position = Vector2(262, 575)
 texture = ExtResource("9_87f5q")
 script = ExtResource("9_8sxkk")
+appear_chance_per_interval = 0.15
 fade_in_out_duration = 0.05
 
 [node name="flowers" type="Sprite2D" parent="BG_props"]
@@ -192,6 +196,7 @@ visible = false
 position = Vector2(1419, 957)
 texture = ExtResource("10_kbv4o")
 script = ExtResource("9_8sxkk")
+appear_chance_per_interval = 0.15
 fade_in_out_duration = 0.05
 
 [node name="HandSprite" type="AnimatedSprite2D" parent="."]

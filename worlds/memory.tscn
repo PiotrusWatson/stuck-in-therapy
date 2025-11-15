@@ -52,7 +52,7 @@ script = ExtResource("1_rwnrf")
 transition_background = NodePath("TransitionBackground")
 dragging_cursor = ExtResource("2_l277u")
 non_dragging_cursor = ExtResource("3_aokbw")
-cursor_size = 80
+cursor_size = 200
 
 [node name="TransitionBackground" type="ColorRect" parent="."]
 visible = false
@@ -78,12 +78,12 @@ texture = ExtResource("1_7jid2")
 z_index = 50
 z_as_relative = false
 layout_mode = 0
-offset_left = 1765.0
-offset_top = 6.0180035
-offset_right = 1913.0
-offset_bottom = 65.19788
+offset_left = 1604.0
+offset_top = 10.0300045
+offset_right = 1912.0
+offset_bottom = 127.70119
 focus_behavior_recursive = 1
-theme_override_constants/icon_max_width = 140
+theme_override_constants/icon_max_width = 300
 icon = ExtResource("6_s3seb")
 
 [node name="Fader" parent="MemoryBackground/ExitButton" instance=ExtResource("5_x5ada")]
