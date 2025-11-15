@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bk08p22bqgedt"]
+[gd_scene load_steps=36 format=3 uid="uid://bk08p22bqgedt"]
 
 [ext_resource type="Script" uid="uid://bx6vafdiacrbd" path="res://worlds/phone_scene.gd" id="1_ds0r6"]
 [ext_resource type="PackedScene" uid="uid://54d17rar78tt" path="res://scenes/phone_screen/phone_screen.tscn" id="2_ok0bf"]
@@ -12,11 +12,13 @@
 [ext_resource type="Script" uid="uid://m07xebbobwqp" path="res://scripts/data/memory_data.gd" id="5_pcggb"]
 [ext_resource type="Texture2D" uid="uid://decri42luoiah" path="res://sprites/spritesheet (5).png" id="6_5nblm"]
 [ext_resource type="Texture2D" uid="uid://bbpbol0nttrqv" path="res://sprites/room_props/gramma.png" id="6_34q1c"]
+[ext_resource type="Script" uid="uid://da8htufk5mfs3" path="res://scripts/appearing_element_swapper.gd" id="6_grcxh"]
 [ext_resource type="Resource" uid="uid://cp3ncskft3r6a" path="res://resources/memories/dead_dad.tres" id="6_p1gq1"]
 [ext_resource type="Texture2D" uid="uid://cytgexkqcstxv" path="res://sprites/room_props/xray.png" id="7_8sxkk"]
 [ext_resource type="Resource" uid="uid://bx675g4lwwlj6" path="res://resources/memories/after_death.tres" id="7_jvojg"]
 [ext_resource type="Resource" uid="uid://baqko3el8b42y" path="res://resources/memories/end.tres" id="8_5nblm"]
 [ext_resource type="Texture2D" uid="uid://bfofwivbttrvg" path="res://sprites/room_props/iv_stand.png" id="8_grcxh"]
+[ext_resource type="Script" uid="uid://c0ypgfrsdgmab" path="res://scripts/appearing_element.gd" id="9_8sxkk"]
 [ext_resource type="Texture2D" uid="uid://d2nrtqab4je30" path="res://sprites/room_props/crow.png" id="9_87f5q"]
 [ext_resource type="Texture2D" uid="uid://cmjey7ytuxl6a" path="res://sprites/room_props/flowers.png" id="10_kbv4o"]
 [ext_resource type="Texture2D" uid="uid://b23mvt5lw1rh8" path="res://sprites/phone/screenblur.png" id="12_gpm3c"]
@@ -148,21 +150,29 @@ texture = ExtResource("3_nlgdw")
 position = Vector2(1290, 409)
 texture = ExtResource("4_8frej")
 
-[node name="Plant" type="AnimatedSprite2D" parent="BG_props"]
+[node name="Plant" type="AnimatedSprite2D" parent="BG_props" node_paths=PackedStringArray("current_element", "next_element")]
 position = Vector2(999, 545)
 sprite_frames = SubResource("SpriteFrames_grcxh")
 autoplay = "default"
 frame_progress = 0.9478507
+script = ExtResource("6_grcxh")
+fade_in_out_duration = 0.05
+current_element = NodePath(".")
+next_element = NodePath("../IV_stand")
 
 [node name="gramma" type="Sprite2D" parent="BG_props"]
 visible = false
 position = Vector2(1307, 474)
 texture = ExtResource("6_34q1c")
+script = ExtResource("9_8sxkk")
+fade_in_out_duration = 0.05
 
 [node name="xray" type="Sprite2D" parent="BG_props"]
 visible = false
 position = Vector2(476, 366)
 texture = ExtResource("7_8sxkk")
+script = ExtResource("9_8sxkk")
+fade_in_out_duration = 0.05
 
 [node name="IV_stand" type="Sprite2D" parent="BG_props"]
 visible = false
@@ -173,11 +183,15 @@ texture = ExtResource("8_grcxh")
 visible = false
 position = Vector2(262, 575)
 texture = ExtResource("9_87f5q")
+script = ExtResource("9_8sxkk")
+fade_in_out_duration = 0.05
 
 [node name="flowers" type="Sprite2D" parent="BG_props"]
 visible = false
 position = Vector2(1419, 957)
 texture = ExtResource("10_kbv4o")
+script = ExtResource("9_8sxkk")
+fade_in_out_duration = 0.05
 
 [node name="HandSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(973, 525)
