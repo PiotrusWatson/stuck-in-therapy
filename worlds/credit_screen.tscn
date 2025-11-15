@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bu70xqugcwedp"]
+[gd_scene load_steps=7 format=3 uid="uid://bu70xqugcwedp"]
 
 [ext_resource type="Theme" uid="uid://ckyyf48pnkwpe" path="res://worlds/title/title_menu_theme.tres" id="1_pu426"]
+[ext_resource type="Texture2D" uid="uid://ckl88gr0ms6y" path="res://sprites/title/intro_bg.png" id="3_4ko3b"]
 [ext_resource type="Script" uid="uid://mxmhdtqb5koc" path="res://worlds/credit_screen.gd" id="3_tqgdg"]
-[ext_resource type="Texture2D" uid="uid://cc0o0u0mfv615" path="res://placeholder/phone.jpeg" id="4_kyl1g"]
-
-[sub_resource type="Theme" id="Theme_tqgdg"]
-Label/font_sizes/font_size = 35
+[ext_resource type="FontFile" uid="uid://cab2r6hdpm0qd" path="res://fonts/kaisa.ttf" id="4_2leig"]
+[ext_resource type="Theme" uid="uid://83fotgcxjcty" path="res://worlds/title/menu_button.tres" id="5_kyl1g"]
+[ext_resource type="Texture2D" uid="uid://bj3ms8po583xj" path="res://sprites/title/creds_edit.png" id="6_2leig"]
 
 [node name="CreditScene" type="Control"]
 layout_mode = 3
@@ -24,8 +24,36 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_kyl1g")
+texture = ExtResource("3_4ko3b")
 expand_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.34100002
+anchor_top = 0.40800002
+anchor_right = 0.661
+anchor_bottom = 0.818
+offset_left = 84.27997
+offset_top = 7.3599854
+offset_right = -73.119995
+offset_bottom = -64.44
+alignment = 1
+
+[node name="Name" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6627451, 0.90588236, 0.8862745, 1)
+theme_override_constants/line_spacing = 9
+theme_override_fonts/font = ExtResource("4_2leig")
+text = "Alina - Art
+Aral - Programming
+Berk - Narrative & Producer
+Dan - Music
+Piotrus - Programming
+Teemu - Music & SFX
+Venni - Art & Animation
+Zoi - Art & Narrative"
+horizontal_alignment = 1
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
@@ -44,133 +72,6 @@ text = "Credits"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Credits" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -315.0
-offset_top = -305.0
-offset_right = 364.0
-offset_bottom = 379.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_tqgdg")
-
-[node name="Zoi" type="HBoxContainer" parent="Credits"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="Credits/Zoi"]
-layout_mode = 2
-text = "Zoi:"
-
-[node name="MarginContainer" type="MarginContainer" parent="Credits/Zoi"]
-layout_mode = 2
-
-[node name="Role" type="Label" parent="Credits/Zoi"]
-layout_mode = 2
-text = "art! collages! concept! "
-
-[node name="Venni" type="HBoxContainer" parent="Credits"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="Credits/Venni"]
-layout_mode = 2
-text = "Venni:"
-
-[node name="MarginContainer" type="MarginContainer" parent="Credits/Venni"]
-layout_mode = 2
-
-[node name="Role" type="Label" parent="Credits/Venni"]
-layout_mode = 2
-text = "art! mockups! "
-
-[node name="Berk" type="HBoxContainer" parent="Credits"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="Credits/Berk"]
-layout_mode = 2
-text = "Berk:"
-
-[node name="MarginContainer" type="MarginContainer" parent="Credits/Berk"]
-layout_mode = 2
-
-[node name="Role" type="Label" parent="Credits/Berk"]
-layout_mode = 2
-text = "narrative design! producer!"
-
-[node name="Alina" type="HBoxContainer" parent="Credits"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="Credits/Alina"]
-layout_mode = 2
-text = "Alina:"
-
-[node name="MarginContainer" type="MarginContainer" parent="Credits/Alina"]
-layout_mode = 2
-
-[node name="Role" type="Label" parent="Credits/Alina"]
-layout_mode = 2
-text = "roughly 2000 stickers! (art)"
-
-[node name="Teemu" type="HBoxContainer" parent="Credits"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="Credits/Teemu"]
-layout_mode = 2
-text = "Teemu:"
-
-[node name="MarginContainer" type="MarginContainer" parent="Credits/Teemu"]
-layout_mode = 2
-
-[node name="Role" type="Label" parent="Credits/Teemu"]
-layout_mode = 2
-text = "sick bangers + sfx"
-
-[node name="Dan" type="HBoxContainer" parent="Credits"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="Credits/Dan"]
-layout_mode = 2
-text = "Dan:"
-
-[node name="MarginContainer" type="MarginContainer" parent="Credits/Dan"]
-layout_mode = 2
-
-[node name="Role" type="Label" parent="Credits/Dan"]
-layout_mode = 2
-text = "sick bangers!!!"
-
-[node name="Aral" type="HBoxContainer" parent="Credits"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="Credits/Aral"]
-layout_mode = 2
-text = "Aral:"
-
-[node name="MarginContainer" type="MarginContainer" parent="Credits/Aral"]
-layout_mode = 2
-
-[node name="Role" type="Label" parent="Credits/Aral"]
-layout_mode = 2
-text = "programmer! did the hard stuff!"
-
-[node name="Piotrus" type="HBoxContainer" parent="Credits"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="Credits/Piotrus"]
-layout_mode = 2
-text = "Piotrus:"
-
-[node name="MarginContainer" type="MarginContainer" parent="Credits/Piotrus"]
-layout_mode = 2
-
-[node name="Role" type="Label" parent="Credits/Piotrus"]
-layout_mode = 2
-text = "programmer! dead from COVID 54"
-
 [node name="Back" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -178,12 +79,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -61.0
-offset_top = 95.0
-offset_right = 56.0
-offset_bottom = 166.0
+offset_left = -74.0
+offset_top = 309.0
+offset_right = 57.0
+offset_bottom = 380.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("5_kyl1g")
 text = "Back"
+
+[node name="CredsEdit" type="Sprite2D" parent="."]
+position = Vector2(955, 304)
+scale = Vector2(0.8130081, 0.8130081)
+texture = ExtResource("6_2leig")
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
