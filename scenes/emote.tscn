@@ -15,7 +15,8 @@ theme = SubResource("Theme_ittyt")
 script = ExtResource("1_ynt4s")
 
 [node name="Face" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(50, 50)
+texture_filter = 4
+custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
