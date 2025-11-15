@@ -71,7 +71,7 @@ func make_message(text, is_yours, sticker_info):
 	var message: MessageBox = message_box_prefab.instantiate()
 	messages.add_child(message)
 	if sticker_info != "":
-		message.set_up_sticker(stickers[int(sticker_info)])
+		message.set_up_sticker(Globals.sticker_dictionary[sticker_info])
 	else:
 		message.set_up(text, is_yours)
 	return message

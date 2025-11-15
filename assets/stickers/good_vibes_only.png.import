@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dggrnuvbo81pe"
-path="res://.godot/imported/Untitled_Artwork_13.png-1be278703709047f0bfc4f14a391a3aa.ctex"
+path="res://.godot/imported/good_vibes_only.png-97c6580bcfbdbf8150dce1a16c03825d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stickers/Untitled_Artwork_13.png"
-dest_files=["res://.godot/imported/Untitled_Artwork_13.png-1be278703709047f0bfc4f14a391a3aa.ctex"]
+source_file="res://assets/stickers/good_vibes_only.png"
+dest_files=["res://.godot/imported/good_vibes_only.png-97c6580bcfbdbf8150dce1a16c03825d.ctex"]
 
 [params]
 

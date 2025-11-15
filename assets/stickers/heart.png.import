@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cirjucevytpd8"
-path="res://.godot/imported/Untitled_Artwork_19.png-265020a03f0de373f9ce78abe68e3807.ctex"
+uid="uid://b4wwl7v54428e"
+path="res://.godot/imported/heart.png-7993f8a6362b1d4ea4e5274a9e4482bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stickers/Untitled_Artwork_19.png"
-dest_files=["res://.godot/imported/Untitled_Artwork_19.png-265020a03f0de373f9ce78abe68e3807.ctex"]
+source_file="res://assets/stickers/heart.png"
+dest_files=["res://.godot/imported/heart.png-7993f8a6362b1d4ea4e5274a9e4482bf.ctex"]
 
 [params]
 

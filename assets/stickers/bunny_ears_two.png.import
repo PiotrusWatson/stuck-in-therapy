@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q2qdi2tc88sh"
-path="res://.godot/imported/Untitled_Artwork_17.png-eddbe840ff2975c76daea19af64bb45d.ctex"
+uid="uid://76u7fayjdxe8"
+path="res://.godot/imported/bunny_ears_two.png-f4fa7fb0aadfb97edb344e6ca0116bc2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stickers/Untitled_Artwork_17.png"
-dest_files=["res://.godot/imported/Untitled_Artwork_17.png-eddbe840ff2975c76daea19af64bb45d.ctex"]
+source_file="res://assets/stickers/bunny_ears_two.png"
+dest_files=["res://.godot/imported/bunny_ears_two.png-f4fa7fb0aadfb97edb344e6ca0116bc2.ctex"]
 
 [params]
 

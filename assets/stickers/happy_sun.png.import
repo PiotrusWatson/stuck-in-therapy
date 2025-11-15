@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4tjdksepnepe"
-path="res://.godot/imported/Untitled_Artwork_21.png-37e7eb4be09908c0090026075141b337.ctex"
+uid="uid://dkgdvwf054iur"
+path="res://.godot/imported/happy_sun.png-bc13d193fd0d906c01df8ee4360d1094.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stickers/Untitled_Artwork_21.png"
-dest_files=["res://.godot/imported/Untitled_Artwork_21.png-37e7eb4be09908c0090026075141b337.ctex"]
+source_file="res://assets/stickers/happy_sun.png"
+dest_files=["res://.godot/imported/happy_sun.png-bc13d193fd0d906c01df8ee4360d1094.ctex"]
 
 [params]
 

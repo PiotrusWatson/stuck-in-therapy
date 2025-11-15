@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://76u7fayjdxe8"
-path="res://.godot/imported/Untitled_Artwork_23.png-ad575aa8a1ba6d43cf1868be9603699e.ctex"
+uid="uid://dp03676fy8dxi"
+path="res://.godot/imported/drink_water.png-4013b4f44f2032b76587c2a5a49a3cb5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stickers/Untitled_Artwork_23.png"
-dest_files=["res://.godot/imported/Untitled_Artwork_23.png-ad575aa8a1ba6d43cf1868be9603699e.ctex"]
+source_file="res://assets/stickers/drink_water.png"
+dest_files=["res://.godot/imported/drink_water.png-4013b4f44f2032b76587c2a5a49a3cb5.ctex"]
 
 [params]
 

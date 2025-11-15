@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2r5xmnfisuf4"
-path="res://.godot/imported/Untitled_Artwork_22.png-ee76c90d2a5df4eba6c6b879d4136887.ctex"
+uid="uid://qwgs383joetg"
+path="res://.godot/imported/sparkle_heart.png-972a6307b2fe1d7bb5274c83871b0468.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stickers/Untitled_Artwork_22.png"
-dest_files=["res://.godot/imported/Untitled_Artwork_22.png-ee76c90d2a5df4eba6c6b879d4136887.ctex"]
+source_file="res://assets/stickers/sparkle_heart.png"
+dest_files=["res://.godot/imported/sparkle_heart.png-972a6307b2fe1d7bb5274c83871b0468.ctex"]
 
 [params]
 

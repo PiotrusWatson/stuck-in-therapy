@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8aqbqfuah08j"
-path="res://.godot/imported/Untitled_Artwork_5.png-43c83a691a30e7f654115b4bfba591e0.ctex"
+uid="uid://c4tjdksepnepe"
+path="res://.godot/imported/cat_ears.png-c5fb7d0aecb2960690ef7fef4aaa91a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stickers/Untitled_Artwork_5.png"
-dest_files=["res://.godot/imported/Untitled_Artwork_5.png-43c83a691a30e7f654115b4bfba591e0.ctex"]
+source_file="res://assets/stickers/cat_ears.png"
+dest_files=["res://.godot/imported/cat_ears.png-c5fb7d0aecb2960690ef7fef4aaa91a7.ctex"]
 
 [params]
 

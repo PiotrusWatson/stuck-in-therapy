@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp03676fy8dxi"
-path="res://.godot/imported/Untitled_Artwork_6.png-806ad2960f09ce0df1decddad4943d47.ctex"
+uid="uid://cgso5oua3jw2t"
+path="res://.godot/imported/love.png-83d49bd0c422be265b959cafd756e408.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stickers/Untitled_Artwork_6.png"
-dest_files=["res://.godot/imported/Untitled_Artwork_6.png-806ad2960f09ce0df1decddad4943d47.ctex"]
+source_file="res://assets/stickers/love.png"
+dest_files=["res://.godot/imported/love.png-83d49bd0c422be265b959cafd756e408.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4wwl7v54428e"
-path="res://.godot/imported/Untitled_Artwork_10.png-c1b0d55e56ca50aa2baa6dedada3cc47.ctex"
+uid="uid://d1fve5wf0oykv"
+path="res://.godot/imported/take_your_vitamins.png-949b6b5cdfdc603112406f7ca8436fb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stickers/Untitled_Artwork_10.png"
-dest_files=["res://.godot/imported/Untitled_Artwork_10.png-c1b0d55e56ca50aa2baa6dedada3cc47.ctex"]
+source_file="res://assets/stickers/take_your_vitamins.png"
+dest_files=["res://.godot/imported/take_your_vitamins.png-949b6b5cdfdc603112406f7ca8436fb0.ctex"]
 
 [params]
 

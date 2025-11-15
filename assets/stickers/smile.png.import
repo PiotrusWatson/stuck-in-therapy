@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgso5oua3jw2t"
-path="res://.godot/imported/Untitled_Artwork_12.png-b968b3f53577d9ec2bce9eacca39499b.ctex"
+uid="uid://dttkmortowuyf"
+path="res://.godot/imported/smile.png-66e66ef750b65e1e312187599e2abc97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stickers/Untitled_Artwork_12.png"
-dest_files=["res://.godot/imported/Untitled_Artwork_12.png-b968b3f53577d9ec2bce9eacca39499b.ctex"]
+source_file="res://assets/stickers/smile.png"
+dest_files=["res://.godot/imported/smile.png-66e66ef750b65e1e312187599e2abc97.ctex"]
 
 [params]
 

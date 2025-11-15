@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cld8ry611o60l"
-path="res://.godot/imported/Untitled_Artwork_4.png-4a008b3ed41a31a4493bdf95df06b851.ctex"
+uid="uid://co423b6b2enhi"
+path="res://.godot/imported/star_smile.png-9681ef9a880833a364364a21515b3504.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stickers/Untitled_Artwork_4.png"
-dest_files=["res://.godot/imported/Untitled_Artwork_4.png-4a008b3ed41a31a4493bdf95df06b851.ctex"]
+source_file="res://assets/stickers/star_smile.png"
+dest_files=["res://.godot/imported/star_smile.png-9681ef9a880833a364364a21515b3504.ctex"]
 
 [params]
 

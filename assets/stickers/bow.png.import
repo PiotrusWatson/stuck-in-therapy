@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c35brohqbakcv"
-path="res://.godot/imported/Untitled_Artwork.png-cbf77d470207557997724caa1e4772d5.ctex"
+uid="uid://pfpsoc8ggpjg"
+path="res://.godot/imported/bow.png-22620fdcd4bdf0fa81d53123e315ad85.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stickers/Untitled_Artwork.png"
-dest_files=["res://.godot/imported/Untitled_Artwork.png-cbf77d470207557997724caa1e4772d5.ctex"]
+source_file="res://assets/stickers/bow.png"
+dest_files=["res://.godot/imported/bow.png-22620fdcd4bdf0fa81d53123e315ad85.ctex"]
 
 [params]
 

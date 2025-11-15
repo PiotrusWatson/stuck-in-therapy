@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnp2dwjipl3q2"
-path="res://.godot/imported/Untitled_Artwork_15.png-bb2d51adefd73ee1bc0a07cb480c55d6.ctex"
+uid="uid://dxcc1tjbw2fvo"
+path="res://.godot/imported/breathe.png-0455e3b467e55b96d85f3c2711f30d9c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/stickers/Untitled_Artwork_15.png"
-dest_files=["res://.godot/imported/Untitled_Artwork_15.png-bb2d51adefd73ee1bc0a07cb480c55d6.ctex"]
+source_file="res://assets/stickers/breathe.png"
+dest_files=["res://.godot/imported/breathe.png-0455e3b467e55b96d85f3c2711f30d9c.ctex"]
 
 [params]
 
