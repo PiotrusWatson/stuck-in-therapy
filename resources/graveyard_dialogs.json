@@ -1,43 +1,117 @@
 {
     "kaisa": {
-        "percentage": 0.1,
+        "percentage": 0.45,
         "moods": {
             "default": {
                 "dialogs": [
-                    "1 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not.",
-                    "2 Place Holder text short example",
-                    "3 shortest"
-                ]
-            },
-            "sad": {
-                "dialogs": [
-                    "1 sad mood text here",
-                    "2 Short sad example",
-                    "3 crying"
+                    "I can't believe I'm even trying this.",
+                    "Isn't that just… insulting?",
+                    "This isn't helping.",
+                    "Stop.",
+                    "I feel weird.",
+                    "This is not calming me down.",
+                    "This doesn't make any sense.",
+                    "It doesn't even look good there.",
+                    "That's actually very creepy.",
+                    "This feels wrong.",
+                    "Why am I adding more stickers?",
+                    "Not very helpful.",
+                    "Was this what was playing on the radio?",
+                    "That was not what they looked like.",
+                    "The colors are all wrong.",
+                    "Nothing looks right.",
+                    "I don't want to forget this.",
+                    "This makes me feel worse.",
+                    "I miss your voice.",
+                    "Give me my grandma back.",
+                    "Everything is fading.",
+                    "I hate this.",
+                    "Coldness is all that is left.",
+                    "What would she say to all this?",
+                    "It's too quiet without you.",
+                    "Pain isn't going away.",
+                    "I just want everyone to leave me be.",
+                    "I don't want any more change.",
+                    "Please let me remember.",
+                    "That wasn't her face.",
+                    "This smell….",
+                    "I always hated hospitals.",
+                    "A sticker a day…",
+                    "The beeping never stops.",
+                    "I can still feel the alcohol burning my nostrils.",
+                    "You were so pale.",
+                    "Your hand was so cold.",
+                    "It's peaceful here.",
+                    "I hope you are enjoying the silence.",
+                    "I miss you so much.",
+                    "Why did you leave me?",
+                    "The grass was cold under my feet.",
+                    "I swear I heard your voice in the wind.",
+                    "I don't want to let you go."
                 ]
             }
         }
     },
     "ai": {
-        "percentage": 0.75,
+        "percentage": 0.45,
         "moods": {
             "default": {
                 "dialogs": [
-                    "1 Graveyard Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not.",
-                    "2 Graveyard Place Holder text short example",
-                    "3 Graveyard shortest"
+                    "Doesn't that make you feel better?",
+                    "Good job, buddy!",
+                    "The past is what we make it to be.",
+                    "The happiness of your life depends on the quality of your thoughts.",
+                    "Think positive, feel positive!",
+                    "One sticker at a time!",
+                    "Sad thoughts, begone!",
+                    "Sadness has no chance against you!",
+                    "Stick, laugh, love!",
+                    "No happiness without action.",
+                    "Everything is better with stickers!",
+                    "Oh how unpleasant, glad you covered that up.",
+                    "Don't forget to check out the limited-time GRIEF collection!",
+                    "Sadness, now 100% off!",
+                    "Now that would put a smile on any face. (can be reserved for the smiley face sticker)",
+                    "Let the sparkle out!",
+                    "Stick it to the bad memories.",
+                    "I can already feel the positivity!",
+                    "The more colors, the better you feel, now isn't that fun?",
+                    "Smile through sadness, that'll teach 'em!",
+                    "Don't let depression win, glam it up!",
+                    "What matters is how YOU remember things.",
+                    "Is it just me or is it getting happy in here?",
+                    "Just perfect.",
+                    "Remember to rate the app and make ME happy!",
+                    "Don't forget to check out our Mental Health Day special discount!",
+                    "More stickers = more giggles",
+                    "That looks SO GOOD on there!",
+                    "Only important emotions are the sparkly ones",
+                    "See how it's much better like that?",
+                    "Don't think, act!",
+                    "Paint the picture you want to see!",
+                    "Remember how ugly things were a minute ago? Well, you really shouldn't!",
+                    "You're a natural!",
+                    "A sticker a day, keeps the bad thoughts away.",
+                    "Oh I see what you're doing!",
+                    "Check out our new app Careful Whispers and get them sweet affirmations!",
+                    "Have you taken a walk lately?",
+                    "That's what I call a pleasant memory, good job!",
+                    "You are being very brave right now."
                 ]
             }
         }
     },
     "thirdVoice": {
-        "percentage": 0.15,
+        "percentage": 0.1,
         "moods": {
             "default": {
                 "dialogs": [
-                    "1 Place Holder text, Lorem Ipsum etc, something long to see how it wraps around the dialog box and if it looks good or not.",
-                    "2 Place Holder text short example",
-                    "3 shortest"
+                    "She is in eternal embrace now.",
+                    "Are you tired? Do you seek rest?",
+                    "Even in this place, there is life.",
+                    "People take me with them. Dirt under their fingernails.",
+                    "The flowers will soon die too.",
+                    "After everything, there is me."
                 ]
             }
         }
