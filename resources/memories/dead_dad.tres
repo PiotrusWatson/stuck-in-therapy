@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Memory" load_steps=3 format=3 uid="uid://cp3ncskft3r6a"]
+[gd_resource type="Resource" script_class="MemoryData" load_steps=3 format=3 uid="uid://cp3ncskft3r6a"]
 
 [ext_resource type="Script" uid="uid://m07xebbobwqp" path="res://scripts/data/memory_data.gd" id="1_6cv0j"]
 [ext_resource type="Texture2D" uid="uid://dqlbj7jxva735" path="res://sprites/hospital_var3.png" id="2_rsb7m"]
@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("1_6cv0j")
 texture = ExtResource("2_rsb7m")
-name = "The Last Time I Saw Them..."
+name = "The Last Time I Saw Her..."
 metadata/_custom_type_script = "uid://m07xebbobwqp"

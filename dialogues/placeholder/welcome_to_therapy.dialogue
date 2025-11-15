@@ -1,30 +1,37 @@
 ~ start
-AI: Welcome...to the future of therapy...
-AI: I will be your guide
-AI: No longer will you need to talk with human beings about your problems (lame) (gay) 
-AI: But instead... simply visualise your most painful memories...
-AI: And I will let you process them.......
-AI: [#sticker=0]
-- I am so PUMPED to do THERAPY
-	You: I'm rly excited :)
-	AI: yes :) yippee :)
-- Why did I install this
-	You: I'd rather not
-	AI: tough titties :)	
-AI: anyway, here's wonderwall! 
-- What
-	You: what....
-- Wow! Value added :)
-	You: yay! yippii
-	AI: <3
-AI: Today is gonna be the day that I'm gonna throw it back to you....
-- Why
-	You: Why.....
-	AI: u know it bich
-- I love Oasis!
-	You: wow classic
-	AI: what da fuck...
-AI: By now, you surely somehow realise what I have to do......
-AI: Anyway I'm just joshing u
-AI: Here, picture your most traumatic memory or some shit
+AI: Hello, Kaisa! I’m very glad you chose me, Sparkl, as your therapy assistant!
+AI: [#sticker=smile]
+AI: So, how are we feeling today?
+- I can't complain.
+	You: I can't complain.
+- I could use a little help.
+	You: I could use a little help.
+AI: Great! Look at you, reaching out for emotional support today — that's so brave of you!
+- Yay?
+	You: Yay?
+- I don't know if that's brave.
+	You: I don't know if that's brave.
+AI: Really, not everyone manages to type a whole sentence when they need help, so you're halfway there to a mindful calmness!
+AI: Now tell me, friend, what do you need to help with?
+- I feel like I keep replaying this...moment, like I'm stuck.
+	You: I feel like I keep replaying this...moment, like I'm stuck.
+- I can't get this memory out of my head.
+	You: I can't get this memory out of my head.
+AI: There there, come here — metaphorically — and let me pat your head.
+AI: [#sticker=its_okay]
+AI: You don't have to be afraid! Sparkl is here to help you, like a warm hug on a cold day.
+AI: As soon as you agree to the terms and conditions, of course!
+- Sure.
+	You: Sure.
+- I can't see any terms and whatever?
+	You: I can't see any terms and whatever?
+AI: Thank you so much for agreeing!
+AI: [#sticker=heart]
+AI: Now let's turn that frown upside down with our new groundbreaking therapy, shall we?
+- I really don't want to. Can I please talk to an actual person?
+	You: I really don't want to. Can I please talk to an actual person?
+- I'm not doing this.
+	You: I'm not doing this.
+AI: Fantastic! Let's dive deep into that memory, and make it sparkly. By the end it won't just shine — it'll gleam.
+AI [#sticker=sparkle_heart]
 => END

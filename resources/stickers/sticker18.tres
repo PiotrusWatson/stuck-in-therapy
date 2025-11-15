@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="StickerData" load_steps=3 format=3 uid="uid://chb5uslwgmys4"]
 
 [ext_resource type="Script" uid="uid://bkoyo31sqb8kt" path="res://scripts/data/sticker_data.gd" id="1_uifom"]
-[ext_resource type="Texture2D" uid="uid://q2qdi2tc88sh" path="res://assets/stickers/Untitled_Artwork_17.png" id="2_uifom"]
+[ext_resource type="Texture2D" uid="uid://q2qdi2tc88sh" path="res://assets/stickers/purple_bow.png" id="2_uifom"]
 
 [resource]
 script = ExtResource("1_uifom")

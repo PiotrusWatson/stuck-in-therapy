@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d01kcxnb3kiup"]
 
-[ext_resource type="Script" path="res://scenes/message/emote.gd" id="1_ynt4s"]
+[ext_resource type="Script" uid="uid://dn8ea2cg8ihgq" path="res://scenes/message/emote.gd" id="1_ynt4s"]
 [ext_resource type="Texture2D" uid="uid://bqy86vhlny4b2" path="res://placeholder/properlaugh.webp" id="2_swm51"]
 
 [sub_resource type="Theme" id="Theme_ittyt"]
