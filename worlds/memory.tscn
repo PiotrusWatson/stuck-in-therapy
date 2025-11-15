@@ -50,6 +50,7 @@ script = ExtResource("1_rwnrf")
 transition_background = NodePath("TransitionBackground")
 dragging_cursor = ExtResource("2_l277u")
 non_dragging_cursor = ExtResource("3_aokbw")
+cursor_size = 80
 
 [node name="TransitionBackground" type="ColorRect" parent="."]
 visible = false
