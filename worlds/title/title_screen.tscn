@@ -45,9 +45,9 @@ expand_mode = 2
 [node name="Start" type="Button" parent="PhoneBackground"]
 layout_mode = 0
 offset_left = 824.0
-offset_top = 722.0
+offset_top = 651.0
 offset_right = 1098.0
-offset_bottom = 799.0
+offset_bottom = 728.0
 theme = ExtResource("5_rmdpg")
 text = "Play
 "
@@ -55,14 +55,14 @@ text = "Play
 [node name="Credits" type="Button" parent="PhoneBackground"]
 layout_mode = 0
 offset_left = 824.0
-offset_top = 847.0
+offset_top = 752.0
 offset_right = 1094.0
-offset_bottom = 930.0
+offset_bottom = 835.0
 theme = ExtResource("5_rmdpg")
 text = "Credits"
 
 [node name="LogoEdited" type="Sprite2D" parent="."]
-position = Vector2(965, 448)
+position = Vector2(960, 415)
 texture = ExtResource("6_6yhbl")
 
 [connection signal="pressed" from="PhoneBackground/Start" to="." method="_on_start_pressed"]
