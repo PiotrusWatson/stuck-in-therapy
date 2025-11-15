@@ -41,7 +41,6 @@ var characters: Dictionary = {}
 var character_moods: Dictionary = {}  # Track current mood per character
 
 func _ready() -> void:
-	load_dialogs("res://resources/memory_dialogs.json")
 	SignalBus.memory_mood_change.connect(_on_memory_mood_change)
 
 func load_dialogs(file_path: String) -> void:

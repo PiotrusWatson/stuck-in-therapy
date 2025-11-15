@@ -33,7 +33,7 @@
 [ext_resource type="Resource" uid="uid://cnxn18srbddb" path="res://resources/stickers/sticker22.tres" id="30_m2vve"]
 [ext_resource type="Resource" uid="uid://bhpoxkw18pk1s" path="res://resources/stickers/sticker23.tres" id="31_vdmvj"]
 
-[node name="Memory" type="Control"]
+[node name="Memory" type="Control" node_paths=PackedStringArray("transition_background")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,6 +42,15 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_rwnrf")
+transition_background = NodePath("TransitionBackground")
+
+[node name="TransitionBackground" type="ColorRect" parent="."]
+visible = false
+z_index = 60
+layout_mode = 0
+offset_right = 1919.0
+offset_bottom = 1079.0
+color = Color(0, 0, 0, 1)
 
 [node name="MemoryManager" parent="." node_paths=PackedStringArray("dialog_display", "exit_button") instance=ExtResource("2_37m0f")]
 dialog_display = NodePath("../MemoryBackground/DialogDisplayManager")
@@ -82,7 +91,7 @@ color = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = -0.99999994
 offset_top = 4.0120025
-offset_right = 186.99998
+offset_right = 147.99998
 offset_bottom = 1083.0059
 color = Color(0, 0, 0, 0.39607844)
 
