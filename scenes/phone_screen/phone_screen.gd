@@ -16,6 +16,7 @@ signal response_choice_triggered(responses)
 signal thought_parsed(text)
 var current_line: DialogueLine
 var current_dotted_anim
+
 func _ready():
 	match Globals.state:
 		Globals.GameState.FIRST_DIALOGUE:
@@ -63,8 +64,6 @@ func parse_and_make_message(dialogue_line: DialogueLine):
 	if dialogue_line.responses.size() > 0:
 		response_choice_triggered.emit(dialogue_line.responses)
 		message_timer.stop()
-	else:
-		time_before_typing.start()
 	return make_message(text, is_yours, sticker_info)
 	
 func make_message(text, is_yours, sticker_info):
@@ -92,6 +91,8 @@ func _on_message_timer_timeout() -> void:
 		message_timer.stop()
 		return
 	parse_and_make_message(current_line)
+	if current_line.responses.size() <= 0:
+		time_before_typing.start()
 	
 
 
