@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MemoryData" load_steps=3 format=3 uid="uid://bx675g4lwwlj6"]
+
+[ext_resource type="Script" uid="uid://m07xebbobwqp" path="res://scripts/data/memory_data.gd" id="1_fwovl"]
+[ext_resource type="Texture2D" uid="uid://daluecfwiuqq8" path="res://sprites/graveyard_v6.png" id="2_0voxu"]
+
+[resource]
+script = ExtResource("1_fwovl")
+texture = ExtResource("2_0voxu")
+name = "Mourning"
+metadata/_custom_type_script = "uid://m07xebbobwqp"

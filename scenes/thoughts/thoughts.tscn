@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cca4hxrunpw3" path="res://scenes/thoughts/thought/thought.tscn" id="2_2hhch"]
 [ext_resource type="Script" uid="uid://m07xebbobwqp" path="res://scripts/data/memory_data.gd" id="4_5yie2"]
 [ext_resource type="Resource" uid="uid://cp3ncskft3r6a" path="res://resources/memories/dead_dad.tres" id="5_8naq7"]
-[ext_resource type="Resource" uid="uid://bx675g4lwwlj6" path="res://resources/memories/shrek.tres" id="6_3dlnp"]
+[ext_resource type="Resource" uid="uid://bx675g4lwwlj6" path="res://resources/memories/after_death.tres" id="6_3dlnp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ws1tj"]
 bg_color = Color(0.24595326, 0.2520835, 0.26741594, 0.5529412)
