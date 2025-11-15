@@ -3,6 +3,10 @@ extends Control
 @onready var background = $MemoryBackground
 @onready var exit_button = $MemoryBackground/ExitButton
 @export var transition_background: ColorRect
+@export var dragging_cursor: Texture2D
+@export var non_dragging_cursor: Texture2D
+@export var cursor_size: int = 32
+
 
 func _ready():
 	if Globals.memory_image != null:
@@ -12,6 +16,31 @@ func _ready():
 	transition_background_tween.tween_property(transition_background, "modulate:a", 0.0, 1.0)
 	transition_background_tween.tween_callback(func ():transition_background.visible = false)
 
+	if dragging_cursor != null and non_dragging_cursor != null:
+
+		var resized_dragging_cursor = set_scaled_cursor(dragging_cursor, cursor_size)
+		var resized_non_dragging_cursor = set_scaled_cursor(non_dragging_cursor, cursor_size)
+
+		Input.set_custom_mouse_cursor(resized_dragging_cursor, Input.CURSOR_CAN_DROP)
+		# Because scrollbar is forbidden to drop, we set the forbidden cursor when over the scrollbar
+		Input.set_custom_mouse_cursor(resized_dragging_cursor, Input.CURSOR_FORBIDDEN)
+		Input.set_custom_mouse_cursor(resized_non_dragging_cursor, Input.CURSOR_ARROW)
+
 func _on_exit_button_pressed() -> void:
-	Globals.state += 1 
+	Globals.state += 1
+	resetCursor()
 	get_tree().change_scene_to_file("res://worlds/piotrus_scene.tscn")
+
+func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
+	return true
+
+func resetCursor() -> void:
+	Input.set_custom_mouse_cursor(null, Input.CURSOR_ARROW)
+
+	Input.set_custom_mouse_cursor(null, Input.CURSOR_CAN_DROP)
+	Input.set_custom_mouse_cursor(null, Input.CURSOR_FORBIDDEN)
+
+func set_scaled_cursor(texture: Texture2D, scale: float) -> ImageTexture:
+	var img := texture.get_image()
+	img.resize(cursor_size, cursor_size)
+	return ImageTexture.create_from_image(img)

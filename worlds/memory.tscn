@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cb16cuqo8h7mk"]
+[gd_scene load_steps=35 format=3 uid="uid://cb16cuqo8h7mk"]
 
 [ext_resource type="Texture2D" uid="uid://dqlbj7jxva735" path="res://sprites/hospital_var3.png" id="1_7jid2"]
 [ext_resource type="Script" uid="uid://dc67o6nwswrcx" path="res://worlds/memory.gd" id="1_rwnrf"]
@@ -6,8 +6,10 @@
 [ext_resource type="Script" uid="uid://3mfuktwawp7d" path="res://scripts/sticker_scrollbar.gd" id="2_cxery"]
 [ext_resource type="PackedScene" uid="uid://bn1gwdoilwgt2" path="res://prefabs/draggable_sticker.tscn" id="2_hjr63"]
 [ext_resource type="PackedScene" uid="uid://qthvuvksqow3" path="res://prefabs/dialog_display_manager.tscn" id="2_hurhv"]
+[ext_resource type="Texture2D" uid="uid://sjgoodkk5f05" path="res://assets/mouse_cursors/drag.png" id="2_l277u"]
 [ext_resource type="PackedScene" uid="uid://bkj473o2yxwtl" path="res://prefabs/memory_text.tscn" id="3_7jid2"]
 [ext_resource type="Script" uid="uid://bkoyo31sqb8kt" path="res://scripts/data/sticker_data.gd" id="3_37m0f"]
+[ext_resource type="Texture2D" uid="uid://c0hpfhuef0666" path="res://assets/mouse_cursors/memory_normal.png" id="3_aokbw"]
 [ext_resource type="PackedScene" uid="uid://dd8scxj0g6iwu" path="res://components/fader.tscn" id="5_x5ada"]
 [ext_resource type="Resource" uid="uid://76c52wfoyr7w" path="res://resources/stickers/sticker1.tres" id="9_2vv2x"]
 [ext_resource type="Resource" uid="uid://jevvn0xfycy3" path="res://resources/stickers/sticker2.tres" id="10_itv5q"]
@@ -43,6 +45,8 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_rwnrf")
 transition_background = NodePath("TransitionBackground")
+dragging_cursor = ExtResource("2_l277u")
+non_dragging_cursor = ExtResource("3_aokbw")
 
 [node name="TransitionBackground" type="ColorRect" parent="."]
 visible = false
@@ -88,6 +92,7 @@ mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
 [node name="ColorRect" type="ColorRect" parent="MemoryBackground"]
+z_index = 16
 layout_mode = 0
 offset_left = -0.99999994
 offset_top = 4.0120025
