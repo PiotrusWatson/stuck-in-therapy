@@ -27,6 +27,8 @@ func _ready() -> void:
 
 
 func onTimer_timeout() -> void:
+	if Globals.state == Globals.GameState.FIRST_DIALOGUE:
+		return
 	var rand_value = randf()
 	print('timer ran out for', name, ' : ', rand_value)
 	if rand_value <= appear_chance_per_interval:

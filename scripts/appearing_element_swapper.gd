@@ -32,6 +32,8 @@ func _ready() -> void:
 	next_element.modulate.a = 0.0
 
 func _on_check_timer_timeout() -> void:
+	if Globals.state == Globals.GameState.FIRST_DIALOGUE:
+		return
 	var rand_value = randf()
 	if rand_value <= appear_chance_per_interval:
 		swap_elements()

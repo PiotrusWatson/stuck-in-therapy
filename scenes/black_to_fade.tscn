@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://b87enckblgk28" path="res://components/fader.gd" id="2_n1jhf"]
 
 [node name="BlackToFade" type="ColorRect"]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
