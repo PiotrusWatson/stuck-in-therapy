@@ -1,12 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://cca4hxrunpw3"]
+[gd_scene load_steps=5 format=3 uid="uid://cca4hxrunpw3"]
 
 [ext_resource type="Script" uid="uid://dch7khbg5iq1m" path="res://scenes/thoughts/thought/thought.gd" id="1_nnvrq"]
+[ext_resource type="StyleBox" uid="uid://brjh381iuboq1" path="res://scenes/thoughts/thought/thought_new.tres" id="2_f2dd6"]
+[ext_resource type="FontFile" uid="uid://cvtrvram72il3" path="res://fonts/final_fonts_decided/Vividly-Regular.otf" id="2_ta6dl"]
+
+[sub_resource type="Theme" id="Theme_f2dd6"]
+Button/font_sizes/font_size = 36
+Button/styles/disabled = ExtResource("2_f2dd6")
+Button/styles/focus = ExtResource("2_f2dd6")
+Button/styles/hover = ExtResource("2_f2dd6")
+Button/styles/normal = ExtResource("2_f2dd6")
+Button/styles/pressed = ExtResource("2_f2dd6")
 
 [node name="Thought" type="MarginContainer"]
+offset_right = 172.0
+offset_bottom = 50.0
 script = ExtResource("1_nnvrq")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
+theme = SubResource("Theme_f2dd6")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.10966663, 0.0756, 0.28, 1)
+theme_override_fonts/font = ExtResource("2_ta6dl")
+theme_override_font_sizes/font_size = 22
 disabled = true
 text = "Wow Am I a shit"
 
