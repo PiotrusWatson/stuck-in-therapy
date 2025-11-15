@@ -6,6 +6,7 @@ extends Control
 @export var dragging_cursor: Texture2D
 @export var non_dragging_cursor: Texture2D
 @export var cursor_size: int = 32
+@export var background_fade_duration: float = 1.0
 
 
 func _ready():
@@ -13,7 +14,7 @@ func _ready():
 		background.texture = Globals.memory_image.texture
 	transition_background.visible = true
 	var transition_background_tween = create_tween()
-	transition_background_tween.tween_property(transition_background, "modulate:a", 0.0, 1.0)
+	transition_background_tween.tween_property(transition_background, "modulate:a", 0.0, background_fade_duration)
 	transition_background_tween.tween_callback(func ():transition_background.visible = false)
 
 	if dragging_cursor != null and non_dragging_cursor != null:
@@ -27,9 +28,16 @@ func _ready():
 		Input.set_custom_mouse_cursor(resized_non_dragging_cursor, Input.CURSOR_ARROW)
 
 func _on_exit_button_pressed() -> void:
+	var transition_background_tween = create_tween()
+	transition_background.visible = true
+	transition_background_tween.tween_property(transition_background, "modulate:a", 1, background_fade_duration)
+	transition_background_tween.tween_callback(transition_to_next_scene)
+
+func transition_to_next_scene() -> void:
 	Globals.state += 1
 	resetCursor()
 	get_tree().change_scene_to_file("res://worlds/piotrus_scene.tscn")
+
 
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	return true

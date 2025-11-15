@@ -73,6 +73,7 @@ texture = ExtResource("1_7jid2")
 
 [node name="ExitButton" type="Button" parent="MemoryBackground"]
 z_index = 50
+z_as_relative = false
 layout_mode = 0
 offset_left = 1805.9999
 offset_top = 5.015002
@@ -83,10 +84,12 @@ text = "Exit Memory"
 [node name="Fader" parent="MemoryBackground/ExitButton" instance=ExtResource("5_x5ada")]
 
 [node name="DialogDisplayManager" parent="MemoryBackground" node_paths=PackedStringArray("allowed_area") instance=ExtResource("2_hurhv")]
+layout_mode = 0
 allowed_area = NodePath("ColorRect")
 label_prefab = ExtResource("3_7jid2")
 
 [node name="ColorRect" type="ColorRect" parent="MemoryBackground/DialogDisplayManager"]
+layout_mode = 0
 offset_left = 210.0
 offset_top = 29.0
 offset_right = 1900.0
@@ -111,6 +114,7 @@ text = "Collapse"
 
 [node name="ColorRect" type="ColorRect" parent="MemoryBackground/Collapsable"]
 z_index = 16
+z_as_relative = false
 layout_mode = 0
 offset_left = -1.0
 offset_top = 34.10202
@@ -120,6 +124,7 @@ color = Color(0, 0, 0, 0.39607844)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MemoryBackground/Collapsable/ColorRect"]
 z_index = 20
+z_as_relative = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
