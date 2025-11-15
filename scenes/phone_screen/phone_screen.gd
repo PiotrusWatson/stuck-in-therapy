@@ -42,7 +42,6 @@ func select_response(response: DialogueResponse):
 	current_line = await dialogue_to_use.get_next_dialogue_line(response.next_id)
 	parse_and_make_message(current_line)
 	message_timer.start()
-	time_before_typing.start()
 	
 func parse_character(character: String):
 	if character.to_lower() == "ai":
@@ -80,6 +79,8 @@ func make_dotted_anim():
 	messages.add_child(current_dotted_anim)
 	
 func stop_dotted_anim():
+	if current_dotted_anim == null:
+		return
 	current_dotted_anim.queue_free()
 	current_dotted_anim = null
 

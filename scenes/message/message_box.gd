@@ -32,4 +32,3 @@ func set_up_sticker(image: Texture2D):
 	sticker.visible = true
 	sticker.texture = image
 	AudioManager.play_ai_message_send_sound()
-
