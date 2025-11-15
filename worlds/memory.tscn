@@ -106,6 +106,7 @@ button = NodePath("Button")
 layout_mode = 0
 offset_right = 89.99999
 offset_bottom = 31.0
+focus_mode = 0
 text = "Collapse"
 
 [node name="ColorRect" type="ColorRect" parent="MemoryBackground/Collapsable"]
