@@ -15,7 +15,7 @@ func _ready():
 
 func toggle():
 	collapsed = !collapsed
-	button.text = "Expand" if collapsed else "Collapse"
+	# button.text = "Expand" if collapsed else "Collapse"
 	var tween = create_tween()
 
 	var target_height = collapsed_height if collapsed else expanded_height

@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cb16cuqo8h7mk"]
+[gd_scene load_steps=39 format=3 uid="uid://cb16cuqo8h7mk"]
 
 [ext_resource type="Texture2D" uid="uid://dqlbj7jxva735" path="res://sprites/hospital_var3.png" id="1_7jid2"]
 [ext_resource type="Script" uid="uid://dc67o6nwswrcx" path="res://worlds/memory.gd" id="1_rwnrf"]
@@ -11,9 +11,11 @@
 [ext_resource type="Script" uid="uid://bkoyo31sqb8kt" path="res://scripts/data/sticker_data.gd" id="3_37m0f"]
 [ext_resource type="Texture2D" uid="uid://c0hpfhuef0666" path="res://assets/mouse_cursors/memory_normal.png" id="3_aokbw"]
 [ext_resource type="PackedScene" uid="uid://dd8scxj0g6iwu" path="res://components/fader.tscn" id="5_x5ada"]
+[ext_resource type="Texture2D" uid="uid://dw3pi618mdnij" path="res://assets/memory_exit_button.png" id="6_s3seb"]
 [ext_resource type="Resource" uid="uid://76c52wfoyr7w" path="res://resources/stickers/sticker1.tres" id="9_2vv2x"]
 [ext_resource type="Script" uid="uid://dpflkwudffh57" path="res://scripts/collabsable.gd" id="9_aokbw"]
 [ext_resource type="Resource" uid="uid://jevvn0xfycy3" path="res://resources/stickers/sticker2.tres" id="10_itv5q"]
+[ext_resource type="Texture2D" uid="uid://cujkfyk74q7wp" path="res://assets/sticker_button.png" id="10_tn4tt"]
 [ext_resource type="Resource" uid="uid://djr6denh037b6" path="res://resources/stickers/sticker3.tres" id="11_46wtp"]
 [ext_resource type="Resource" uid="uid://cielbcp6l2f5j" path="res://resources/stickers/sticker4.tres" id="12_c2gur"]
 [ext_resource type="Resource" uid="uid://c561oy2i77kxh" path="res://resources/stickers/sticker5.tres" id="13_jux1v"]
@@ -76,11 +78,13 @@ texture = ExtResource("1_7jid2")
 z_index = 50
 z_as_relative = false
 layout_mode = 0
-offset_left = 1805.9999
-offset_top = 5.015002
-offset_right = 1911.9999
-offset_bottom = 59.177036
-text = "Exit Memory"
+offset_left = 1765.0
+offset_top = 6.0180035
+offset_right = 1913.0
+offset_bottom = 65.19788
+focus_behavior_recursive = 1
+theme_override_constants/icon_max_width = 140
+icon = ExtResource("6_s3seb")
 
 [node name="Fader" parent="MemoryBackground/ExitButton" instance=ExtResource("5_x5ada")]
 
@@ -108,19 +112,25 @@ button = NodePath("Button")
 
 [node name="Button" type="Button" parent="MemoryBackground/Collapsable"]
 layout_mode = 0
-offset_right = 89.99999
-offset_bottom = 31.0
+offset_left = -0.99999976
+offset_top = -1.0030006
+offset_right = 147.0
+offset_bottom = 58.34835
 focus_mode = 0
-text = "Collapse"
+theme_override_constants/outline_size = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 140
+theme_override_constants/align_to_largest_stylebox = 0
+icon = ExtResource("10_tn4tt")
 
 [node name="ColorRect" type="ColorRect" parent="MemoryBackground/Collapsable"]
 z_index = 16
 z_as_relative = false
 layout_mode = 0
 offset_left = -1.0
-offset_top = 34.10202
+offset_top = 57.17103
 offset_right = 147.99998
-offset_bottom = 1075.2166
+offset_bottom = 1079.2285
 color = Color(0, 0, 0, 0.39607844)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MemoryBackground/Collapsable/ColorRect"]
