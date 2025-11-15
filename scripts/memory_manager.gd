@@ -43,7 +43,7 @@ func on_increment_sticker_count() -> void:
 func make_exit_button_visible() -> void:
 	exit_button.visible = true
 	exit_button.modulate.a = 0.0  # Start invisible
-
+	AudioManager.play_ai_message_send_sound()
 	var fade_in = create_tween()
 	fade_in.set_trans(Tween.TRANS_SINE)
 	fade_in.set_ease(Tween.EASE_IN_OUT)

@@ -8,7 +8,6 @@ extends Control
 @export var cursor_size: int = 32
 @export var background_fade_duration: float = 1.0
 
-
 func _ready():
 	if Globals.memory_image != null:
 		background.texture = Globals.memory_image.texture
