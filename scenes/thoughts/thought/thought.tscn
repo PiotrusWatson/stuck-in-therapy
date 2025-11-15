@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://cvtrvram72il3" path="res://fonts/final_fonts_decided/Vividly-Regular.otf" id="2_ta6dl"]
 
 [sub_resource type="Theme" id="Theme_f2dd6"]
-Button/font_sizes/font_size = 24
+Button/font_sizes/font_size = 40
 Button/styles/disabled = ExtResource("2_f2dd6")
 Button/styles/focus = ExtResource("2_f2dd6")
 Button/styles/hover = ExtResource("2_f2dd6")

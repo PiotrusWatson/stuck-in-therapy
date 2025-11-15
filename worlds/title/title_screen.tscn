@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dg1t6l8xfh5un"]
+[gd_scene load_steps=9 format=3 uid="uid://dg1t6l8xfh5un"]
 
 [ext_resource type="StyleBox" uid="uid://dtb2evyop03b4" path="res://worlds/title/start.tres" id="1_62euk"]
-[ext_resource type="Texture2D" uid="uid://cc0o0u0mfv615" path="res://placeholder/phone.jpeg" id="1_pi3m5"]
 [ext_resource type="FontFile" uid="uid://davs5q4w1xsj7" path="res://fonts/Ldfcomicsansbold-zgma.ttf" id="2_bmmhk"]
 [ext_resource type="Script" uid="uid://batwp5l73g4d2" path="res://worlds/title/title_screen.gd" id="3_bmmhk"]
-[ext_resource type="Texture2D" uid="uid://bgfo3u0g0o1a1" path="res://sprites/background.png" id="4_6ser7"]
+[ext_resource type="Texture2D" uid="uid://ckl88gr0ms6y" path="res://sprites/title/intro_bg.png" id="4_gmy8i"]
+[ext_resource type="Theme" uid="uid://83fotgcxjcty" path="res://worlds/title/menu_button.tres" id="5_rmdpg"]
+[ext_resource type="Texture2D" uid="uid://bx2dkg86het63" path="res://sprites/title/logo_edited.png" id="6_6yhbl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vht7m"]
 bg_color = Color(0, 0.90588236, 0.39215687, 1)
@@ -31,10 +32,6 @@ grow_vertical = 2
 theme = SubResource("Theme_pi3m5")
 script = ExtResource("3_bmmhk")
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(971, 543)
-texture = ExtResource("4_6ser7")
-
 [node name="PhoneBackground" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -42,40 +39,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_pi3m5")
+texture = ExtResource("4_gmy8i")
 expand_mode = 2
-
-[node name="Title" type="Label" parent="PhoneBackground"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -309.0
-offset_top = -370.0
-offset_right = 361.0
-offset_bottom = -237.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "😳What if therapy had whatsapp😳"
-autowrap_mode = 3
 
 [node name="Start" type="Button" parent="PhoneBackground"]
 layout_mode = 0
-offset_left = 714.0
-offset_top = 521.0
-offset_right = 1243.0
-offset_bottom = 598.0
-text = "Start you're journey..."
+offset_left = 824.0
+offset_top = 722.0
+offset_right = 1098.0
+offset_bottom = 799.0
+theme = ExtResource("5_rmdpg")
+text = "Play
+"
 
 [node name="Credits" type="Button" parent="PhoneBackground"]
 layout_mode = 0
-offset_left = 860.0
-offset_top = 628.0
-offset_right = 1052.0
-offset_bottom = 711.0
+offset_left = 824.0
+offset_top = 847.0
+offset_right = 1094.0
+offset_bottom = 930.0
+theme = ExtResource("5_rmdpg")
 text = "Credits"
+
+[node name="LogoEdited" type="Sprite2D" parent="."]
+position = Vector2(965, 448)
+texture = ExtResource("6_6yhbl")
 
 [connection signal="pressed" from="PhoneBackground/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="PhoneBackground/Credits" to="." method="_on_credits_pressed"]

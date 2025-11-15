@@ -59,7 +59,7 @@ MarginContainer/constants/margin_top = 20
 layout_mode = 3
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = 101.0
+offset_left = 159.0
 offset_right = 512.0
 grow_vertical = 2
 theme = SubResource("Theme_ok0bf")
@@ -69,10 +69,12 @@ memories = Array[ExtResource("4_5yie2")]([ExtResource("5_8naq7"), ExtResource("6
 
 [node name="ThoughtBox" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.60400003
 offset_top = 436.0
+offset_right = 2.0
+offset_bottom = -0.32000732
 grow_horizontal = 2
 grow_vertical = 2
 
