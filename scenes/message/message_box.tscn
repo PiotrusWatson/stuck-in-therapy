@@ -5,9 +5,9 @@
 [ext_resource type="Script" uid="uid://bx1wac5qns3sh" path="res://scenes/message/message_box.gd" id="2_1iohf"]
 [ext_resource type="StyleBox" uid="uid://bwtmow7os3cwh" path="res://scenes/message/your_message.tres" id="4_fyhq7"]
 [ext_resource type="PackedScene" uid="uid://d01kcxnb3kiup" path="res://scenes/emote.tscn" id="4_wr4po"]
-[ext_resource type="Texture2D" uid="uid://cgppmd015g0xe" path="res://placeholder/laugh.webp" id="5_gou7c"]
-[ext_resource type="Texture2D" uid="uid://bqy86vhlny4b2" path="res://placeholder/properlaugh.webp" id="5_ittyt"]
-[ext_resource type="Script" uid="uid://c4n2mr874rlgd" path="res://scenes/message/message_panel.gd" id="7_2tjhq"]
+[ext_resource type="Texture2D" uid="uid://4q1mdj72dgsi" path="res://sprites/phone/happyface.png" id="5_gou7c"]
+[ext_resource type="Texture2D" uid="uid://docgxtuegnwk5" path="res://sprites/phone/happierface.png" id="6_lb13d"]
+[ext_resource type="Script" path="res://scenes/message/message_panel.gd" id="7_2tjhq"]
 [ext_resource type="FontFile" uid="uid://cvtrvram72il3" path="res://fonts/final_fonts_decided/Vividly-Regular.otf" id="7_wr4po"]
 [ext_resource type="FontFile" uid="uid://drairci7rdnud" path="res://fonts/final_fonts_decided/Comfortaa-Regular.ttf" id="8_868i4"]
 [ext_resource type="Texture2D" uid="uid://bi6mefp2558py" path="res://placeholder/stickers/sticker1.png" id="10_868i4"]
@@ -36,7 +36,7 @@ layout_mode = 2
 [node name="Emote" parent="HBoxContainer" instance=ExtResource("4_wr4po")]
 layout_mode = 2
 normal_face = ExtResource("5_gou7c")
-happy_face = ExtResource("5_ittyt")
+happy_face = ExtResource("6_lb13d")
 
 [node name="MessagePanel" type="PanelContainer" parent="HBoxContainer"]
 layout_mode = 2

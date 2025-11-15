@@ -196,7 +196,7 @@ texture = ExtResource("4_5nblm")
 layout_mode = 0
 offset_left = 683.0
 offset_top = 105.0
-offset_right = 1120.0
+offset_right = 1118.0
 offset_bottom = 944.0
 
 [node name="FingersSprite" type="AnimatedSprite2D" parent="."]

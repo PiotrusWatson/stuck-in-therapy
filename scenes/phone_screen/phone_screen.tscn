@@ -79,11 +79,11 @@ texture = ExtResource("19_nb2fu")
 
 [node name="MessageScroller" type="ScrollContainer" parent="MessageBackground"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.92100006
 offset_top = 14.0
-offset_bottom = -56.0
+offset_bottom = 0.16497803
 grow_horizontal = 2
 grow_vertical = 2
 follow_focus = true
