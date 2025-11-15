@@ -35,6 +35,7 @@ func _on_exit_button_pressed() -> void:
 func transition_to_next_scene() -> void:
 	Globals.state += 1
 	resetCursor()
+	AudioManager.transition_background_music()
 	get_tree().change_scene_to_file("res://worlds/piotrus_scene.tscn")
 
 

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ugk4wq8v5ox3"
+path="res://.godot/imported/Talking with the AI 75bpm.wav-001468c21e51a6bdb55368350b9e2791.sample"
+
+[deps]
+
+source_file="res://sounds/bakcgourndSounds/Talking with the AI 75bpm.wav"
+dest_files=["res://.godot/imported/Talking with the AI 75bpm.wav-001468c21e51a6bdb55368350b9e2791.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -22,9 +22,11 @@ func start_moving_to_sticker(memory: MemoryData):
 func _on_load_delay_timer_timeout() -> void:
 	if Globals.state == Globals.GameState.FIRST_DIALOGUE or Globals.state == Globals.GameState.SECOND_DIALOGUE:
 		Globals.state += 1
+		AudioManager.transition_background_music()
 		get_tree().change_scene_to_file("res://worlds/memory.tscn")
 	elif Globals.state == Globals.GameState.THIRD_DIALOGUE:
 		Globals.state += 1
+		AudioManager.transition_background_music()
 		get_tree().change_scene_to_file("res://worlds/end_screen.tscn")
 	else:
 		print(Globals.state)
