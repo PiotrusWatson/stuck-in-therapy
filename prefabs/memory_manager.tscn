@@ -4,3 +4,4 @@
 
 [node name="MemoryManager" type="Node"]
 script = ExtResource("1_stf4c")
+sticker_max_count = 5

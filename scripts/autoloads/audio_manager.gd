@@ -6,11 +6,13 @@ extends Node
 @export var audio_player: Array[AudioStreamPlayer]
 @export var background_music_player: AudioStreamPlayer
 @export var background_music_player_second: AudioStreamPlayer
-@export var background_music: AudioStream
-@export var background_music_second: AudioStream
 
-@export var volume_sfx: float = 0.05
-@export var volume_background: float = 0.25
+@export var background_music_map: Dictionary[Globals.GameState, AudioStream]
+@export var menu_background_music: AudioStream 
+@export var background_music_transition_duration: float = 2.0
+
+@export var volume_sfx: float = 0.025
+@export var volume_background: float = 0.35
 @export var volume_message_sfx: float = 0.15
 
 # Called when the node enters the scene tree for the first time.
@@ -18,7 +20,10 @@ func _ready() -> void:
 	for player in audio_player:
 		player.volume_linear = volume_sfx
 
-	play_background_music(background_music)
+	background_music_player.volume_linear = volume_background
+	background_music_player_second.volume_linear = volume_background
+
+	play_background_music(menu_background_music)
 	
 
 func play_random_sticker_sound() -> void:
@@ -77,3 +82,41 @@ func play_background_music(music: AudioStream) -> void:
 	background_music_player.volume_linear = volume_background
 	background_music_player.stream = music
 	background_music_player.play()
+
+func transition_background_music() -> void:
+	var current_game_state = Globals.state
+	var current_player = null
+	var next_player = null
+
+	if background_music_player.playing:
+		print("here means first player")
+		current_player = background_music_player
+		next_player = background_music_player_second
+	elif background_music_player_second.playing:
+		current_player = background_music_player_second
+		next_player = background_music_player
+	else:
+		# No music is playing, just play the new music
+		play_background_music(background_music_map.get(current_game_state, menu_background_music))
+		return
+
+	if not background_music_map.has(current_game_state):
+		return
+
+	var tween = create_tween()
+	tween.set_parallel(true)
+	var new_music := background_music_map[current_game_state]
+	next_player.stream = new_music
+	next_player.volume_linear = 0.0
+	next_player.play()
+
+	tween.tween_property(current_player, "volume_linear", 0.0, background_music_transition_duration)
+	tween.tween_property(next_player, "volume_linear", volume_background, background_music_transition_duration)
+
+	tween.set_parallel(false)
+
+	tween.tween_callback(func() -> void:
+		current_player.stop()
+	)
+
+	
