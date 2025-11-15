@@ -30,8 +30,17 @@ func fill_memories():
 	thought.set_up_memory(memory)
 	current_thoughts.append(thought)
 	thought.memory_selected.connect(select_memory)
+	
 	visible = true
-	title.text = "Time to go..."
+	if Globals.state == Globals.GameState.THIRD_DIALOGUE:
+		title.text = "What do I choose?"
+		thought = thought_prefab.instantiate()
+		thought_box.add_child(thought)
+		thought.set_up_memory(memory)
+		current_thoughts.append(thought)
+		thought.memory_selected.connect(select_memory)
+	else:
+		title.text = "Time to go..."
 
 func fill_responses(responses):
 	clear_thoughts()

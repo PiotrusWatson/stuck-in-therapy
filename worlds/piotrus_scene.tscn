@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bk08p22bqgedt"]
+[gd_scene load_steps=37 format=3 uid="uid://bk08p22bqgedt"]
 
 [ext_resource type="Script" uid="uid://bx6vafdiacrbd" path="res://worlds/phone_scene.gd" id="1_ds0r6"]
 [ext_resource type="PackedScene" uid="uid://54d17rar78tt" path="res://scenes/phone_screen/phone_screen.tscn" id="2_ok0bf"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://d2nrtqab4je30" path="res://sprites/room_props/crow.png" id="9_87f5q"]
 [ext_resource type="Texture2D" uid="uid://cmjey7ytuxl6a" path="res://sprites/room_props/flowers.png" id="10_kbv4o"]
 [ext_resource type="Texture2D" uid="uid://b23mvt5lw1rh8" path="res://sprites/phone/screenblur.png" id="12_gpm3c"]
+[ext_resource type="PackedScene" uid="uid://bpq4mik0kteh0" path="res://scenes/black_to_fade.tscn" id="21_8sxkk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t1jrl"]
 atlas = ExtResource("5_7teo3")
@@ -238,5 +239,13 @@ position = Vector2(949.00006, 540.00006)
 scale = Vector2(0.31496894, 0.3108466)
 texture = ExtResource("12_gpm3c")
 metadata/_edit_lock_ = true
+
+[node name="BlackToFade" parent="." instance=ExtResource("21_8sxkk")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [connection signal="timeout" from="LoadDelayTimer" to="." method="_on_load_delay_timer_timeout"]
