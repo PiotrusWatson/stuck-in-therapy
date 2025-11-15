@@ -3,7 +3,7 @@ extends Control
 @onready var thought_box = $ThoughtBox
 @export var thought_prefab: PackedScene
 @export var memories: Array[MemoryData]
-@onready var title = $Title
+@onready var title = $ThoughtBox/Title
 @onready var current_thoughts = []
 
 signal response_selected(response)

@@ -18,13 +18,15 @@ offset_bottom = 50.0
 script = ExtResource("1_nnvrq")
 
 [node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 theme = SubResource("Theme_f2dd6")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.10966663, 0.0756, 0.28, 1)
 theme_override_fonts/font = ExtResource("2_ta6dl")
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 50
 disabled = true
 text = "Wow Am I a shit"
+autowrap_mode = 3
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -72,22 +72,15 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.60400003
-offset_top = 436.0
-offset_right = 2.0
-offset_bottom = -0.32000732
+offset_left = 12.0
+offset_top = 333.0
+offset_right = 14.0
+offset_bottom = -103.32001
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -209.5
-offset_top = 236.0
-offset_right = 227.5
-offset_bottom = 377.0
-grow_horizontal = 2
+[node name="Title" type="Label" parent="ThoughtBox"]
+layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "What do I choose?"
 horizontal_alignment = 1
