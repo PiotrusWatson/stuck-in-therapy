@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bkj473o2yxwtl"]
 
 [node name="RichTextLabel" type="RichTextLabel"]
+z_index = 40
+z_as_relative = false
 offset_right = 878.0
 offset_bottom = 83.0
 theme_override_font_sizes/normal_font_size = 50

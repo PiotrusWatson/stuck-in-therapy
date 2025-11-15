@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://fjcsfq5sojg5" path="res://scripts/dialog_display_manager.gd" id="1_lqxk6"]
 
-[node name="DialogDisplayManager" type="CanvasLayer"]
+[node name="DialogDisplayManager" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("1_lqxk6")
-metadata/_custom_type_script = "uid://fjcsfq5sojg5"

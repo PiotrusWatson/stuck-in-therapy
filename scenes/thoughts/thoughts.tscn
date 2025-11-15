@@ -83,5 +83,6 @@ offset_top = 300.0
 offset_right = 227.5
 offset_bottom = 377.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "What do I choose?"
 horizontal_alignment = 1

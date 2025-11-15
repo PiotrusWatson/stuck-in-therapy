@@ -1,5 +1,5 @@
 class_name DialogDisplayManager
-extends CanvasLayer
+extends Control
 
 @export var fade_out_delay: float = 10.0
 @export var allowed_area: ColorRect

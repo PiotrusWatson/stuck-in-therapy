@@ -13,7 +13,13 @@ var exit_unlocked: bool = false
 func _ready() -> void:
 	SignalBus.increment_sticker_count.connect(on_increment_sticker_count)
 	add_child(dialog_manager)
-	dialog_manager.load_dialogs("res://resources/memory_dialogs.json")
+	match Globals.state:
+		Globals.GameState.HOSPITAL:
+			dialog_manager.load_dialogs("res://resources/hospital_dialogs.json")
+		Globals.GameState.GRAVEYARD:
+			dialog_manager.load_dialogs("res://resources/graveyard_dialogs.json")
+		_ :
+			dialog_manager.load_dialogs("res://resources/hospital_dialogs.json")
 	exit_button.visible = false
 
 func on_increment_sticker_count() -> void:

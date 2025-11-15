@@ -1,13 +1,119 @@
-[gd_scene load_steps=9 format=3 uid="uid://bk08p22bqgedt"]
+[gd_scene load_steps=34 format=3 uid="uid://bk08p22bqgedt"]
 
-[ext_resource type="Texture2D" uid="uid://cc0o0u0mfv615" path="res://placeholder/phone.jpeg" id="1_4itna"]
 [ext_resource type="Script" uid="uid://bx6vafdiacrbd" path="res://worlds/phone_scene.gd" id="1_ds0r6"]
 [ext_resource type="PackedScene" uid="uid://54d17rar78tt" path="res://scenes/phone_screen/phone_screen.tscn" id="2_ok0bf"]
+[ext_resource type="Texture2D" uid="uid://bgfo3u0g0o1a1" path="res://sprites/background.png" id="2_pcggb"]
+[ext_resource type="Texture2D" uid="uid://dev1ee77vygmx" path="res://sprites/spritesheet (4).png" id="3_jvojg"]
+[ext_resource type="Texture2D" uid="uid://dh66188f5ick5" path="res://sprites/room_props/painting.png" id="3_nlgdw"]
 [ext_resource type="PackedScene" uid="uid://cgg2ylkntboy8" path="res://scenes/thoughts/thoughts.tscn" id="3_ws1tj"]
+[ext_resource type="Texture2D" uid="uid://cpfapx6uqbgo2" path="res://sprites/phone.png" id="4_5nblm"]
+[ext_resource type="Texture2D" uid="uid://bjolbb6dp1lib" path="res://sprites/room_props/mirror.png" id="4_8frej"]
+[ext_resource type="Texture2D" uid="uid://cjkfy7r7pybs1" path="res://sprites/room_props/plant_spritesheet.png" id="5_7teo3"]
 [ext_resource type="Script" uid="uid://m07xebbobwqp" path="res://scripts/data/memory_data.gd" id="5_pcggb"]
+[ext_resource type="Texture2D" uid="uid://decri42luoiah" path="res://sprites/spritesheet (5).png" id="6_5nblm"]
+[ext_resource type="Texture2D" uid="uid://bbpbol0nttrqv" path="res://sprites/room_props/gramma.png" id="6_34q1c"]
 [ext_resource type="Resource" uid="uid://cp3ncskft3r6a" path="res://resources/memories/dead_dad.tres" id="6_p1gq1"]
+[ext_resource type="Texture2D" uid="uid://cytgexkqcstxv" path="res://sprites/room_props/xray.png" id="7_8sxkk"]
 [ext_resource type="Resource" uid="uid://bx675g4lwwlj6" path="res://resources/memories/shrek.tres" id="7_jvojg"]
-[ext_resource type="Resource" uid="uid://baqko3el8b42y" path="res://resources/memories/end.tres" id="8_5nblm"]
+[ext_resource type="Resource" path="res://resources/memories/end.tres" id="8_5nblm"]
+[ext_resource type="Texture2D" uid="uid://bfofwivbttrvg" path="res://sprites/room_props/iv_stand.png" id="8_grcxh"]
+[ext_resource type="Texture2D" uid="uid://d2nrtqab4je30" path="res://sprites/room_props/crow.png" id="9_87f5q"]
+[ext_resource type="Texture2D" uid="uid://cmjey7ytuxl6a" path="res://sprites/room_props/flowers.png" id="10_kbv4o"]
+[ext_resource type="Texture2D" uid="uid://b23mvt5lw1rh8" path="res://sprites/phone/screenblur.png" id="12_gpm3c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1jrl"]
+atlas = ExtResource("5_7teo3")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wlld"]
+atlas = ExtResource("5_7teo3")
+region = Rect2(1920, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34q1c"]
+atlas = ExtResource("5_7teo3")
+region = Rect2(3840, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sxkk"]
+atlas = ExtResource("5_7teo3")
+region = Rect2(5760, 0, 1920, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grcxh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1jrl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wlld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34q1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sxkk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpm3c"]
+atlas = ExtResource("3_jvojg")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkms0"]
+atlas = ExtResource("3_jvojg")
+region = Rect2(1920, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lser"]
+atlas = ExtResource("3_jvojg")
+region = Rect2(3840, 0, 1920, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nlgdw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpm3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkms0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lser")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlgdw"]
+atlas = ExtResource("6_5nblm")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8frej"]
+atlas = ExtResource("6_5nblm")
+region = Rect2(1920, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7teo3"]
+atlas = ExtResource("6_5nblm")
+region = Rect2(3840, 0, 1920, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1jrl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlgdw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8frej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7teo3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.5
+}]
 
 [node name="PhoneScene" type="Control"]
 layout_mode = 3
@@ -23,28 +129,100 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 278.0
-offset_top = 11.0
-offset_right = -403.0
-offset_bottom = 15.0
+offset_top = -1.0
+offset_right = -2.0
+offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_4itna")
+texture = ExtResource("2_pcggb")
 expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="BG_props" type="Node2D" parent="."]
+
+[node name="Painting" type="Sprite2D" parent="BG_props"]
+position = Vector2(476, 365)
+texture = ExtResource("3_nlgdw")
+
+[node name="Mirror" type="Sprite2D" parent="BG_props"]
+position = Vector2(1290, 409)
+texture = ExtResource("4_8frej")
+
+[node name="Plant" type="AnimatedSprite2D" parent="BG_props"]
+position = Vector2(999, 545)
+sprite_frames = SubResource("SpriteFrames_grcxh")
+autoplay = "default"
+frame_progress = 0.9478507
+
+[node name="gramma" type="Sprite2D" parent="BG_props"]
+visible = false
+position = Vector2(1307, 474)
+texture = ExtResource("6_34q1c")
+
+[node name="xray" type="Sprite2D" parent="BG_props"]
+visible = false
+position = Vector2(476, 366)
+texture = ExtResource("7_8sxkk")
+
+[node name="IV_stand" type="Sprite2D" parent="BG_props"]
+visible = false
+position = Vector2(1714, 660)
+texture = ExtResource("8_grcxh")
+
+[node name="crow" type="Sprite2D" parent="BG_props"]
+visible = false
+position = Vector2(262, 575)
+texture = ExtResource("9_87f5q")
+
+[node name="flowers" type="Sprite2D" parent="BG_props"]
+visible = false
+position = Vector2(1419, 957)
+texture = ExtResource("10_kbv4o")
+
+[node name="HandSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(973, 525)
+scale = Vector2(1, 1.0231482)
+sprite_frames = SubResource("SpriteFrames_nlgdw")
+autoplay = "default"
+frame_progress = 0.8688111
+metadata/_edit_lock_ = true
+
+[node name="Phone" type="Sprite2D" parent="."]
+position = Vector2(917.09375, 583.5)
+scale = Vector2(0.41367498, 0.43881223)
+texture = ExtResource("4_5nblm")
 
 [node name="PhoneScreen" parent="." instance=ExtResource("2_ok0bf")]
 layout_mode = 0
 offset_left = 683.0
 offset_top = 105.0
-offset_right = 1127.0
+offset_right = 1120.0
 offset_bottom = 944.0
+
+[node name="FingersSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(906, 466)
+sprite_frames = SubResource("SpriteFrames_t1jrl")
+autoplay = "default"
+frame_progress = 0.96288526
+metadata/_edit_lock_ = true
 
 [node name="Thoughts" parent="." instance=ExtResource("3_ws1tj")]
 layout_mode = 1
+offset_left = 51.0
+offset_right = 653.0
+offset_bottom = -94.0
 memories = Array[ExtResource("5_pcggb")]([ExtResource("6_p1gq1"), ExtResource("7_jvojg"), ExtResource("8_5nblm")])
+metadata/_edit_lock_ = true
 
 [node name="LoadDelayTimer" type="Timer" parent="."]
 wait_time = 0.4
 one_shot = true
+
+[node name="Screenblur" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.13725491)
+position = Vector2(949.00006, 540.00006)
+scale = Vector2(0.31496894, 0.3108466)
+texture = ExtResource("12_gpm3c")
+metadata/_edit_lock_ = true
 
 [connection signal="timeout" from="LoadDelayTimer" to="." method="_on_load_delay_timer_timeout"]

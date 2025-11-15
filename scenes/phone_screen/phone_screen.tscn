@@ -8,18 +8,18 @@
 [ext_resource type="Resource" uid="uid://b3y5ixrc74kax" path="res://woah_heavy.dialogue" id="4_nb2fu"]
 [ext_resource type="PackedScene" uid="uid://vfm4316ynwxs" path="res://scenes/dotted_anim_box.tscn" id="4_y063l"]
 [ext_resource type="Texture2D" uid="uid://b4wwl7v54428e" path="res://assets/stickers/Untitled_Artwork_10.png" id="5_acdai"]
-[ext_resource type="Texture2D" uid="uid://508155i8s6xe" path="res://placeholder/Hamburger_icon.svg.png" id="5_vv4ai"]
 [ext_resource type="Resource" uid="uid://n0ktc85cjf4h" path="res://dialogues/placeholder/great_job.dialogue" id="5_yva0c"]
 [ext_resource type="Texture2D" uid="uid://c35brohqbakcv" path="res://assets/stickers/Untitled_Artwork.png" id="6_ghj0f"]
-[ext_resource type="Texture2D" uid="uid://co3illq88p7ax" path="res://placeholder/chevron.png" id="6_y063l"]
 [ext_resource type="Texture2D" uid="uid://co423b6b2enhi" path="res://assets/stickers/Untitled_Artwork_1.png" id="7_2dw1j"]
-[ext_resource type="Texture2D" uid="uid://c3kvo2q1pccfu" path="res://placeholder/square-icon-13.png" id="7_acdai"]
 [ext_resource type="Texture2D" uid="uid://bt8ivs5bt4xw8" path="res://assets/stickers/Untitled_Artwork_2.png" id="8_ealox"]
 [ext_resource type="Texture2D" uid="uid://dxcc1tjbw2fvo" path="res://assets/stickers/Untitled_Artwork_3.png" id="9_nb2fu"]
 [ext_resource type="Texture2D" uid="uid://cld8ry611o60l" path="res://assets/stickers/Untitled_Artwork_4.png" id="10_6oa37"]
 [ext_resource type="Texture2D" uid="uid://b8aqbqfuah08j" path="res://assets/stickers/Untitled_Artwork_5.png" id="11_yva0c"]
 [ext_resource type="Texture2D" uid="uid://dp03676fy8dxi" path="res://assets/stickers/Untitled_Artwork_6.png" id="12_1b5rh"]
 [ext_resource type="Texture2D" uid="uid://d1fve5wf0oykv" path="res://assets/stickers/Untitled_Artwork_7.png" id="13_nbp6t"]
+[ext_resource type="Texture2D" uid="uid://bfuhgdq0dsfkq" path="res://sprites/phone/screen.png" id="18_6oa37"]
+[ext_resource type="Texture2D" uid="uid://n60m2kuamf13" path="res://sprites/phone/menu.png" id="19_ealox"]
+[ext_resource type="Texture2D" uid="uid://b23mvt5lw1rh8" path="res://sprites/phone/screenblur.png" id="19_nb2fu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_irhmb"]
 shader = ExtResource("4_ar6ec")
@@ -61,18 +61,29 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 3.0
 offset_bottom = -204.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture1D_vv4ai")
+
+[node name="Screen" type="Sprite2D" parent="MessageBackground"]
+position = Vector2(223.49994, 424.49997)
+scale = Vector2(0.25937498, 0.27684465)
+texture = ExtResource("18_6oa37")
+
+[node name="Screenblur" type="Sprite2D" parent="MessageBackground"]
+modulate = Color(1, 1, 1, 0.13725491)
+position = Vector2(256.49997, 420.50003)
+scale = Vector2(0.28470656, 0.29298937)
+texture = ExtResource("19_nb2fu")
 
 [node name="MessageScroller" type="ScrollContainer" parent="MessageBackground"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 1.0
+offset_top = 14.0
+offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 2
 follow_focus = true
@@ -112,7 +123,7 @@ offset_top = 12.0
 offset_right = 399.0
 offset_bottom = 77.0
 disabled = true
-text = "Type here :)"
+text = "Message"
 
 [node name="DreamHelper" type="Label" parent="BottomScreenJunk"]
 layout_mode = 1
@@ -127,47 +138,13 @@ offset_right = 116.0
 offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Powered by DreamHelper AI"
+text = "Powered by Sparkl AI"
 horizontal_alignment = 1
 
-[node name="Hamburger" type="TextureRect" parent="BottomScreenJunk"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 111.0
-offset_top = 36.0
-offset_right = 165.0
-offset_bottom = 90.0
-grow_vertical = 2
-texture = ExtResource("5_vv4ai")
-expand_mode = 5
-
-[node name="Chevron" type="TextureRect" parent="BottomScreenJunk"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 271.0
-offset_top = 40.0
-offset_right = 326.0
-offset_bottom = 86.0
-grow_vertical = 2
-texture = ExtResource("6_y063l")
-expand_mode = 3
-
-[node name="Square" type="TextureRect" parent="BottomScreenJunk"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 188.0
-offset_top = 38.0
-offset_right = 256.0
-offset_bottom = 93.0
-grow_vertical = 2
-texture = ExtResource("7_acdai")
-expand_mode = 3
+[node name="Menu" type="Sprite2D" parent="BottomScreenJunk"]
+position = Vector2(212, 162.00003)
+scale = Vector2(0.32313418, 0.32313412)
+texture = ExtResource("19_ealox")
 
 [connection signal="timeout" from="Timers/MessageTimer" to="." method="_on_message_timer_timeout"]
 [connection signal="timeout" from="Timers/TimeBeforeTyping" to="." method="_on_time_before_typing_timeout"]

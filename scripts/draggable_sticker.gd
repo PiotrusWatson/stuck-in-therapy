@@ -22,3 +22,6 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	dragged_sticker.scale = size / texture.get_size()
 	sticker_dad.add_child(dragged_sticker)
 	return data
+
+func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
+	return true

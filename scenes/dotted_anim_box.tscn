@@ -1,16 +1,83 @@
-[gd_scene load_steps=3 format=3 uid="uid://vfm4316ynwxs"]
+[gd_scene load_steps=13 format=3 uid="uid://vfm4316ynwxs"]
 
-[ext_resource type="Texture2D" uid="uid://8p8ni3o35buu" path="res://placeholder/unnamed.webp" id="1_br71s"]
+[ext_resource type="Texture2D" uid="uid://dk07tuy1jqty4" path="res://sprites/spritesheet (3).png" id="1_br71s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inihp"]
+atlas = ExtResource("1_br71s")
+region = Rect2(0, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m18sv"]
+atlas = ExtResource("1_br71s")
+region = Rect2(250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7yym"]
+atlas = ExtResource("1_br71s")
+region = Rect2(500, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhwhm"]
+atlas = ExtResource("1_br71s")
+region = Rect2(750, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7t3p"]
+atlas = ExtResource("1_br71s")
+region = Rect2(1000, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybohx"]
+atlas = ExtResource("1_br71s")
+region = Rect2(1250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v61vk"]
+atlas = ExtResource("1_br71s")
+region = Rect2(1500, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q633a"]
+atlas = ExtResource("1_br71s")
+region = Rect2(1750, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbgfe"]
+atlas = ExtResource("1_br71s")
+region = Rect2(2000, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g522e"]
+atlas = ExtResource("1_br71s")
+region = Rect2(2250, 0, 250, 250)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dk62d"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_br71s")
+"texture": SubResource("AtlasTexture_inihp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m18sv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7yym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhwhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7t3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybohx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v61vk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q633a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbgfe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g522e")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 15.0
 }]
 
 [node name="DottedAnimBox" type="MarginContainer"]
@@ -28,4 +95,6 @@ theme_override_constants/margin_top = 0
 position = Vector2(63.500004, 68.5)
 scale = Vector2(0.52916664, 0.54583335)
 sprite_frames = SubResource("SpriteFrames_dk62d")
+autoplay = "default"
+frame_progress = 0.9567537
 offset = Vector2(30, 0)
