@@ -1,6 +1,7 @@
 extends Control
 
-
+func _ready() -> void:
+	get_window().grab_focus()
 
 func _on_start_pressed() -> void:
 	Globals.state = Globals.GameState.FIRST_DIALOGUE

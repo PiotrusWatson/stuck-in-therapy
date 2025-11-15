@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://d2nrtqab4je30" path="res://sprites/room_props/crow.png" id="9_87f5q"]
 [ext_resource type="Texture2D" uid="uid://cmjey7ytuxl6a" path="res://sprites/room_props/flowers.png" id="10_kbv4o"]
 [ext_resource type="Texture2D" uid="uid://b23mvt5lw1rh8" path="res://sprites/phone/screenblur.png" id="12_gpm3c"]
-[ext_resource type="PackedScene" path="res://scenes/black_to_fade.tscn" id="21_8sxkk"]
+[ext_resource type="PackedScene" uid="uid://bpq4mik0kteh0" path="res://scenes/black_to_fade.tscn" id="21_8sxkk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t1jrl"]
 atlas = ExtResource("5_7teo3")
