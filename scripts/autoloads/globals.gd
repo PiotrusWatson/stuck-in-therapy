@@ -13,5 +13,8 @@ var sticker_dictionary =  {
 	"heart": preload("res://assets/stickers/heart.png"),
 	"sparkle_heart": preload("res://assets/stickers/sparkle_heart.png"),
 	"smug_star": preload("res://assets/stickers/smug_star.png"),
-	"good_vibes_only": preload("res://assets/stickers/good_vibes_only.png")
+	"good_vibes_only": preload("res://assets/stickers/good_vibes_only.png"),
+	"happy_sun": preload("res://assets/stickers/happy_sun.png"),
+	"grow": preload("res://assets/stickers/grow.png"),
+	"meditate": preload("res://assets/stickers/meditate.png")
 }
