@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpq4mik0kteh0"]
+
+[ext_resource type="Script" uid="uid://3agmy0mujuo0" path="res://worlds/black_to_fade.gd" id="1_y1xun"]
+[ext_resource type="Script" uid="uid://b87enckblgk28" path="res://components/fader.gd" id="2_n1jhf"]
+
+[node name="BlackToFade" type="ColorRect"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_y1xun")
+
+[node name="Fader" type="Node" parent="."]
+script = ExtResource("2_n1jhf")
+metadata/_custom_type_script = "uid://b87enckblgk28"
