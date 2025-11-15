@@ -1,6 +1,8 @@
 extends Node
 
 @export var sticker_sounds: Array[AudioStream]
+@export var kaisa_message_send: AudioStream
+@export var ai_message_send: AudioStream
 @export var audio_player: Array[AudioStreamPlayer]
 @export var background_music_player: AudioStreamPlayer
 @export var background_music_player_second: AudioStreamPlayer
@@ -9,6 +11,7 @@ extends Node
 
 @export var volume_sfx: float = 0.05
 @export var volume_background: float = 0.25
+@export var volume_message_sfx: float = 0.15
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -33,20 +36,26 @@ func play_random_sticker_sound() -> void:
 			return
 	if not is_any_player_available:
 		var random_index = randi() % sticker_sounds.size()
-		play_sound_in_new_player(sticker_sounds[random_index])
+		play_sound_in_new_player(sticker_sounds[random_index], volume_message_sfx)
 
+func play_kaisa_message_send_sound() -> void:
+	play_sound(kaisa_message_send, volume_message_sfx)
 
-func play_sound(sound: AudioStream) -> void:
+func play_ai_message_send_sound() -> void:
+	play_sound(ai_message_send, volume_message_sfx)
+
+func play_sound(sound: AudioStream, volume :float) -> void:
 	var is_any_player_available = false
 
 	for player in audio_player:
 		if not player.playing:
 			player.stream = sound
+			player.volume_linear = volume
 			player.play()
 			is_any_player_available = true
 			return
 	if not is_any_player_available:
-		play_sound_in_new_player(sound)
+		play_sound_in_new_player(sound, volume)
 	
 
 func spawn_new_audio_player() -> AudioStreamPlayer:
@@ -56,8 +65,9 @@ func spawn_new_audio_player() -> AudioStreamPlayer:
 	audio_player.append(new_audio_player)
 	return new_audio_player
 
-func play_sound_in_new_player(sound: AudioStream) -> void:
+func play_sound_in_new_player(sound: AudioStream, volume :float) -> void:
 	var new_player = spawn_new_audio_player()
+	new_player.volume_linear = volume
 	new_player.stream = sound
 	new_player.play()
 
