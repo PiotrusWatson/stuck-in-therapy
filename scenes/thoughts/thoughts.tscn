@@ -38,6 +38,8 @@ expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
 [sub_resource type="Theme" id="Theme_ok0bf"]
+default_font = ExtResource("1_8naq7")
+default_font_size = 35
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_disabled_color = Color(0.7708395, 0.77083945, 0.77083945, 1)
 Button/constants/line_spacing = 4
@@ -50,14 +52,15 @@ Button/styles/pressed = SubResource("StyleBoxFlat_xv6fk")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/font_sizes/font_size = 50
 Label/fonts/font = ExtResource("1_8naq7")
-MarginContainer/constants/margin_bottom = 10
-MarginContainer/constants/margin_top = 10
+MarginContainer/constants/margin_bottom = 20
+MarginContainer/constants/margin_top = 20
 
 [node name="Thoughts" type="Control"]
 layout_mode = 3
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_right = 619.0
+offset_left = 101.0
+offset_right = 512.0
 grow_vertical = 2
 theme = SubResource("Theme_ok0bf")
 script = ExtResource("1_qag6t")
@@ -79,10 +82,11 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -209.5
-offset_top = 300.0
+offset_top = 236.0
 offset_right = 227.5
 offset_bottom = 377.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "What do I choose?"
 horizontal_alignment = 1
+vertical_alignment = 1

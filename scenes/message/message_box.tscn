@@ -25,10 +25,7 @@ offset_right = 400.0
 offset_bottom = 75.0
 theme = SubResource("Theme_4itna")
 script = ExtResource("2_1iohf")
-your_smallest_margin = 10
-your_largest_margin = 150
-their_smallest_margin = 10
-their_largest_margin = 90
+your_largest_margin = 100
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
