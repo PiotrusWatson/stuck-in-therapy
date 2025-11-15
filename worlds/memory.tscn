@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cb16cuqo8h7mk"]
+[gd_scene load_steps=37 format=3 uid="uid://cb16cuqo8h7mk"]
 
 [ext_resource type="Texture2D" uid="uid://dqlbj7jxva735" path="res://sprites/hospital_var3.png" id="1_7jid2"]
 [ext_resource type="Script" uid="uid://dc67o6nwswrcx" path="res://worlds/memory.gd" id="1_rwnrf"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c0hpfhuef0666" path="res://assets/mouse_cursors/memory_normal.png" id="3_aokbw"]
 [ext_resource type="PackedScene" uid="uid://dd8scxj0g6iwu" path="res://components/fader.tscn" id="5_x5ada"]
 [ext_resource type="Resource" uid="uid://76c52wfoyr7w" path="res://resources/stickers/sticker1.tres" id="9_2vv2x"]
+[ext_resource type="Script" uid="uid://dpflkwudffh57" path="res://scripts/collabsable.gd" id="9_aokbw"]
 [ext_resource type="Resource" uid="uid://jevvn0xfycy3" path="res://resources/stickers/sticker2.tres" id="10_itv5q"]
 [ext_resource type="Resource" uid="uid://djr6denh037b6" path="res://resources/stickers/sticker3.tres" id="11_46wtp"]
 [ext_resource type="Resource" uid="uid://cielbcp6l2f5j" path="res://resources/stickers/sticker4.tres" id="12_c2gur"]
@@ -34,6 +35,8 @@
 [ext_resource type="Resource" uid="uid://cgof25xqbtbr1" path="res://resources/stickers/sticker21.tres" id="29_qaltb"]
 [ext_resource type="Resource" uid="uid://cnxn18srbddb" path="res://resources/stickers/sticker22.tres" id="30_m2vve"]
 [ext_resource type="Resource" uid="uid://bhpoxkw18pk1s" path="res://resources/stickers/sticker23.tres" id="31_vdmvj"]
+
+[sub_resource type="Theme" id="Theme_tn4tt"]
 
 [node name="Memory" type="Control" node_paths=PackedStringArray("transition_background")]
 layout_mode = 3
@@ -91,16 +94,30 @@ offset_bottom = 1052.0
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
-[node name="ColorRect" type="ColorRect" parent="MemoryBackground"]
+[node name="Collapsable" type="Control" parent="MemoryBackground" node_paths=PackedStringArray("content", "button")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("9_aokbw")
+content = NodePath("ColorRect")
+button = NodePath("Button")
+
+[node name="Button" type="Button" parent="MemoryBackground/Collapsable"]
+layout_mode = 0
+offset_right = 89.99999
+offset_bottom = 31.0
+text = "Collapse"
+
+[node name="ColorRect" type="ColorRect" parent="MemoryBackground/Collapsable"]
 z_index = 16
 layout_mode = 0
-offset_left = -0.99999994
-offset_top = 4.0120025
+offset_left = -1.0
+offset_top = 34.10202
 offset_right = 147.99998
-offset_bottom = 1083.0059
+offset_bottom = 1075.2166
 color = Color(0, 0, 0, 0.39607844)
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MemoryBackground/ColorRect"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MemoryBackground/Collapsable/ColorRect"]
 z_index = 20
 layout_mode = 1
 anchors_preset = 15
@@ -108,8 +125,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_tn4tt")
 
-[node name="StickerScrollbar" type="VBoxContainer" parent="MemoryBackground/ColorRect/ScrollContainer" node_paths=PackedStringArray("sticker_daddy")]
+[node name="StickerScrollbar" type="VBoxContainer" parent="MemoryBackground/Collapsable/ColorRect/ScrollContainer" node_paths=PackedStringArray("sticker_daddy")]
 clip_contents = true
 custom_minimum_size = Vector2(0, 1080)
 layout_mode = 2
@@ -117,6 +135,6 @@ size_flags_horizontal = 3
 script = ExtResource("2_cxery")
 stciker_resource = Array[ExtResource("3_37m0f")]([ExtResource("9_2vv2x"), ExtResource("10_itv5q"), ExtResource("11_46wtp"), ExtResource("12_c2gur"), ExtResource("13_jux1v"), ExtResource("14_r2a1t"), ExtResource("15_rh3kr"), ExtResource("16_8p1ng"), ExtResource("17_dqos0"), ExtResource("18_2mmri"), ExtResource("19_04pn2"), ExtResource("20_l277u"), ExtResource("21_aokbw"), ExtResource("22_tn4tt"), ExtResource("23_2mmri"), ExtResource("24_04pn2"), ExtResource("25_l277u"), ExtResource("26_aokbw"), ExtResource("27_tn4tt"), ExtResource("28_s3seb"), ExtResource("29_qaltb"), ExtResource("30_m2vve"), ExtResource("31_vdmvj")])
 sticker_prefab = ExtResource("2_hjr63")
-sticker_daddy = NodePath("../../..")
+sticker_daddy = NodePath("../../../..")
 
 [connection signal="pressed" from="MemoryBackground/ExitButton" to="." method="_on_exit_button_pressed"]
