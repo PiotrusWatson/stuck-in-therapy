@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcvecwlt7got3"]
+
+[ext_resource type="Script" uid="uid://cfssgkof15fyn" path="res://worlds/intro_scene.gd" id="1_8plbg"]
+[ext_resource type="Texture2D" uid="uid://j3kkh35qcp8u" path="res://sprites/introemail.png" id="1_ukmh3"]
+
+[node name="IntroScene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8plbg")
+
+[node name="Introemail" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_ukmh3")
+
+[node name="StartGameTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="StartGameTimer" to="." method="_on_start_game_timer_timeout"]

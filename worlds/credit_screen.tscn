@@ -30,14 +30,14 @@ expand_mode = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.34100002
-anchor_top = 0.40800002
-anchor_right = 0.661
+anchor_left = 0.333
+anchor_top = 0.42600003
+anchor_right = 0.666
 anchor_bottom = 0.818
-offset_left = 25.279968
-offset_top = 15.359985
-offset_right = -33.119995
-offset_bottom = -56.440002
+offset_left = -0.35998535
+offset_top = -0.08001709
+offset_right = -0.7199707
+offset_bottom = -52.440002
 alignment = 1
 
 [node name="Name" type="Label" parent="VBoxContainer"]
@@ -52,7 +52,8 @@ Dan Santamaki - Music
 Piotrus Watson - Programming
 Teemu Kangas - Music & SFX
 Noodle - Art & Animation
-Zoi Asterataki - Art & Narrative"
+Ritinae - Tech Support
+Zoi Asterataki - Art Direction & Narrative"
 horizontal_alignment = 1
 
 [node name="Back" type="Button" parent="."]
