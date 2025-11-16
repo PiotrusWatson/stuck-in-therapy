@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://cb16cuqo8h7mk"]
+[gd_scene load_steps=44 format=3 uid="uid://cb16cuqo8h7mk"]
 
 [ext_resource type="Texture2D" uid="uid://dqlbj7jxva735" path="res://sprites/hospital_var3.png" id="1_7jid2"]
 [ext_resource type="Script" uid="uid://dc67o6nwswrcx" path="res://worlds/memory.gd" id="1_rwnrf"]
@@ -38,7 +38,40 @@
 [ext_resource type="Resource" uid="uid://cnxn18srbddb" path="res://resources/stickers/sticker22.tres" id="30_m2vve"]
 [ext_resource type="Resource" uid="uid://bhpoxkw18pk1s" path="res://resources/stickers/sticker23.tres" id="31_vdmvj"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3seb"]
+bg_color = Color(0.41960785, 0.5882353, 0.6156863, 1)
+corner_radius_top_left = 500
+corner_radius_top_right = 500
+corner_radius_bottom_right = 500
+corner_radius_bottom_left = 500
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qaltb"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 500
+corner_radius_top_right = 500
+corner_radius_bottom_right = 500
+corner_radius_bottom_left = 500
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2vve"]
+bg_color = Color(0.8560673, 0.8560673, 0.856067, 1)
+corner_radius_top_left = 500
+corner_radius_top_right = 500
+corner_radius_bottom_right = 500
+corner_radius_bottom_left = 500
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vdmvj"]
+bg_color = Color(0, 0, 0, 0.39607844)
+border_width_left = 12
+border_color = Color(0, 0, 0, 0.39607844)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kutn"]
+
 [sub_resource type="Theme" id="Theme_tn4tt"]
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_s3seb")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_qaltb")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_m2vve")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_vdmvj")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_1kutn")
 
 [node name="Memory" type="Control" node_paths=PackedStringArray("transition_background")]
 layout_mode = 3
@@ -114,12 +147,12 @@ button = NodePath("Button")
 layout_mode = 0
 offset_left = -0.99999976
 offset_top = -1.0030006
-offset_right = 147.0
-offset_bottom = 58.34835
+offset_right = 157.0
+offset_bottom = 62.016304
 focus_mode = 0
 theme_override_constants/outline_size = 0
 theme_override_constants/h_separation = 0
-theme_override_constants/icon_max_width = 140
+theme_override_constants/icon_max_width = 153
 theme_override_constants/align_to_largest_stylebox = 0
 icon = ExtResource("10_tn4tt")
 
@@ -128,7 +161,7 @@ z_index = 16
 z_as_relative = false
 layout_mode = 0
 offset_left = -1.0
-offset_top = 57.17103
+offset_top = 63.189034
 offset_right = 147.99998
 offset_bottom = 1079.2285
 color = Color(0, 0, 0, 0.39607844)
@@ -140,18 +173,20 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 12.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_tn4tt")
 
-[node name="StickerScrollbar" type="VBoxContainer" parent="MemoryBackground/Collapsable/ColorRect/ScrollContainer" node_paths=PackedStringArray("sticker_daddy")]
+[node name="StickerScrollbar" type="VBoxContainer" parent="MemoryBackground/Collapsable/ColorRect/ScrollContainer" node_paths=PackedStringArray("sticker_daddy", "scrollbar_container")]
 clip_contents = true
 custom_minimum_size = Vector2(0, 1080)
 layout_mode = 2
-size_flags_horizontal = 3
 script = ExtResource("2_cxery")
 stciker_resource = Array[ExtResource("3_37m0f")]([ExtResource("9_2vv2x"), ExtResource("10_itv5q"), ExtResource("11_46wtp"), ExtResource("12_c2gur"), ExtResource("13_jux1v"), ExtResource("14_r2a1t"), ExtResource("15_rh3kr"), ExtResource("16_8p1ng"), ExtResource("17_dqos0"), ExtResource("18_2mmri"), ExtResource("19_04pn2"), ExtResource("20_l277u"), ExtResource("21_aokbw"), ExtResource("22_tn4tt"), ExtResource("23_2mmri"), ExtResource("24_04pn2"), ExtResource("25_l277u"), ExtResource("26_aokbw"), ExtResource("27_tn4tt"), ExtResource("28_s3seb"), ExtResource("29_qaltb"), ExtResource("30_m2vve"), ExtResource("31_vdmvj")])
 sticker_prefab = ExtResource("2_hjr63")
 sticker_daddy = NodePath("../../../..")
+scrollbar_container = NodePath("..")
+scrollbar_thickness_margin = 12
 
 [connection signal="pressed" from="MemoryBackground/ExitButton" to="." method="_on_exit_button_pressed"]
