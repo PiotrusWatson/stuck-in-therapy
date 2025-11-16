@@ -5,8 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://b6ingkv786hui" path="res://sounds/Sticker.wav" id="3_6hqem"]
 [ext_resource type="AudioStream" uid="uid://8xw85u0vk4kk" path="res://sounds/Message Sent 2.mp3" id="4_4jimw"]
 [ext_resource type="AudioStream" uid="uid://bvxiv43fmp4tj" path="res://sounds/Notification Sound 3.wav" id="5_xjk7e"]
+[ext_resource type="AudioStream" uid="uid://iqadgqvevjs5" path="res://sounds/bakcgourndSounds/Talking with the AI 75bpm 1.1.wav" id="6_g7wom"]
 [ext_resource type="AudioStream" uid="uid://d0qd0i1rpyy7o" path="res://sounds/bakcgourndSounds/Therapy_Memory85_Bm.wav" id="7_g7wom"]
-[ext_resource type="AudioStream" uid="uid://ugk4wq8v5ox3" path="res://sounds/bakcgourndSounds/Talking with the AI 75bpm.wav" id="8_g7wom"]
 [ext_resource type="AudioStream" uid="uid://do32axn7nx5mg" path="res://sounds/bakcgourndSounds/Therapy_Memory_second_one_76_Bm_2.wav" id="9_xqjjb"]
 [ext_resource type="AudioStream" uid="uid://dugme82j7g017" path="res://sounds/bakcgourndSounds/Song for the menu 75bpm.wav" id="10_xqjjb"]
 
@@ -19,11 +19,11 @@ audio_player = [NodePath("AudioStreamPlayer"), NodePath("AudioStreamPlayer2")]
 background_music_player = NodePath("BackgroundMusicPlayer")
 background_music_player_second = NodePath("BackgroundMusicPlayer2")
 background_music_map = Dictionary[int, AudioStream]({
-0: ExtResource("8_g7wom"),
+0: ExtResource("6_g7wom"),
 1: ExtResource("7_g7wom"),
-2: ExtResource("8_g7wom"),
+2: ExtResource("6_g7wom"),
 3: ExtResource("9_xqjjb"),
-4: ExtResource("8_g7wom"),
+4: ExtResource("6_g7wom"),
 5: ExtResource("10_xqjjb")
 })
 menu_background_music = ExtResource("10_xqjjb")
