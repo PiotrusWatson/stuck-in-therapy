@@ -5,12 +5,43 @@ var is_dragging: bool = true
 
 var stciker_resource: StickerData
 
-func setData(sticker_data: StickerData) -> void:
-	stciker_resource = sticker_data
+var current_frame := 0
+var timer := 0.0
+var target_size: Vector2
 
-func _process(_delta: float) -> void:
+func setData(data: StickerData, desired_size: Vector2):
+	stciker_resource = data
+	target_size = desired_size
+
+	if data.sprite_sheet:
+		texture = data.sprite_sheet
+		hframes = data.hframes
+		vframes = data.vframes
+		frame = 0
+
+		# --- Correct scaling here ---
+		var frame_w = texture.get_width() / hframes
+		var frame_h = texture.get_height() / vframes
+		var frame_size = Vector2(frame_w, frame_h)
+		scale = target_size / frame_size
+
+	else:
+		texture = data.sticker_texture
+
+		# static texture scaling
+		scale = target_size / texture.get_size()
+
+
+func _process(delta: float) -> void:
 	if is_dragging:
 		global_position = get_global_mouse_position()
+
+	if stciker_resource.sprite_sheet != null:
+		timer += delta
+		if timer >= 1.0 / stciker_resource.fps:
+			timer = 0
+			current_frame = (current_frame + 1) % (hframes * vframes)
+			frame = current_frame
 
 	if Input.is_action_just_released("LeftMouse") and is_dragging:
 		is_dragging = false
