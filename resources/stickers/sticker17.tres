@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="StickerData" load_steps=3 format=3 uid="uid://d3mcu8eo51dl2"]
+[gd_resource type="Resource" script_class="StickerData" load_steps=4 format=3 uid="uid://d3mcu8eo51dl2"]
 
 [ext_resource type="Script" uid="uid://bkoyo31sqb8kt" path="res://scripts/data/sticker_data.gd" id="1_bwj1l"]
+[ext_resource type="Texture2D" uid="uid://clv32ijdlk6pb" path="res://assets/animated_stickers/heart.png" id="2_15gel"]
 [ext_resource type="Texture2D" uid="uid://qwgs383joetg" path="res://assets/stickers/sparkle_heart.png" id="2_bwj1l"]
 
 [resource]
 script = ExtResource("1_bwj1l")
 sticker_texture = ExtResource("2_bwj1l")
+sprite_sheet = ExtResource("2_15gel")
+hframes = 4
 metadata/_custom_type_script = "uid://bkoyo31sqb8kt"

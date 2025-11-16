@@ -15,13 +15,10 @@ func set_daddy(sticker_daddy: Node) -> void:
 	sticker_dad = sticker_daddy
 
 func _get_drag_data(at_position: Vector2) -> Variant:
-	var data = 1
 	var dragged_sticker = dragged_sticker_prefab.instantiate() as DraggedSticker
-	dragged_sticker.setData(stciker_resource)
-	dragged_sticker.texture = texture
-	dragged_sticker.scale = size / texture.get_size()
+	dragged_sticker.setData(stciker_resource, size) # pass desired UI size
 	sticker_dad.add_child(dragged_sticker)
-	return data
+	return 1
 
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	return true
