@@ -1,3 +1,4 @@
+@tool
 class_name Emote
 extends MarginContainer
 
@@ -6,6 +7,9 @@ extends MarginContainer
 @onready var face = $Face
 
 func _ready():
+	if Engine.is_editor_hint():
+		return
+
 	visible = false
 
 func show_normal():

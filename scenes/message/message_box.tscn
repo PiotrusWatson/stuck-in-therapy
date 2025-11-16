@@ -27,38 +27,47 @@ RichTextLabel/fonts/italics_font = ExtResource("3_y2vsw")
 RichTextLabel/fonts/normal_font = ExtResource("3_lb13d")
 
 [node name="MessageBox" type="MarginContainer"]
-offset_right = 400.0
-offset_bottom = 75.0
+offset_right = 435.0
+offset_bottom = 187.0
 theme = SubResource("Theme_4itna")
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_right = 0
 script = ExtResource("2_1iohf")
+text = "Hello [i]everybody[/i] it's me the big man on campus im going to jack off and suck myself off big time sexual style wow it's so cool."
 your_largest_margin = 100
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="Container" type="HBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="Emote" parent="HBoxContainer" instance=ExtResource("4_wr4po")]
+[node name="Emote" parent="Container" instance=ExtResource("4_wr4po")]
 layout_mode = 2
+size_flags_horizontal = 1
 normal_face = ExtResource("5_gou7c")
 happy_face = ExtResource("6_lb13d")
 
-[node name="MessagePanel" type="PanelContainer" parent="HBoxContainer"]
+[node name="MessagePanel" type="PanelContainer" parent="Container"]
 layout_mode = 2
+theme_override_styles/panel = ExtResource("1_ihena")
 script = ExtResource("7_2tjhq")
 your_font = ExtResource("7_wr4po")
 their_font = ExtResource("8_868i4")
 their_font_italic = ExtResource("3_y2vsw")
 your_style = ExtResource("4_fyhq7")
 their_style = ExtResource("1_ihena")
+text = "Hello [i]everybody[/i] it's me the big man on campus im going to jack off and suck myself off big time sexual style wow it's so cool."
 
-[node name="Message" type="RichTextLabel" parent="HBoxContainer/MessagePanel"]
+[node name="Message" type="RichTextLabel" parent="Container/MessagePanel"]
 custom_minimum_size = Vector2(275, 0)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("8_868i4")
+theme_override_fonts/italics_font = ExtResource("3_y2vsw")
 bbcode_enabled = true
 text = "Hello [i]everybody[/i] it's me the big man on campus im going to jack off and suck myself off big time sexual style wow it's so cool."
 fit_content = true
 
-[node name="Sticker" type="TextureRect" parent="HBoxContainer"]
+[node name="Sticker" type="TextureRect" parent="Container"]
+visible = false
 custom_minimum_size = Vector2(250, 250)
 layout_mode = 2
 size_flags_horizontal = 0
