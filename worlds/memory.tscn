@@ -125,6 +125,7 @@ icon = ExtResource("6_s3seb")
 layout_mode = 0
 allowed_area = NodePath("ColorRect")
 label_prefab = ExtResource("3_7jid2")
+kaisa_text_color = Color(0.6627451, 0.83137256, 0.95686275, 1)
 
 [node name="ColorRect" type="ColorRect" parent="MemoryBackground/DialogDisplayManager"]
 layout_mode = 0

@@ -6,6 +6,7 @@ extends Control
 @export var label_prefab: PackedScene
 @export var max_labels: int = 3
 @export var fade_out_duration: float = 1.0
+@export var kaisa_text_color: Color
 
 var character_fonts: Dictionary = {}
 var character_colors: Dictionary = {}
@@ -23,6 +24,8 @@ func setup_character_styles() -> void:
 	character_fonts["ai"] = load("res://fonts/ai.ttf")
 	character_fonts["thirdVoice"] = load("res://fonts/memory_voice.ttf")
 
+	# character_colors["ai"] = kaisa_text_color
+
 func display_dialog(character: String, text: String) -> void:
 	if not allowed_area:
 		push_error("allowed_area is not assigned!")
@@ -34,7 +37,7 @@ func display_dialog(character: String, text: String) -> void:
 	
 	# Create new label
 	var new_label = label_prefab.instantiate() as RichTextLabel
-	new_label.text = "[outline_size=1]%s[/outline_size]" % text
+	new_label.text = "[color=#%s][outline_size=5]%s[/outline_size][/color]" % [character_colors.get(character, Color.WHITE).to_html(), text]
 	new_label.visible_ratio = 0
 	new_label.add_theme_font_override("normal_font", character_fonts.get(character))
 	new_label.add_theme_color_override("font_color", character_colors.get(character, Color.WHITE))
