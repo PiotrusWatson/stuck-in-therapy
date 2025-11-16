@@ -53,7 +53,7 @@ Piotrus Watson - Programming
 Teemu Kangas - Music & SFX
 Noodle - Art & Animation
 Ritinae - Tech Support
-Zoi Asterataki - Art Direction & Narrative"
+Zoi Asterataki - Art Direction & Narrative, Backgrounds"
 horizontal_alignment = 1
 
 [node name="Back" type="Button" parent="."]
