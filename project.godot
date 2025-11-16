@@ -13,6 +13,8 @@ config_version=5
 config/name="stuck in therapy"
 run/main_scene="uid://dg1t6l8xfh5un"
 config/features=PackedStringArray("4.5", "Forward Plus")
+boot_splash/bg_color=Color(0.2627451, 0, 0.33333334, 1)
+boot_splash/image="uid://clrw8kgcck0yw"
 config/icon="res://icon.svg"
 
 [autoload]
