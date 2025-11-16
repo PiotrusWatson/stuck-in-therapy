@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://kyse6qfuqcau"]
+[gd_scene load_steps=15 format=3 uid="uid://kyse6qfuqcau"]
 
 [ext_resource type="FontFile" uid="uid://bpm5h050ty0jo" path="res://fonts/Ldfcomicsans-jj7l.ttf" id="1_awoei"]
 [ext_resource type="StyleBox" uid="uid://mw0yh24s4b8" path="res://scenes/message/their_message.tres" id="1_ihena"]
 [ext_resource type="Script" uid="uid://bx1wac5qns3sh" path="res://scenes/message/message_box.gd" id="2_1iohf"]
+[ext_resource type="FontFile" uid="uid://ldv0ssrpj1aa" path="res://fonts/final_fonts_decided/Comfortaa-VariableFont_wght.ttf" id="3_lb13d"]
+[ext_resource type="FontVariation" uid="uid://ch2owqspuotwi" path="res://fonts/final_fonts_decided/comfortaa_italic.tres" id="3_y2vsw"]
 [ext_resource type="StyleBox" uid="uid://bwtmow7os3cwh" path="res://scenes/message/your_message.tres" id="4_fyhq7"]
 [ext_resource type="PackedScene" uid="uid://d01kcxnb3kiup" path="res://scenes/emote.tscn" id="4_wr4po"]
 [ext_resource type="Texture2D" uid="uid://4q1mdj72dgsi" path="res://sprites/phone/happyface.png" id="5_gou7c"]
@@ -19,6 +21,10 @@ MarginContainer/constants/margin_bottom = 0
 MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_top = 10
 PanelContainer/styles/panel = ExtResource("1_ihena")
+RichTextLabel/font_sizes/italics_font_size = 20
+RichTextLabel/font_sizes/normal_font_size = 20
+RichTextLabel/fonts/italics_font = ExtResource("3_y2vsw")
+RichTextLabel/fonts/normal_font = ExtResource("3_lb13d")
 
 [node name="MessageBox" type="MarginContainer"]
 offset_right = 400.0
@@ -40,15 +46,17 @@ layout_mode = 2
 script = ExtResource("7_2tjhq")
 your_font = ExtResource("7_wr4po")
 their_font = ExtResource("8_868i4")
+their_font_italic = ExtResource("3_y2vsw")
 your_style = ExtResource("4_fyhq7")
 their_style = ExtResource("1_ihena")
 
-[node name="Message" type="Label" parent="HBoxContainer/MessagePanel"]
+[node name="Message" type="RichTextLabel" parent="HBoxContainer/MessagePanel"]
 custom_minimum_size = Vector2(275, 0)
 layout_mode = 2
 size_flags_vertical = 3
-text = "Hello everybody it's me the big man on campus im going to jack off and suck myself off big time sexual style wow it's so cool."
-autowrap_mode = 3
+bbcode_enabled = true
+text = "Hello [i]everybody[/i] it's me the big man on campus im going to jack off and suck myself off big time sexual style wow it's so cool."
+fit_content = true
 
 [node name="Sticker" type="TextureRect" parent="HBoxContainer"]
 custom_minimum_size = Vector2(250, 250)
