@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://lecfw8a02eau" path="res://worlds/end_screen.gd" id="2_ebymt"]
 [ext_resource type="Texture2D" uid="uid://ckl88gr0ms6y" path="res://sprites/title/intro_bg.png" id="3_hwdko"]
 [ext_resource type="Texture2D" uid="uid://bx2dkg86het63" path="res://sprites/title/logo_edited.png" id="4_07qhy"]
-[ext_resource type="Script" path="res://worlds/title.gd" id="4_nln4v"]
+[ext_resource type="Script" uid="uid://dr8x0soasusxl" path="res://worlds/title.gd" id="4_nln4v"]
 [ext_resource type="PackedScene" uid="uid://dd8scxj0g6iwu" path="res://components/fader.tscn" id="5_hwdko"]
 
 [node name="END_SCREEN" type="Control"]
